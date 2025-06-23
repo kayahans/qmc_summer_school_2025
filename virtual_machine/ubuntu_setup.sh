@@ -189,6 +189,10 @@ if  [ $INSTALL_QMCPACK -eq 1 ]; then
 
     cd $HOME/apps/qmcpack
     export OMPI_MCA_rmaps_base_oversubscribe=true
+	if [ $INSTALL_PYSCF -eq 1 ]; then
+    	export PYTHONPATH=$HOME/apps/qmcpack/qmcpack/src/QMCTools:$PYTHONPATH
+	fi
+
     if [ ! -e bin/qmcpack ]; then
 	echo --- Building QMCPACK `date`
 	if [ -e build ]; then
@@ -198,10 +202,10 @@ if  [ $INSTALL_QMCPACK -eq 1 ]; then
 	mkdir build
 	cd build
 	cmake -DCMAKE_INSTALL_PREFIX=$HOME/apps/qmcpack -DCMAKE_CXX_COMPILER=mpiCC -DCMAKE_C_COMPILER=mpicc -DQE_BIN=$HOME/apps/qe-7.4.1/bin ../qmcpack/
-	time make -j 2 >& make.out
+	make -j 2
 	make install
 	#    ctest -L unit
-	ctest -L deterministic
+	ctest -L deterministic --output-on-failure
 	cd ..
 	rm -r -f build
     fi
@@ -214,9 +218,9 @@ if  [ $INSTALL_QMCPACK -eq 1 ]; then
 	mkdir build_complex
 	cd build_complex
 	cmake -DQMC_COMPLEX=1 -DCMAKE_CXX_COMPILER=mpiCC -DCMAKE_C_COMPILER=mpicc -DQE_BIN=$HOME/apps/qe-7.4.1/bin ../qmcpack/
-	time make -j 2 >& make.out # Serial to avoid possible out of memory
+	make -j 2
 	#ctest -L unit
-	ctest -L deterministic 
+	ctest -L deterministic --output-on-failure
 	cp -p bin/qmcpack_complex $HOME/apps/qmcpack/bin
 	#    cd ../build/bin
 	#    ln -sf ../../build_complex/bin/qmcpack_complex qmcpack_complex
