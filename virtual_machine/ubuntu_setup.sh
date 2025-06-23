@@ -123,15 +123,14 @@ if  [ $INSTALL_PYSCF -eq 1 ]; then
 	make -j 4
 
 	echo --- PySCF build done
+    else
+	echo -- Found existing PySCF installation
+    fi
 # Setup PATHS so that QMCPACK cmake will detect PySCF
 	export PYTHONPATH=$topdir:$PYTHONPATH
 	export LD_LIBRARY_PATH=$herelib:$LD_LIBRARY_PATH
 	echo export PYTHONPATH=$topdir:\$PYTHONPATH
 	echo export LD_LIBRARY_PATH=$herelib:\$LD_LIBRARY_PATH
-
-    else
-	echo -- Found existing PySCF installation
-    fi
 fi
 
 # QE
