@@ -182,7 +182,8 @@ if  [ $INSTALL_QMCPACK -eq 1 ]; then
 
 
     cd $HOME/apps/qmcpack
-    export OMPI_MCA_rmaps_base_oversubscribe=true
+	export PRTE_MCA_rmaps_default_mapping_policy=:oversubscribe # For OpenMPI >= 5
+    export OMPI_MCA_rmaps_base_oversubscribe=true # For OpenMPI <5
 	if [ $INSTALL_PYSCF -eq 1 ]; then
     	export PYTHONPATH=$HOME/apps/qmcpack/qmcpack/src/QMCTools:$PYTHONPATH
 	fi
@@ -252,6 +253,9 @@ export PYTHONPATH=\$HOME/apps/qmcpack/qmcpack/src/QMCTools:\$PYTHONPATH
 export LD_LIBRARY_PATH=\$HOME/apps/pyscf/pyscf/opt/lib:\$LD_LIBRARY_PATH
 # Default threads
 export OMP_NUM_THREADS=1
+# OpenMPI oversubscription
+export PRTE_MCA_rmaps_default_mapping_policy=:oversubscribe # For OpenMPI >= 5
+export OMPI_MCA_rmaps_base_oversubscribe=true # For OpenMPI <5	
 EOF
 lead='^# START-QMCPACK-RELATED'
 tail='^# END-QMCPACK-RELATED'
@@ -261,7 +265,7 @@ echo "$output" >.bashrc
 rm -f __insert_this
 
 
-# Add setup info to current shell for convenience
+# Add setup info to current shell for installation testing convenience
 # QMCPACK and NEXUS
 export PATH=$HOME/apps/qmcpack/bin:$PATH
 export PATH=$HOME/apps/qmcpack/qmcpack/nexus/bin:$PATH
@@ -272,8 +276,11 @@ export PATH=$HOME/apps/qe-7.4.1/bin:$PATH
 export PYTHONPATH=$HOME/apps/pyscf/pyscf:$PYTHONPATH
 export PYTHONPATH=$HOME/apps/qmcpack/qmcpack/src/QMCTools:$PYTHONPATH
 export LD_LIBRARY_PATH=$HOME/apps/pyscf/pyscf/opt/lib:$LD_LIBRARY_PATH
-
+# Default threads
 export OMP_NUM_THREADS=1
+# OpenMPI oversubscription
+export PRTE_MCA_rmaps_default_mapping_policy=:oversubscribe # For OpenMPI >= 5
+export OMPI_MCA_rmaps_base_oversubscribe=true # For OpenMPI <5	
 
 if  [ $SETUP_DESKTOP -eq 1 ]; then
 
