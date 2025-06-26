@@ -340,7 +340,7 @@ if [ ! -e $HOME/Desktop/WORKSHOP_README.txt ]; then
 	mkdir $HOME/Desktop
     fi
     cat >$HOME/Desktop/WORKSHOP_README.txt<<EOF
-QMC Virtual Summer School 2025 Virtual Machine based on Ubuntu 24.04 LTS
+QMC Virtual Summer School 2025 Virtual Machine based on Ubuntu 24.04 LT / 25.04
 
 https://qmcpack.org/qmc2025
 
@@ -350,8 +350,10 @@ This image contains installed versions of
 
 QMCPACK
 NEXUS
+STALK
 Quantum ESPRESSO (QE) 7.4.1
 PySCF 2.9.0
+geomeTRIC
 
 See the individual packages for details of their specific open-source licenses.
 
