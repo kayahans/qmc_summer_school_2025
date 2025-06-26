@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Setup script to install QMCPACK, Quantum Espresso (QE/PWSCF), PySCF
+# Setup script to install QMCPACK, Quantum ESPRESSO (QE/PWSCF), PySCF
 # and workshop files for QMCPACK 2025 Summer School
 #
 # Assumes a vanilla Ubuntu 24.04 LTS, 25.04 or similar
