@@ -4,7 +4,7 @@
 # Setup script to install QMCPACK, Quantum Espresso (QE/PWSCF), PySCF
 # and workshop files for QMCPACK 2025 Summer School
 #
-# Assumes a vanilla Ubuntu 24.04 LTS or similar
+# Assumes a vanilla Ubuntu 24.04 LTS, 25.04 or similar
 #
 # Script is safely rerunnable
 #
@@ -15,8 +15,9 @@
 # Installs in $HOME/apps :
 #
 # QMCPACK and NEXUS workflow software
+# STALK surrogate Hessian optimization package
 # Quantum ESPRESSO (QE) 7.4.1
-# PySCF 2.9.0
+# PySCF 2.9.0 with geomeTRIC optimizer
 #
 # vim, emacs, xcrysden, and gnuplot are installed for convenience
 #
@@ -43,6 +44,8 @@ INSTALL_SYSTEM_PACKAGES=1
 INSTALL_QMCPACK=1
 INSTALL_QE=1
 INSTALL_PYSCF=1
+INSTALL_STALK=1
+INSTALL_GEOMETRIC=1
 SETUP_DESKTOP=1
 UPDATE_WORKSHOP_FILES=1
 
@@ -62,7 +65,8 @@ sudo apt-get -y install cmake g++ gfortran libopenmpi-dev libboost-dev libhdf5-d
 
 sudo apt-get -y install python-is-python3 python3-pip
 sudo apt-get -y install python3-numpy python3-scipy python3-matplotlib python3-pydot python3-pandas python3-h5py python3-mpi4py
-
+sudo apt-get -y install python3-networkx python3-six python3-setuptools # For geomeTRIC optimizer
+sudo apt-get -y install python3-dill # For STALK
 # Nice to have tools
 sudo apt-get -y install vim emacs-nox gnuplot xcrysden
 # Cleanup
@@ -77,6 +81,19 @@ if [ ! -e $HOME/apps ]; then
     mkdir $HOME/apps
 fi
 
+#
+# GeomeTRIC optimizer for PySCF
+#
+
+if  [ $INSTALL_GEOMETRIC -eq 1 ]; then
+    cd $HOME/apps
+    if [ ! -e geomeTRIC ]; then
+	git clone https://github.com/leeping/geomeTRIC.git --depth=1
+	cd geomeTRIC
+	sudo python setup.py install # Systemwide installation for convenience.
+	cd ..
+    fi
+fi
 
 #
 # PySCF
@@ -226,6 +243,12 @@ if  [ $INSTALL_QMCPACK -eq 1 ]; then
 
 fi
 
+if  [ $INSTALL_STALK -eq 1 ]; then
+    cd $HOME/apps
+    if [ ! -e stalk ]; then
+	git clone https://github.com/QMCPACK/stalk.git --depth=1
+    fi
+fi
 
 cd $HOME
 echo --- Shell setup `date`
@@ -251,6 +274,8 @@ export PATH=\$HOME/apps/qe-7.4.1/bin:\$PATH
 export PYTHONPATH=\$HOME/apps/pyscf/pyscf:\$PYTHONPATH
 export PYTHONPATH=\$HOME/apps/qmcpack/qmcpack/src/QMCTools:\$PYTHONPATH
 export LD_LIBRARY_PATH=\$HOME/apps/pyscf/pyscf/opt/lib:\$LD_LIBRARY_PATH
+# STALK
+export PYTHONPATH=\$HOME/apps/stalk/stalk:\$PYTHONPATH
 # Default threads
 export OMP_NUM_THREADS=1
 # OpenMPI oversubscription
@@ -276,6 +301,8 @@ export PATH=$HOME/apps/qe-7.4.1/bin:$PATH
 export PYTHONPATH=$HOME/apps/pyscf/pyscf:$PYTHONPATH
 export PYTHONPATH=$HOME/apps/qmcpack/qmcpack/src/QMCTools:$PYTHONPATH
 export LD_LIBRARY_PATH=$HOME/apps/pyscf/pyscf/opt/lib:$LD_LIBRARY_PATH
+# STALK
+export PYTHONPATH=$HOME/apps/stalk/stalk:$PYTHONPATH
 # Default threads
 export OMP_NUM_THREADS=1
 # OpenMPI oversubscription
