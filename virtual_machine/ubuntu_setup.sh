@@ -275,7 +275,7 @@ export PYTHONPATH=\$HOME/apps/pyscf/pyscf:\$PYTHONPATH
 export PYTHONPATH=\$HOME/apps/qmcpack/qmcpack/src/QMCTools:\$PYTHONPATH
 export LD_LIBRARY_PATH=\$HOME/apps/pyscf/pyscf/opt/lib:\$LD_LIBRARY_PATH
 # STALK
-export PYTHONPATH=\$HOME/apps/stalk/stalk:\$PYTHONPATH
+export PYTHONPATH=\$HOME/apps/stalk:\$PYTHONPATH
 # Default threads
 export OMP_NUM_THREADS=1
 # OpenMPI oversubscription
@@ -302,7 +302,7 @@ export PYTHONPATH=$HOME/apps/pyscf/pyscf:$PYTHONPATH
 export PYTHONPATH=$HOME/apps/qmcpack/qmcpack/src/QMCTools:$PYTHONPATH
 export LD_LIBRARY_PATH=$HOME/apps/pyscf/pyscf/opt/lib:$LD_LIBRARY_PATH
 # STALK
-export PYTHONPATH=$HOME/apps/stalk/stalk:$PYTHONPATH
+export PYTHONPATH=$HOME/apps/stalk:$PYTHONPATH
 # Default threads
 export OMP_NUM_THREADS=1
 # OpenMPI oversubscription
