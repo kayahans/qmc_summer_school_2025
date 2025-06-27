@@ -13,7 +13,7 @@ for higher performance, we recommend installing it directly.
 * Install the latest version of VirtualBox (free, no cost) from
   https://www.virtualbox.org/  . We used v7.1.10 to make the image. 
 * Download the image file from https://bit.ly/qmcsummerschool2025vbximage . The
-  file is around 10GB in size, so will take several minutes to download even on
+  file is around 6GB in size, so will take several minutes to download even on
   the fastest networks, and potentially several hours. Be patient and try again
   at a different time or using a different network if initially unsuccessful.
 * Run VirtualBox and import the image to setup the virtual machine:
@@ -31,14 +31,13 @@ for higher performance, we recommend installing it directly.
 
 We provide a virtual machine for UTM, an open source virtualization and
 emulation package. Ubuntu Linux for ARM is virtualized and runs at close to full
-speed on the m1. The release of Ubuntu 25 is used for compatibility
-and performance. 
+speed on Apple Silicon. The virtual machine uses Ubuntu 25.04 for compatibility.
 
 * Install the latest version of UTM for mac (free, open source) from https://mac.getutm.app . You
   can also purchase from the Mac App Store to contribute financially to the
   project.
 * Download the image file from https://bit.ly/qmcsummerschool2025utmimage . The
-  file is around 10GB in size, so will take several minutes to download even on the
+  file is around 6GB in size, so will take several minutes to download even on the
   fastest networks, and potentially several hours. Be patient and try again at a
   different time or using a different network if initially unsuccessful.
 * Unzip the downloaded compressed image file to obtain QMCSummerSchool2025Image.utm
@@ -111,7 +110,7 @@ tail -f out
   * shutdown VM
   * `VBoxManage modifymedium --compact /path/to/thedisk.vdi`
   * e.g. `VBoxManage modifymedium --compact /Users/pk7/VirtualBox\ VMs/WorkshopUbuntu/WorkshopUbuntu.vdi` or `vboxmanage` with Linux hosts (capitalization varies)
-* Export image using VirtualBox. Set title, URL etc. as desired.
+* Export image using VirtualBox. Set title, URL etc.
 
 ## UTM on Apple Silicon machines
 
@@ -134,8 +133,6 @@ tail -f out
       * magic word: qmc2025
       * **set login automatically**
       * (Standard install questions... long wait + reboot)
-      * UTM often fails to restart at this point. Restart the VM. (triangle in
-        window title bar to the left of the VM name)
       * Allow software updater to run and reboot as needed
       * Settings (at top right) ->Privacy->Screen Lock disable
       * In terminal
@@ -152,10 +149,9 @@ tail -f out
       ```
       * There are customization options in the setup script to enable or disable
   different applications. 
-      * Use magic word for new keyring if prompted
-      * Reboot
+      * Reboot after successful installation.
       * Check `which qmcpack` works
       * Power Off the VM
       * Clear the CD/DVD with the .iso
       * "Share" the VM, Save As QMCSummerSchool2025Image.utm
-      * Compress (ZIP) the image to reduce the ~16GB image file size.
+      * Compress (ZIP) the image to reduce the ~16GB image file size to ~6GB.
