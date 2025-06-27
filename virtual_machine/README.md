@@ -113,7 +113,7 @@ tail -f out
   * e.g. `VBoxManage modifymedium --compact /Users/pk7/VirtualBox\ VMs/WorkshopUbuntu/WorkshopUbuntu.vdi` or `vboxmanage` with Linux hosts (capitalization varies)
 * Export image using VirtualBox. Set title, URL etc. as desired.
 
-## UTM on Apple SiliconS machines
+## UTM on Apple Silicon machines
 
 * Install the latest version of UTM from https://mac.getutm.app/ (currently 2.4.1)
 * Download the Ubuntu 25.04 from https://cdimage.ubuntu.com/releases/plucky/release/ e.g. https://cdimage.ubuntu.com/releases/plucky/release/ubuntu-25.04-desktop-arm64.iso
