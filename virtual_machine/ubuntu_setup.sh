@@ -26,10 +26,7 @@
 # sudo apt-get -y install git
 # cd $HOME
 # git clone https://github.com/QMCPACK/qmc_summer_school_2025.git
-# ./qmc_summer_school_2025/virtual_machine/setup_ubuntu.sh
-# or
-# nohup ./qmc_summer_school_2025/virtual_machinee/setup_ubuntu.sh >& out&
-# tail -f out
+# ./qmc_summer_school_2025/virtual_machine/ubuntu_setup.sh
 #
 # Sudoer password is needed for initial package installs and updates
 # Full installation may take several hours depending on underlying hardware
