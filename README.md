@@ -4,7 +4,7 @@ This repository contains the presentation materials and examples for the Quantum
 
 [Summer school website and registration](https://qmcpack.org/qmc2025).
 
-[How to download and using the VirtualBox machine image for the Summer School](https://github.com/QMCPACK/qmc_summer_school_2025/tree/master/virtual_machine).
+[How to download and use the VirtualBox machine image for the Summer School](https://github.com/QMCPACK/qmc_summer_school_2025/tree/master/virtual_machine).
 
 [Latest QMCPACK manual](https://qmcpack.readthedocs.io/en/develop/) and [Source code on GitHub](https://github.com/QMCPACK/qmcpack).
 
