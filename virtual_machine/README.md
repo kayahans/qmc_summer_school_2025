@@ -22,7 +22,7 @@ for higher performance, we recommend installing it directly.
  * Complete importing the virtual machine. Initial setup may take a few minutes.
  * In the main VirtualBox window select the new machine, then "Start". You should see Ubuntu boot and a standard desktop appear.
  * The virtual machine is setup to automatically log in as user "qmcuser". Should you need to authenticate the word you need is "qmc2025" (without quotes).
- * You can get a terminal (or other application) by clicking the square of dots icon at the bottom left and either typing or selecting the application you want.
+ * You can get a terminal (or other application) by clicking the dotted circle icon at the bottom left and either typing or selecting the application you want.
  * Inside a terminal, e.g. "qmcpack", "qmcpack_complex", "pw.x" are on the path. NEXUS and PySCF are available through python. These are installed in $HOME/apps
  * You can install any standard Linux software, e.g. via "sudo apt-get install your_favorite_editor".
 
@@ -43,7 +43,7 @@ speed on Apple Silicon. The virtual machine uses Ubuntu 25.04 for compatibility.
 * In UTM, select "Create a New Virutal Machine", then "Open..." an existing machine. Import the downloaded QMCSummerSchool2025Image.utm file
 * Start the newly created virtual machine using the large "play" icon
 * The virtual machine is setup to automatically log in as user "qmcuser". Should you need to authenticate the word you need is "qmc2025" (without quotes).
-* You can get a terminal (or other application) by clicking the square of dots icon at the bottom left and either typing or selecting the application you want.
+* You can get a terminal (or other application) by clicking the dotted circle icon at the bottom left and either typing or selecting the application you want.
 * Inside a terminal, e.g. "qmcpack", "qmcpack_complex", "pw.x"are on the path.
   NEXUS and PySCF are available through python. These were installed in
   $HOME/apps.
