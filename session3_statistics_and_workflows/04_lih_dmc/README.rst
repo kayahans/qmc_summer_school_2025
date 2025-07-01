@@ -112,7 +112,7 @@ fitting the data to a line and extrapolating to zero timestep:
 
 .. code-block:: bash
 
-  qmc-fit ts -e 30 -b 8 -t '0.04 0.03 0.01' runs/LiH/dmc_textrap/*s00{1,2,3}*scalar*
+  qmc-fit ts -e 30 -b 8 -t '0.04 0.03 0.01' -s 1 runs/LiH/dmc_textrap/*scalar*
 
   fit function  : linear
   fitted formula: (-0.78747 +/- 0.00022) + (-0.0072 +/- 0.0076)*t
