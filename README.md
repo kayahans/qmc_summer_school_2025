@@ -16,6 +16,7 @@ Access to the live Zoom sessions requires registration.
  * [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session1_introduction/session1_introduction_vfinal.pdf). [Recorded video presentation on YouTube](https://youtu.be/6a5yN_GDZJc).
 ## Session 2 / Thursday July 3 / 11 am Eastern US time : Fundamentals of Quantum Monte Carlo
  * Speaker: Paul Kent
+ * [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session2_qmc/session2_qmc_vfinal.pdf).
 ## Session 3 / Tuesday July 8 / 11 am Eastern US time : Pseudopotentials, Workflows and Statistics
  * Speakers: Lubos Mitas, Jaron Krogel
 ## Session 4 / Thursday July 10 / 11 am Eastern US time : Molecular Calculations
