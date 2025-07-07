@@ -18,7 +18,8 @@ Access to the live Zoom sessions requires registration.
  * Speaker: Paul Kent
  * [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session2_qmc/session2_qmc_vfinal.pdf). [Recorded video presentation on YouTube](https://youtu.be/Q0mREjYbLhU).
 ## Session 3 / Tuesday July 8 / 11 am Eastern US time : Pseudopotentials, Workflows and Statistics
- * Speakers: Lubos Mitas, Jaron Krogel
+ * Speakers: Lubos Mitas, Omar Madany, Jaron Krogel
+ * "Pseudopotentials/effective core potentials - and their place in QMC", Lubos Mitas. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session3_pseudopotentials/session3_ecpsLMnewG3school2025final.pdf).
 ## Session 4 / Thursday July 10 / 11 am Eastern US time : Molecular Calculations
  * Speakers: Amanda Dumi, Paul Kent
 ## Session 5 / Tuesday July 15 / 11 am Eastern US time : Solid-State Calculations
