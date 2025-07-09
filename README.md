@@ -19,9 +19,9 @@ Access to the live Zoom sessions requires registration.
  * [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session2_qmc/session2_qmc_vfinal.pdf). [Recorded video presentation on YouTube](https://youtu.be/Q0mREjYbLhU).
 ## Session 3 / Tuesday July 8 / 11 am Eastern US time : Pseudopotentials, Workflows and Statistics
  * Speakers: Lubos Mitas, Omar Madany, Jaron Krogel
- * "Pseudopotentials/effective core potentials - and their place in QMC", Lubos Mitas. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session3_pseudopotentials/session3_ecpsLMnewG3school2025final.pdf).
- * "Correlation consistent effective core potential", Omar Madany. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session3_pseudopotentials/session3_Madany_ccECPs.pdf).
- * "Statistical analysis and Nexus workflows", Jaron Krogel. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session3_statistics_and_workflows/session3_stats_nexus.pdf).
+ * "Pseudopotentials/effective core potentials - and their place in QMC", Lubos Mitas. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session3_pseudopotentials/session3_ecpsLMnewG3school2025final.pdf). [Recorded video presentation on YouTube](https://youtu.be/2GZB0tpTdrs).
+ * "Correlation consistent effective core potential", Omar Madany. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session3_pseudopotentials/session3_Madany_ccECPs.pdf). [Recorded video presentation on YouTube](https://youtu.be/dEVQuS_RyQo).
+ * "Statistical analysis and Nexus workflows", Jaron Krogel. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session3_statistics_and_workflows/session3_stats_nexus.pdf). [Recorded video presentation on YouTube](https://youtu.be/cW-SCun_c7U).
 ## Session 4 / Thursday July 10 / 11 am Eastern US time : Molecular Calculations
  * Speakers: Amanda Dumi, Paul Kent
 ## Session 5 / Tuesday July 15 / 11 am Eastern US time : Solid-State Calculations
