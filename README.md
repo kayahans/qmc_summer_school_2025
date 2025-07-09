@@ -24,7 +24,7 @@ Access to the live Zoom sessions requires registration.
  * "Statistical analysis and Nexus workflows", Jaron Krogel. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session3_statistics_and_workflows/session3_stats_nexus.pdf). [Recorded video presentation on YouTube](https://youtu.be/cW-SCun_c7U).
 ## Session 4 / Thursday July 10 / 11 am Eastern US time : Molecular Calculations
  * Speakers: Amanda Dumi, Paul Kent
- * "Demystifying QMC terminology", Paul Kent [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session4_terminology/session4_qmc_terms_vfinal.pdf)
+ * "Demystifying QMC terminology", Paul Kent. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session4_terminology/session4_qmc_terms_vfinal.pdf).
 ## Session 5 / Tuesday July 15 / 11 am Eastern US time : Solid-State Calculations
  * Speaker: Ray Clay
 ## Session 6 / Thursday July 17 / 11 am Eastern US time : Real-World Calculations
