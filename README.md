@@ -25,7 +25,7 @@ Access to the live Zoom sessions requires registration.
 ## Session 4 / Thursday July 10 / 11 am Eastern US time : Molecular Calculations
  * Speakers: Amanda Dumi, Paul Kent
  * "Demystifying QMC terminology", Paul Kent. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session4_terminology/session4_qmc_terms_vfinal.pdf). [Recorded video presentation on YouTube](https://youtu.be/2e85J7Xc1oQ).
- * "Molecular Calculations driven by Nexus", Amanda Dumi. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session4_molecules/session4_molecules_slides.pdf).
+ * "Molecular Calculations driven by Nexus", Amanda Dumi. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session4_molecules/session4_molecules_slides.pdf). [Recorded video presentation on YouTube](https://youtu.be/5PLfKSJjbTo).
 ## Session 5 / Tuesday July 15 / 11 am Eastern US time : Solid-State Calculations
  * Speaker: Ray Clay
 ## Session 6 / Thursday July 17 / 11 am Eastern US time : Real-World Calculations
