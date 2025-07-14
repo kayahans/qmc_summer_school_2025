@@ -1,0 +1,647 @@
+  Input file(s): dmc.g000.twistnum_0.in.xml dmc.g001.twistnum_1.in.xml dmc.g002.twistnum_2.in.xml dmc.g003.twistnum_3.in.xml 
+================================================================
+                        QMCPACK 4.1.9
+
+          (c) Copyright 2003-2025 QMCPACK developers
+
+                         Please cite:
+      J. Kim et al. J. Phys. Cond. Mat. 30 195901 (2018)
+           https://doi.org/10.1088/1361-648X/aab9c3
+                             and
+       P. Kent et al. J. Chem. Phys. 152 174105 (2020)
+              https://doi.org/10.1063/5.0004860
+
+  Git branch: develop
+  Last git commit: 76b83bc7dfda9855aede70878988c10c5f0c5fe6
+  Last git commit date: Wed Jul 9 11:33:49 2025 -0700
+  Last git commit subject: Merge pull request #5569 from prckent/unreleased_log
+================================================================
+  Global options 
+
+  Total number of MPI ranks = 4
+  Number of MPI groups      = 4
+  MPI group ID              = 0
+  Number of ranks in group  = 1
+  MPI ranks per node        = 4
+  OMP 1st level threads     = 1
+  OMP nested threading disabled or only 1 thread on the 2nd level
+
+  Precision used in this calculation, see definitions in the manual:
+  Base precision      = double
+  Full precision      = double
+
+  CPU only build
+  Complex build. QMC_COMPLEX=ON
+  Timer build option is enabled. Current timer level is coarse
+
+=================================================
+--- Memory usage report : when QMCPACK starts ---
+=================================================
+Available memory on node 0, free + buffers :   29069 MiB
+Memory footprint by rank 0 on node 0       :      27 MiB
+=================================================
+
+  Input XML = dmc.g000.twistnum_0.in.xml
+
+  Project = dmc
+  date    = 2025-07-14 12:00:03 MDT
+  host    = s1002448
+
+  hamiltonian has MPC. Will read density if it is found.
+
+
+ Random Number
+ -------------
+  Offset for the random number seeds based on time: 419
+
+  Range of prime numbers to use as seeds over processors and threads = 2909-2953
+
+
+ Lattice
+ -------
+  Simulation cell radius   = 3.373161 bohr
+  Wigner-Seitz cell radius = 3.373161 bohr
+
+  Overwriting global supercell 
+  Long-range breakup parameters:
+    rc*kc = 15.000000; rc = 3.373161; kc = 4.446867; tol = 0.000300
+  Long-range breakup parameters:
+    rc*kc = 15.000000; rc = 3.373161; kc = 4.446867; tol = 0.000300
+  KContainer initialised with cutoff 4.446867
+   # of K-shell  = 21
+   # of K points = 460
+
+  Lattice (bohr):      6.7463223000                 0                 0
+                                  0      6.7463223000                 0
+                                  0                 0      6.7463223000
+
+  Boundary Conditions:  p  p  p 
+
+  Volume (bohr^3) = 307.0444532224
+
+  Reciprocal vectors without 2*pi.
+    g_1 =       0.1482289098                 0                 0
+    g_2 =                  0      0.1482289098                 0
+    g_3 =                  0                 0      0.1482289098
+
+  Metric tensor in real-space.
+    h_1 = 45.5128645755 0.0000000000 0.0000000000 
+    h_2 = 0.0000000000 45.5128645755 0.0000000000 
+    h_3 = 0.0000000000 0.0000000000 45.5128645755 
+
+  Metric tensor in g-space.
+    h_1 = 0.8674122794 0.0000000000 0.0000000000 
+    h_2 = 0.0000000000 0.8674122794 0.0000000000 
+    h_3 = 0.0000000000 0.0000000000 0.8674122794 
+
+ Particle Set
+ ------------
+  Name: e   Offload : no
+
+  All the species have the same mass 1.0000000000
+
+  Creating Structure Factor for periodic systems 4.4468672954
+  Particle set size: 32   Groups : 2
+
+
+ Particle Set
+ ------------
+  Name: ion0   Offload : no
+
+  All the species have the same mass 21894.7135905729
+
+  Creating Structure Factor for periodic systems 4.4468672954
+  Particle set size: 8   Groups : 1
+
+
+ Many-body wavefunction
+ -------------------
+  Name: psi0   Tasking: no
+
+
+   Single particle orbitals (SPO) collection
+   -----------------------------------------
+    Name: bspline   Type input: bspline
+
+  Created SPOSet builder named 'bspline' of type bspline
+
+     Single particle orbitals (SPO)
+     ------------------------------
+      Name: spo_ud   Type: spline   Builder class name: EinsplineSetBuilder
+
+  TileMatrix = 
+ [  1 -1  1
+    1  1 -1
+   -1  1  1 ]
+  Reading 16 orbitals from HDF5 file.
+  HDF5 orbital file version 2.1.0
+  Reading orbital file in ESHDF format.
+  ESHDF orbital file version 2.1.0
+  Lattice = 
+    [  3.373161  3.373161 -0.000000
+       0.000000  3.373161  3.373161
+       3.373161  0.000000  3.373161 ]
+  SuperLattice = 
+    [  6.746322  0.000000  0.000000
+       0.000000  6.746322  0.000000
+       0.000000  0.000000  6.746322 ]
+
+bands=8, elecs=32, spins=1, twists=16
+Atom type(0) = 6
+Atom type(1) = 6
+  Read 115633 density G-vectors.
+  EinsplineSetBuilder found density in the HDF5 file.
+  Read 0 VHXC G-vectors.
+TIMER  EinsplineSetBuilder::ReadOrbitalInfo 0.0080280620
+TIMER  EinsplineSetBuilder::BroadcastOrbitalInfo 0.0000004440
+Found 4 distinct supercell twists based on 16 primitive cell k-points
+Super twist #0:  [   0.00000   0.00000   0.00000 ]
+Super twist #1:  [   0.50000   0.00000   0.00000 ]
+Super twist #2:  [   0.50000   0.50000   0.00000 ]
+Super twist #3:  [   0.50000   0.50000   0.50000 ]
+QMCPACK WARNING twist attribute does't exist but twistnum attribute was found. This is potentially ambiguous. Specifying twist attribute is preferred.
+  Using supercell twist 0:  [   0.00000   0.00000   0.00000]
+32 complex-valued orbitals supplied by h5 can be expanded up to 32 SPOs.
+Sorting the bands now:
+We will read 16 distinct complex-valued orbitals from h5.
+B-spline mesh factor is 1.0000000000
+B-spline mesh size is (44, 44, 44)
+Maxmimum number of Gvecs 4312
+    Using complex valued spline SPOs with complex single precision storage (C2C).
+    Running on CPU.
+    Running on CPU.
+BandInfoGroup::selectBands bigspace has 32 distinct orbitals 
+BandInfoGroup::selectBands using distinct orbitals [0,16)
+  Number of distinct bands 16
+  First Band index 0
+  First SPO index 0
+  Size of SPOs 16
+  ClassName = SplineC2C
+  Using complex einspline table
+NumDistinctOrbitals 16 numOrbs = 16
+MEMORY 12 MB allocated for the coefficients in 3D spline orbital representation
+Start transforming plane waves to 3D B-Splines.
+  Time to gather the table = 0.0000021600
+  SplineSetReader initialize_spline_pio 0.3230379690 sec
+  Time to bcast the table = 0.0000001560
+Time spent in creating B-spline SPOs 0.3283662670 sec
+
+   Single Slater determinant
+   -------------------------
+
+     Determinant
+     -----------
+      Name: updet   Spin group: 0   SPO name: spo_ud
+
+      Setting delay_rank to default value 1
+      Using rank-1 Sherman-Morrison Fahy update (SM1)
+      Running on CPU.
+
+
+     Determinant
+     -----------
+      Name: downdet   Spin group: 1   SPO name: spo_ud
+
+      Setting delay_rank to default value 1
+      Using rank-1 Sherman-Morrison Fahy update (SM1)
+      Running on CPU.
+
+  Added a fermionic WaveFunctionComponent SlaterDet
+
+   Jastrow
+   -------
+    Name: J1   Type: One-Body   Function: bspline
+
+    Radial function for element: C - e
+     Number of parameters: 7
+     Cusp: 0.0000000000
+     Cutoff radius: 3.3700000000
+
+     Name                        Value Type Use Index
+     ---- ---------------------------- ---- --- -----
+     eC_0                -3.279556e-01    1  ON     0
+     eC_1                -2.678100e-01    1  ON     1
+     eC_2                -2.148819e-01    1  ON     2
+     eC_3                -1.486402e-01    1  ON     3
+     eC_4                -8.853507e-02    1  ON     4
+     eC_5                -4.047648e-02    1  ON     5
+     eC_6                -1.193666e-02    1  ON     6
+
+
+   Jastrow
+   -------
+    Name: J2   Type: Two-Body   Function: bspline
+
+    Radial function for species: u - u
+     Number of parameters: 7
+     Cusp: -0.25
+     Cutoff radius: 3.37
+
+     Name                        Value Type Use Index
+     ---- ---------------------------- ---- --- -----
+     uu_0                 3.597412e-01    1  ON     0
+     uu_1                 2.622018e-01    1  ON     1
+     uu_2                 1.851262e-01    1  ON     2
+     uu_3                 1.225346e-01    1  ON     3
+     uu_4                 7.500160e-02    1  ON     4
+     uu_5                 3.943958e-02    1  ON     5
+     uu_6                 1.793610e-02    1  ON     6
+
+    Radial function for species: u - d
+     Number of parameters: 7
+     Cusp: -0.5
+     Cutoff radius: 3.37
+
+     Name                        Value Type Use Index
+     ---- ---------------------------- ---- --- -----
+     ud_0                 5.608102e-01    1  ON     0
+     ud_1                 3.833385e-01    1  ON     1
+     ud_2                 2.521186e-01    1  ON     2
+     ud_3                 1.559819e-01    1  ON     3
+     ud_4                 9.014454e-02    1  ON     4
+     ud_5                 4.511151e-02    1  ON     5
+     ud_6                 2.021783e-02    1  ON     6
+
+  Wave function psi0 parameters:
+    Name                        Value Type Use Index
+    ---- ---------------------------- ---- --- -----
+    eC_0                -3.279556e-01    1  ON     0
+    eC_1                -2.678100e-01    1  ON     1
+    eC_2                -2.148819e-01    1  ON     2
+    eC_3                -1.486402e-01    1  ON     3
+    eC_4                -8.853507e-02    1  ON     4
+    eC_5                -4.047648e-02    1  ON     5
+    eC_6                -1.193666e-02    1  ON     6
+    uu_0                 3.597412e-01    1  ON     7
+    uu_1                 2.622018e-01    1  ON     8
+    uu_2                 1.851262e-01    1  ON     9
+    uu_3                 1.225346e-01    1  ON    10
+    uu_4                 7.500160e-02    1  ON    11
+    uu_5                 3.943958e-02    1  ON    12
+    uu_6                 1.793610e-02    1  ON    13
+    ud_0                 5.608102e-01    1  ON    14
+    ud_1                 3.833385e-01    1  ON    15
+    ud_2                 2.521186e-01    1  ON    16
+    ud_3                 1.559819e-01    1  ON    17
+    ud_4                 9.014454e-02    1  ON    18
+    ud_5                 4.511151e-02    1  ON    19
+    ud_6                 2.021783e-02    1  ON    20
+
+  Adding psi0 TrialWaveFunction to the pool
+
+ Hamiltonian and observables
+ ---------------------------
+  Name: h0
+
+  QMCHamiltonian::addOperator Kinetic to H, physical Hamiltonian 
+
+   Pseudo Potential
+   ----------------
+    Name: PseudoPot   Wavefunction : psi0
+
+
+  Adding pseudopotential for C
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+QMCPACK WARNING Nrule was not determined from qmcpack input or pseudopotential file. Setting sensible default.
+    Assuming Hartree unit
+ l-local setting found in pseudopotential file and used.
+   Number of angular momentum channels 2
+   Maximum angular momentum channel (Lmax) 1
+   Creating a Linear Grid Rmax=1.405
+  Using global grid with delta = 0.001
+   Making L=1 a local potential with a radial cutoff of 9.999
+  Quadrature Nrule: 4
+    Non-local pseudopotential parameters
+    Maximum angular momentum = 0
+    Number of non-local channels = 1
+       l(0)=0
+    Cutoff radius = 1.405
+    Number of spherical integration grid points = 12
+    Spherical grid and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 1.405
+
+  Creating CoulombHandler with the Esler Optimized Breakup. 
+  KContainer initialised with cutoff 27.94049125
+   # of K-shell  = 752
+   # of K points = 112930
+
+  NUMBER OF OPT_BREAK KVECS = 29180498243
+ finding kc:  4.446867295 , 4.446867295
+  LRBreakp parameter Kc =4.446867295
+    Continuum approximation in k = [27.94049125,1778.746918)
+
+   LR Breakup chi^2 = 4.65689e-16
+   Constant of PBCAB 15.368
+    CoulombPBCAB::initBreakup
+  Setting a linear grid=[0,3.3732) number of grid points =1001
+  Rcut                3.3732
+  Maximum K shell     20
+  Number of k vectors 460
+    CoulombPBCAB::add 
+ Setting a linear grid=[0,3.3732) number of grid =3374
+    Creating the short-range pseudopotential for species 0
+  QMCHamiltonian::addOperator LocalECP to H, physical Hamiltonian 
+
+  Using NonLocalECP potential 
+    Maximum grid on a sphere for NonLocalECPotential: 12
+    Using batched ratio computing in NonLocalECP
+  QMCHamiltonian::addOperator NonLocalECP to H, physical Hamiltonian 
+
+   Coulomb Potential
+   -----------------
+    Name: ElecElec   Type: AA   PBC: yes
+
+  Clone CoulombHandler. 
+   PBCAA self-interaction term -14.536
+   PBCAA total constant -22.22
+    CoulombPBCAA::initBreakup
+  Setting a linear grid=[0,3.3732) number of grid points =1001
+  Maximum K shell 20
+  Number of k vectors 460
+  Fixed Coulomb potential for e
+    e-e Madelung Const. =-0.21028475
+    Vtot     =0
+  QMCHamiltonian::addOperator ElecElec to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named ElecElec
+
+   Coulomb Potential
+   -----------------
+    Name: IonIon   Type: AA   PBC: yes
+
+  Clone CoulombHandler. 
+   PBCAA self-interaction term -58.143445
+   PBCAA total constant -65.827519
+    CoulombPBCAA::initBreakup
+  Setting a linear grid=[0,3.3731612) number of grid points =1001
+Checking ion-ion Ewald energy against reference...
+  Check passed.
+  Maximum K shell 20
+  Number of k vectors 460
+  Fixed Coulomb potential for ion0
+    e-e Madelung Const. =-0.21028475
+    Vtot     =-51.102678
+  QMCHamiltonian::addOperator IonIon to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named IonIon
+
+   MPC Potential
+   -------------
+    Name: MPC   Physical : no
+
+
+  === Initializing MPC interaction === 
+  Using 609 G-vectors for MPC interaction.
+   Using real-space box of size [32,32,32] for MPC spline.
+    Linear extrap    = 3.062287875839e-01
+    Quadratic extrap = 3.062287875689e-01
+    Worst MPC discrepancy:
+      Linear Extrap   : -2.48667121981254e-04
+      Quadratic Extrap: -2.48673391454602e-04
+  Constant potential = 1.808191491549e+02
+  === MPC interaction initialized === 
+
+  QMCHamiltonian::addOperator MPC to auxH 
+QMCHamiltonian::addOperatorType added type MPC named MPC
+
+  QMCHamiltonian::add2WalkerProperty added
+    6 to P::PropertyList 
+    0 to P::Collectables 
+    starting Index of the observables in P::PropertyList = 9
+ParticleSetPool::randomize 1 ParticleSet.
+<init source="ion0" target="e">
+</init>
+  Initialization Execution time = 2.3978e+00 secs
+=========================================================
+ Summary of QMC systems 
+=========================================================
+ParticleSetPool has: 
+
+  ParticleSet 'e' contains 32 particles :  u(16) d(16)
+
+    u  6.5972126023e+00  1.0367188265e+00  5.1804083048e-01
+    u  6.6889401750e+00  6.3128020087e+00  5.6627387186e+00
+    u  7.7466354622e-01  1.1335180269e+00  2.1639850788e+00
+    u  2.2697388845e+00  1.3039556889e+00  2.6240828440e+00
+    u  4.3642477208e+00  3.9898663109e+00  6.6933309542e+00
+    u  3.4179812228e+00  2.4829772145e+00  5.9907101963e+00
+    u  5.8873290501e+00  4.3128420641e+00  2.0367605891e+00
+    u  5.3972424243e+00  5.2043403682e+00  2.7958913670e+00
+    u  7.4861497605e-02  4.1451285173e+00  2.4991771289e+00
+    u  6.6974961959e+00  4.4042725927e+00  3.9207112696e+00
+    (... and 22 more particle positions ...)
+
+  Distance table for dissimilar particles (A-B):
+    source: ion0  target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use orthorhombic periodic cell in 3D.
+
+  Distance table for similar particles (A-A):
+    source/target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use orthorhombic periodic cell in 3D.
+
+
+  ParticleSet 'ion0' contains 8 particles :  C(8)
+
+    C                 0                 0                 0
+    C  1.6865805800e+00  1.6865805800e+00  1.6865805700e+00
+    C  3.3731611500e+00  3.3731611500e+00                 0
+    C  5.0597417300e+00  5.0597417300e+00  1.6865805700e+00
+    C                 0  3.3731611500e+00  3.3731611500e+00
+    C  1.6865805800e+00  5.0597417300e+00  5.0597417200e+00
+    C  3.3731611500e+00                 0  3.3731611500e+00
+    C  5.0597417300e+00  1.6865805800e+00  5.0597417200e+00
+
+  Distance table for similar particles (A-A):
+    source/target: ion0
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use orthorhombic periodic cell in 3D.
+
+
+  Hamiltonian h0
+  Kinetic         Kinetic energy
+  LocalECP        CoulombPBCAB potential source: ion0
+  NonLocalECP     NonLocalECPotential: ion0
+  ElecElec        CoulombPBCAA potential: e_e
+  IonIon          CoulombPBCAA potential: ion0_ion0
+
+
+========================================
+  Reading VMC driver XML input section
+========================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root dmc.g000.s000
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   28946 MiB
+Memory footprint by rank 0 on node 0       :     584 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 512
+             walkers_per_rank  = [512]
+             num_crowds        = 1
+  on rank 0, walkers_per_crowd = [512]
+
+                         steps = 1
+                        blocks = 200
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   28201 MiB
+Memory footprint by rank 0 on node 0       :     584 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   28230 MiB
+Memory footprint by rank 0 on node 0       :     584 MiB
+=====================================================
+VMC Warmup completed in 8.3694e+00 secs
+Completed block    1 of 200 average 1.025 secs/block after 13.22 secs
+Completed block   50 of 200 average 1.041 secs/block after 64.23 secs
+Completed block  100 of 200 average 1.039 secs/block after 116.1 secs
+Completed block  150 of 200 average 1.038 secs/block after 167.9 secs
+Completed block  200 of 200 average 1.041 secs/block after 220.3 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 0
+    time step          = 0.1
+    reference energy   = -45.025
+    reference variance = 1.42305
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   28145 MiB
+Memory footprint by rank 0 on node 0       :     584 MiB
+=============================================
+  Carry over 512 walker configurations to the next QMC driver.
+  VMCBatched Execution time = 2.1742e+02 secs
+
+========================================
+  Reading DMC driver XML input section
+========================================
+  Using Locality Approximation
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start DMCBatched
+  File Root dmc.g000.s001
+=========================================================
+==============================================================
+--- Memory usage report : DMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   28143 MiB
+Memory footprint by rank 0 on node 0       :     584 MiB
+==============================================================
+DMCBatched Driver running with
+             total_walkers     = 512
+             walkers_per_rank  = [512]
+             num_crowds        = 1
+  on rank 0, walkers_per_crowd = [512]
+
+                         steps = 1
+                        blocks = 300
+
+  Creating the branching engine and walker controler
+    Reference energy is updated using the unlimited_history scheme
+  WalkerControl parameters 
+    maxCopy = 2
+    Max Walkers per MPI rank 1025
+    Min Walkers per MPI rank 103
+    Using non-blocking send/recv
+  Fluctuating population
+  Persistent walkers are killed after 10 MC sweeps
+  BranchInterval = 1
+  Steps per block = 1
+  Number of blocks = 300
+
+  DMC Engine Initialization = 7.7051e-04 secs
+  START ALL OVER 
+  QMC counter             = -1
+  time step               = 1.0000e-02
+  effective time step     = 1.0000e-02
+  trial energy            = -4.5029e+01
+  reference energy        = -4.5029e+01
+  reference variance      = 1.4241e+00
+  Feedback                = 1.0000e+00
+  target walkers          = 512
+  branching cutoff scheme = classic
+  branch cutoff, max      = 5.0000e+01 7.5000e+01
+  QMC Status (BranchMode) = 0000001101
+===================================================================
+--- Memory usage report : DMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   28132 MiB
+Memory footprint by rank 0 on node 0       :     584 MiB
+===================================================================
+Completed block    1 of 300 average 0.7218 secs/block after 221.8 secs
+
+ Warmup is completed after 20
+
+  TauEff     = 9.9369e-03
+ TauEff/Tau = 9.9369e-01
+  Etrial     = -4.5989e+01
+ Population average of energy = -4.5113e+01
+                  Variance = 1.3037e+00
+branch cutoff = 1.3037e+01 1.9555e+01
+Completed block   75 of 300 average 0.7438 secs/block after 276.9 secs
+Completed block  150 of 300 average 0.7567 secs/block after 334.6 secs
+Completed block  225 of 300 average 0.7639 secs/block after 393 secs
+Completed block  300 of 300 average 0.7513 secs/block after 446.5 secs
+====================================================
+  End of a DMC section
+    QMC counter                   = -1
+    time step                     = 0.01
+    effective time step           = 0.00993356
+    trial energy                  = -45.2187
+    reference energy              = -45.1855
+    reference variance            = 1.30368
+    target walkers                = 512
+    branch cutoff                 = 13.0368 19.5551
+    Feedback                      = 1
+    QMC Status (BranchMode)       = 0000001111
+====================================================
+=============================================
+--- Memory usage report : DMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   28084 MiB
+Memory footprint by rank 0 on node 0       :     584 MiB
+=============================================
+  Carry over 529 walker configurations to the next QMC driver.
+  DMCBatched Execution time = 2.2610e+02 secs
+  Total Execution time = 4.4359e+02 secs
+
+=========================================================
+  A new xml input file : dmc.g000.s001.cont.xml
+
+Use --enable-timers=<value> command line option to increase or decrease level of timing information
+Stack timer profile
+Timer         Inclusive_time  Exclusive_time  Calls       Time_per_call
+Total          445.9911     0.0746              1     445.991073434
+  DMCBatched   226.0969   226.0969              1     226.096899015
+  Startup        2.3979     2.3979              1       2.397893747
+  VMCBatched   217.4216   217.4216              1     217.421640441
