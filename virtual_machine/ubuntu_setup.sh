@@ -64,6 +64,7 @@ sudo apt-get -y install python-is-python3 python3-pip
 sudo apt-get -y install python3-numpy python3-scipy python3-matplotlib python3-pydot python3-pandas python3-h5py python3-mpi4py
 sudo apt-get -y install python3-networkx python3-six python3-setuptools # For geomeTRIC optimizer
 sudo apt-get -y install python3-dill # For STALK
+sudo apt-get -y install python3-spglib # Needed by NEXUS for solid state (k-point and twist related) functionality
 # Nice to have tools
 sudo apt-get -y install vim emacs-nox gnuplot xcrysden
 # Cleanup
