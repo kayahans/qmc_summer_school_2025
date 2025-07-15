@@ -27,7 +27,8 @@ Access to the live Zoom sessions requires registration.
  * "Demystifying QMC terminology", Paul Kent. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session4_terminology/session4_qmc_terms_vfinal.pdf). [Recorded video presentation on YouTube](https://youtu.be/2e85J7Xc1oQ).
  * "Molecular Calculations driven by Nexus", Amanda Dumi. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session4_molecules/session4_molecules_slides.pdf). [Recorded video presentation on YouTube](https://youtu.be/5PLfKSJjbTo).
 ## Session 5 / Tuesday July 15 / 11 am Eastern US time : Solid-State Calculations
- * Speaker: Ray Clay
+ * Speaker: Raymond Clay
+ * "QMC for solids", Raymond Clay. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session5_solids_workflow/session5_solids.pdf). [Recorded video presentation on YouTube](https://youtu.be/BmLPliXyi5E).
 ## Session 6 / Thursday July 17 / 11 am Eastern US time : Real-World Calculations
  * Speakers: Hyeondeok Shin, Kayahan Saritas, Paul Kent 
 ## Session 7 / Tuesday July 22 / 11 am Eastern US time : Running on GPUs, Surrogate Hessian Geometry Optimization with STALK, School Wrap-Up
