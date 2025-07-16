@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<qmcsystem>
+  <wavefunction name="psi0" target="e">
+         <sposet_builder type="bspline" href="../nscf/pwscf_output/pwscf.pwscf.h5" tilematrix="1 0 0 0 1 0 0 0 1" twistnum="0" source="ion0" version="0.10" meshfactor="1.0" precision="float" truncate="no">
+            <sposet type="bspline" name="spo_u" size="20" spindataset="0"/>
+            <sposet type="bspline" name="spo_d" size="20" spindataset="1"/>
+         </sposet_builder>
+         <determinantset>
+            <slaterdeterminant>
+               <determinant id="updet" group="u" sposet="spo_u" size="20"/>
+               <determinant id="downdet" group="d" sposet="spo_d" size="20"/>
+            </slaterdeterminant>
+         </determinantset>
+         <jastrow type="One-Body" name="J1" function="bspline" source="ion0" print="yes">
+            <correlation elementType="Ge" size="8" rcut="3.609376915" cusp="0.0">
+               <coefficients id="eGe" type="Array"> -0.09490091852 -0.1160013982 -0.09037900734 -0.05682863092 -0.04503735823 -0.0322723082 -0.02189111414 -0.0175542709</coefficients>
+            </correlation>
+            <correlation elementType="Se" size="8" rcut="3.609376915" cusp="0.0">
+               <coefficients id="eSe" type="Array"> -0.3506904063 -0.4365368673 -0.3598612052 -0.2908411669 -0.2224338004 -0.15495255 -0.09383111422 -0.05216351869</coefficients>
+            </correlation>
+         </jastrow>
+         <jastrow type="Two-Body" name="J2" function="bspline" print="yes">
+            <correlation speciesA="u" speciesB="u" size="8" rcut="3.609376915">
+               <coefficients id="uu" type="Array"> 0.418550458 0.3293749258 0.251183263 0.1850256254 0.1296067408 0.08710685799 0.05008258846 0.02722099448</coefficients>
+            </correlation>
+            <correlation speciesA="u" speciesB="d" size="8" rcut="3.609376915">
+               <coefficients id="ud" type="Array"> 0.6932982871 0.5174094447 0.3762202622 0.2647557016 0.1772014086 0.112786129 0.06262943631 0.03213546115</coefficients>
+            </correlation>
+         </jastrow>
+      <override_variational_parameters href="optJ12.s007.vp.h5"/></wavefunction>
+</qmcsystem>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<qmcsystem>
+  <wavefunction name="psi0" target="e">
+         <sposet_builder type="bspline" href="../nscf/pwscf_output/pwscf.pwscf.h5" tilematrix="3 0 0 0 3 0 0 0 1" twistnum="0" source="ion0" version="0.10" meshfactor="1.0" precision="float" truncate="no">
+            <sposet type="bspline" name="spo_u" size="90" spindataset="0"/>
+            <sposet type="bspline" name="spo_d" size="90" spindataset="1"/>
+         </sposet_builder>
+         <determinantset>
+            <slaterdeterminant>
+               <determinant id="updet" group="u" sposet="spo_u" size="90"/>
+               <determinant id="downdet" group="d" sposet="spo_d" size="90"/>
+            </slaterdeterminant>
+         </determinantset>
+         <jastrow type="One-Body" name="J1" function="bspline" source="ion0" print="yes">
+            <correlation elementType="Se" size="23" rcut="11.02500084" cusp="0.0">
+               <coefficients id="eSe" type="Array"> -1.874832407 -1.908388455 -1.782401214 -1.652186715 -1.496683211 -1.331413134 -1.162473333 -0.9960098101 -0.8358588866 -0.6890231116 -0.5610330599 -0.4507770306 -0.3563215941 -0.2759165665 -0.2084012481 -0.1534878734 -0.1100912338 -0.07611848976 -0.05050848771 -0.03142851313 -0.01777246318 -0.008346112867 -0.003024700297</coefficients>
+            </correlation>
+            <correlation elementType="Ge" size="23" rcut="11.02500084" cusp="0.0">
+               <coefficients id="eGe" type="Array"> -1.442948913 -1.505878693 -1.420937924 -1.341518421 -1.251355802 -1.151371745 -1.042149492 -0.9227749649 -0.7987390377 -0.6778732133 -0.5659555056 -0.464907371 -0.3743281124 -0.2942015694 -0.2249788755 -0.1679335433 -0.1218609402 -0.08555556556 -0.05693814901 -0.03490599515 -0.01912165991 -0.008683999178 -0.00293979149</coefficients>
+            </correlation>
+         </jastrow>
+         <jastrow type="Two-Body" name="J2" function="bspline" print="yes">
+            <correlation speciesA="u" speciesB="u" size="23" rcut="11.02500084">
+               <coefficients id="uu" type="Array"> 0.6687014501 0.5618762424 0.4716208071 0.3961825516 0.3323024208 0.2785527215 0.2325161757 0.1933541062 0.160437095 0.1332919372 0.1106829747 0.09169907304 0.07557436607 0.06190532549 0.04999809947 0.03980051851 0.0310671255 0.02360257148 0.01731906231 0.01209639895 0.007941894051 0.004512473671 0.002274175484</coefficients>
+            </correlation>
+            <correlation speciesA="u" speciesB="d" size="23" rcut="11.02500084">
+               <coefficients id="ud" type="Array"> 0.9602980696 0.7606489807 0.6034134324 0.4801752036 0.3849015549 0.3114520599 0.2540440407 0.2083108688 0.1716832828 0.1419859082 0.1173859427 0.09683492942 0.07958583958 0.06505533849 0.05270694981 0.04209650531 0.032987687 0.02525656891 0.01870324718 0.01318879711 0.008679049014 0.004915665343 0.002478821431</coefficients>
+            </correlation>
+         </jastrow>
+      <override_variational_parameters href="optJ12.s007.vp.h5"/></wavefunction>
+</qmcsystem>

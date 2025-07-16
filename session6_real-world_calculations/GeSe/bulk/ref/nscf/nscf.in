@@ -1,0 +1,50 @@
+&CONTROL
+   calculation     = 'nscf'
+   outdir          = 'pwscf_output'
+   prefix          = 'pwscf'
+   pseudo_dir      = './'
+/
+
+&SYSTEM
+   degauss         = 0.001
+   ecutwfc         = 350
+   ibrav           = 0
+   input_dft       = 'pbe'
+   nat             = 8
+   nosym           = .true.
+   nspin           = 2
+   ntyp            = 2
+   occupations     = 'smearing'
+   smearing        = 'fermi-dirac'
+   starting_magnetization(1) = 0.2
+   tot_charge      = 0
+/
+
+&ELECTRONS
+   mixing_beta     = 0.5
+/
+
+
+ATOMIC_SPECIES 
+   Ge 72.61 Ge.ccECP.upf
+   Se 78.96 Se.ccECP.upf
+
+ATOMIC_POSITIONS bohr
+   Ge       0.87736205       1.80468846      17.92293743 
+   Ge       3.26113818       1.80468846       7.72786494 
+   Ge       7.39963841       5.41406537       2.46720754 
+   Ge       5.01586228       5.41406537      12.66228003 
+   Se       4.16333123       1.80468846       3.01774146 
+   Se       8.25216946       1.80468846      13.21281394 
+   Se       4.11366923       5.41406537      17.37240351 
+   Se       0.02483100       5.41406537       7.17733103 
+
+K_POINTS automatic
+   1 1 1  0 0 0 
+
+CELL_PARAMETERS bohr
+         8.27700046       0.00000000       0.00000000 
+         0.00000000       7.21875383       0.00000000 
+         0.00000000       0.00000000      20.39014497 
+
+

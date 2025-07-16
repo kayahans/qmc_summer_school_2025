@@ -1,0 +1,2093 @@
+  Input file(s): optJ12.in.xml 
+================================================================
+                        QMCPACK 4.1.0
+
+          (c) Copyright 2003-2025 QMCPACK developers
+
+                         Please cite:
+      J. Kim et al. J. Phys. Cond. Mat. 30 195901 (2018)
+           https://doi.org/10.1088/1361-648X/aab9c3
+                             and
+       P. Kent et al. J. Chem. Phys. 152 174105 (2020)
+              https://doi.org/10.1063/5.0004860
+
+  Git branch: HEAD
+  Last git commit: c32123a5233186b177d75b800b86f1ad3b1a1413
+  Last git commit date: Wed Apr 30 13:56:36 2025 -0400
+  Last git commit subject: Merge pull request #5482 from QMCPACK/rc_410
+================================================================
+  Global options 
+
+  Total number of MPI ranks = 64
+  Number of MPI groups      = 1
+  MPI group ID              = 0
+  Number of ranks in group  = 64
+  MPI ranks per node        = 2
+  OMP 1st level threads     = 51
+  OMP nested threading disabled or only 1 thread on the 2nd level
+
+  Precision used in this calculation, see definitions in the manual:
+  Base precision      = double
+  Full precision      = double
+
+  CPU only build
+  Real build. QMC_COMPLEX=OFF
+  Timer build option is enabled. Current timer level is coarse
+
+=================================================
+--- Memory usage report : when QMCPACK starts ---
+=================================================
+Available memory on node 0, free + buffers : 1076236 MiB
+Memory footprint by rank 0 on node 0       :     177 MiB
+=================================================
+
+  Input XML = optJ12.in.xml
+
+  Project = optJ12
+  date    = 2025-07-15 18:25:27 UTC
+  host    = x4213c5s1b0n0
+
+
+ Random Number
+ -------------
+  Offset for the random number seeds based on time: 279
+
+  Range of prime numbers to use as seeds over processors and threads = 1823-33071
+
+
+ Lattice
+ -------
+  Simulation cell radius   = 3.609377 bohr
+  Wigner-Seitz cell radius = 3.609377 bohr
+
+  Overwriting global supercell 
+  Long-range breakup parameters:
+    rc*kc = 15.000000; rc = 3.609377; kc = 4.155842; tol = 0.000300
+  Long-range breakup parameters:
+    rc*kc = 15.000000; rc = 3.609377; kc = 4.155842; tol = 0.000300
+  KContainer initialised with cutoff 4.155842
+   # of K-shell  = 254
+   # of K points = 1464
+
+  Lattice (bohr):      8.2770004600                 0                 0
+                                  0      7.2187538300                 0
+                                  0                 0     20.3901449700
+
+  Boundary Conditions:  p  p  p 
+
+  Volume (bohr^3) = 1218.3035925553
+
+  Reciprocal vectors without 2*pi.
+    g_1 =       0.1208167143                 0                 0
+    g_2 =                  0      0.1385280650                 0
+    g_3 =                  0                 0      0.0490433002
+
+  Metric tensor in real-space.
+    h_1 = 68.5087366148 0.0000000000 0.0000000000 
+    h_2 = 0.0000000000 52.1104068581 0.0000000000 
+    h_3 = 0.0000000000 0.0000000000 415.7580118976 
+
+  Metric tensor in g-space.
+    h_1 = 0.5762537678 0.0000000000 0.0000000000 
+    h_2 = 0.0000000000 0.7575918129 0.0000000000 
+    h_3 = 0.0000000000 0.0000000000 0.0949552780 
+
+ Particle Set
+ ------------
+  Name: e   Offload : no
+
+  All the species have the same mass 1.0000000000
+
+  Creating Structure Factor for periodic systems 4.1558419509
+  Particle set size: 40   Groups : 2
+
+
+ Particle Set
+ ------------
+  Name: ion0   Offload : no
+
+  Distinctive masses for each species 
+
+  Creating Structure Factor for periodic systems 4.1558419509
+  Particle set size: 8   Groups : 2
+
+
+ Many-body wavefunction
+ -------------------
+  Name: psi0   Tasking: no
+
+
+   Single particle orbitals (SPO) collection
+   -----------------------------------------
+    Name: bspline   Type input: bspline
+
+  Created SPOSet builder named 'bspline' of type bspline
+
+     Single particle orbitals (SPO)
+     ------------------------------
+      Name: spo_u   Type: spline   Builder class name: EinsplineSetBuilder
+
+  TileMatrix = 
+ [  1  0  0
+    0  1  0
+    0  0  1 ]
+  Reading 20 orbitals from HDF5 file.
+  HDF5 orbital file version 2.1.0
+  Reading orbital file in ESHDF format.
+  ESHDF orbital file version 2.1.0
+  Lattice = 
+    [  8.277000  0.000000  0.000000
+       0.000000  7.218754  0.000000
+       0.000000  0.000000 20.390145 ]
+  SuperLattice = 
+    [  8.277000  0.000000  0.000000
+       0.000000  7.218754  0.000000
+       0.000000  0.000000 20.390145 ]
+
+bands=24, elecs=40, spins=2, twists=1
+Atom type(0) = 32
+Atom type(1) = 32
+Atom type(2) = 32
+Atom type(3) = 32
+Atom type(4) = 34
+Atom type(5) = 34
+Atom type(6) = 34
+Atom type(7) = 34
+   Skip initialization of the density
+TIMER  EinsplineSetBuilder::ReadOrbitalInfo 0.1598537640
+TIMER  EinsplineSetBuilder::BroadcastOrbitalInfo 0.0007479410
+Found 1 distinct supercell twist based on 1 primitive cell k-point
+Super twist #0:  [   0.00000   0.00000   0.00000 ]
+QMCPACK WARNING twist attribute does't exist but twistnum attribute was found. This is potentially ambiguous. Specifying twist attribute is preferred.
+  Using supercell twist 0:  [   0.00000   0.00000   0.00000]
+Using 1 copies of twist angle [ 0.000,  0.000,  0.000]
+Using real splines.
+24 complex-valued orbitals supplied by h5 can be expanded up to 24 SPOs.
+Sorting the bands now:
+We will read 20 distinct complex-valued orbitals from h5.
+    Using real valued spline SPOs with real single precision storage (R2R).
+    Running on CPU.
+BandInfoGroup::selectBands bigspace has 24 distinct orbitals 
+BandInfoGroup::selectBands using distinct orbitals [0,20)
+  Number of distinct bands 20
+  First Band index 0
+  First SPO index 0
+  Size of SPOs 20
+  ClassName = SplineR2R
+  Using real einspline table
+NumDistinctOrbitals 20 numOrbs = 20
+  TwistIndex = 0 TwistAngle                  0                 0                 0
+   HalfG = 000
+B-spline mesh factor is 1.0000000000
+B-spline mesh size is (96, 84, 240)
+Maxmimum number of Gvecs 134739
+MEMORY 255 MB allocated for the coefficients in 3D spline orbital representation
+Start transforming plane waves to 3D B-Splines.
+  Time to gather the table = 0.4804475260
+  SplineSetReader initialize_spline_pio 1.6338570310 sec
+  Time to bcast the table = 0.0909902920
+Time spent in creating B-spline SPOs 2.0893905280 sec
+
+     Single particle orbitals (SPO)
+     ------------------------------
+      Name: spo_d   Type: spline   Builder class name: EinsplineSetBuilder
+
+24 complex-valued orbitals supplied by h5 can be expanded up to 24 SPOs.
+Sorting the bands now:
+We will read 20 distinct complex-valued orbitals from h5.
+    Running on CPU.
+BandInfoGroup::selectBands bigspace has 24 distinct orbitals 
+BandInfoGroup::selectBands using distinct orbitals [0,20)
+  Number of distinct bands 20
+  First Band index 0
+  First SPO index 0
+  Size of SPOs 20
+  ClassName = SplineR2R
+  Using real einspline table
+NumDistinctOrbitals 20 numOrbs = 20
+  TwistIndex = 0 TwistAngle                  0                 0                 0
+   HalfG = 000
+B-spline mesh factor is 1.0000000000
+B-spline mesh size is (96, 84, 240)
+Maxmimum number of Gvecs 134739
+MEMORY 255 MB allocated for the coefficients in 3D spline orbital representation
+Start transforming plane waves to 3D B-Splines.
+  Time to gather the table = 0.4540807180
+  SplineSetReader initialize_spline_pio 0.8262348470 sec
+  Time to bcast the table = 0.0865038830
+Time spent in creating B-spline SPOs 0.9854961470 sec
+
+   Single Slater determinant
+   -------------------------
+
+     Determinant
+     -----------
+      Name: updet   Spin group: 0   SPO name: spo_u
+
+      Setting delay_rank to default value 1
+      Using rank-1 Sherman-Morrison Fahy update (SM1)
+      Running on CPU.
+
+
+     Determinant
+     -----------
+      Name: downdet   Spin group: 1   SPO name: spo_d
+
+      Setting delay_rank to default value 1
+      Using rank-1 Sherman-Morrison Fahy update (SM1)
+      Running on CPU.
+
+  Added a fermionic WaveFunctionComponent SlaterDet
+
+   Jastrow
+   -------
+    Name: J1   Type: One-Body   Function: bspline
+
+    Radial function for element: Ge - e
+  The Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.6093769150.
+     Number of parameters: 8
+     Cusp: 0.0000000000
+     Cutoff radius: 3.6093769150
+
+      Name                        Value Type Use Index
+     ----- ---------------------------- ---- --- -----
+     eGe_0                 0.000000e+00    1  ON     0
+     eGe_1                 0.000000e+00    1  ON     1
+     eGe_2                 0.000000e+00    1  ON     2
+     eGe_3                 0.000000e+00    1  ON     3
+     eGe_4                 0.000000e+00    1  ON     4
+     eGe_5                 0.000000e+00    1  ON     5
+     eGe_6                 0.000000e+00    1  ON     6
+     eGe_7                 0.000000e+00    1  ON     7
+
+    Radial function for element: Se - e
+  The Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+     Number of parameters: 8
+     Cusp: 0
+     Cutoff radius: 3.60938
+
+      Name                        Value Type Use Index
+     ----- ---------------------------- ---- --- -----
+     eSe_0                 0.000000e+00    1  ON     0
+     eSe_1                 0.000000e+00    1  ON     1
+     eSe_2                 0.000000e+00    1  ON     2
+     eSe_3                 0.000000e+00    1  ON     3
+     eSe_4                 0.000000e+00    1  ON     4
+     eSe_5                 0.000000e+00    1  ON     5
+     eSe_6                 0.000000e+00    1  ON     6
+     eSe_7                 0.000000e+00    1  ON     7
+
+
+   Jastrow
+   -------
+    Name: J2   Type: Two-Body   Function: bspline
+
+    Radial function for species: u - u
+  The Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+     Number of parameters: 8
+     Cusp: -0.25
+     Cutoff radius: 3.60938
+
+     Name                        Value Type Use Index
+     ---- ---------------------------- ---- --- -----
+     uu_0                 0.000000e+00    1  ON     0
+     uu_1                 0.000000e+00    1  ON     1
+     uu_2                 0.000000e+00    1  ON     2
+     uu_3                 0.000000e+00    1  ON     3
+     uu_4                 0.000000e+00    1  ON     4
+     uu_5                 0.000000e+00    1  ON     5
+     uu_6                 0.000000e+00    1  ON     6
+     uu_7                 0.000000e+00    1  ON     7
+
+    Radial function for species: u - d
+  The Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+     Number of parameters: 8
+     Cusp: -0.5
+     Cutoff radius: 3.60938
+
+     Name                        Value Type Use Index
+     ---- ---------------------------- ---- --- -----
+     ud_0                 0.000000e+00    1  ON     0
+     ud_1                 0.000000e+00    1  ON     1
+     ud_2                 0.000000e+00    1  ON     2
+     ud_3                 0.000000e+00    1  ON     3
+     ud_4                 0.000000e+00    1  ON     4
+     ud_5                 0.000000e+00    1  ON     5
+     ud_6                 0.000000e+00    1  ON     6
+     ud_7                 0.000000e+00    1  ON     7
+
+  Wave function psi0 parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                 0.000000e+00    1  ON     0
+    eGe_1                 0.000000e+00    1  ON     1
+    eGe_2                 0.000000e+00    1  ON     2
+    eGe_3                 0.000000e+00    1  ON     3
+    eGe_4                 0.000000e+00    1  ON     4
+    eGe_5                 0.000000e+00    1  ON     5
+    eGe_6                 0.000000e+00    1  ON     6
+    eGe_7                 0.000000e+00    1  ON     7
+    eSe_0                 0.000000e+00    1  ON     8
+    eSe_1                 0.000000e+00    1  ON     9
+    eSe_2                 0.000000e+00    1  ON    10
+    eSe_3                 0.000000e+00    1  ON    11
+    eSe_4                 0.000000e+00    1  ON    12
+    eSe_5                 0.000000e+00    1  ON    13
+    eSe_6                 0.000000e+00    1  ON    14
+    eSe_7                 0.000000e+00    1  ON    15
+     uu_0                 0.000000e+00    1  ON    16
+     uu_1                 0.000000e+00    1  ON    17
+     uu_2                 0.000000e+00    1  ON    18
+     uu_3                 0.000000e+00    1  ON    19
+     uu_4                 0.000000e+00    1  ON    20
+     uu_5                 0.000000e+00    1  ON    21
+     uu_6                 0.000000e+00    1  ON    22
+     uu_7                 0.000000e+00    1  ON    23
+     ud_0                 0.000000e+00    1  ON    24
+     ud_1                 0.000000e+00    1  ON    25
+     ud_2                 0.000000e+00    1  ON    26
+     ud_3                 0.000000e+00    1  ON    27
+     ud_4                 0.000000e+00    1  ON    28
+     ud_5                 0.000000e+00    1  ON    29
+     ud_6                 0.000000e+00    1  ON    30
+     ud_7                 0.000000e+00    1  ON    31
+
+  Adding psi0 TrialWaveFunction to the pool
+
+ Hamiltonian and observables
+ ---------------------------
+  Name: h0
+
+  QMCHamiltonian::addOperator Kinetic to H, physical Hamiltonian 
+
+   Pseudo Potential
+   ----------------
+    Name: PseudoPot   Wavefunction : psi0
+
+
+  Adding pseudopotential for Ge
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+QMCPACK WARNING Nrule was not determined from qmcpack input or pseudopotential file. Setting sensible default.
+    Assuming Hartree unit
+ l-local setting found in pseudopotential file and used.
+   Number of angular momentum channels 4
+   Maximum angular momentum channel (Lmax) 3
+   Creating a Linear Grid Rmax=4.425
+  Using global grid with delta = 0.001
+   Making L=3 a local potential with a radial cutoff of 9.999
+  Quadrature Nrule: 4
+    Non-local pseudopotential parameters
+    Maximum angular momentum = 2
+    Number of non-local channels = 3
+       l(0)=0
+       l(1)=1
+       l(2)=2
+    Cutoff radius = 4.425
+    Number of spherical integration grid points = 12
+    Spherical grid and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 4.425
+
+  Adding pseudopotential for Se
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+QMCPACK WARNING Nrule was not determined from qmcpack input or pseudopotential file. Setting sensible default.
+    Assuming Hartree unit
+ l-local setting found in pseudopotential file and used.
+   Number of angular momentum channels 4
+   Maximum angular momentum channel (Lmax) 3
+   Creating a Linear Grid Rmax=3.085
+  Using global grid with delta = 0.001
+   Making L=3 a local potential with a radial cutoff of 9.999
+  Quadrature Nrule: 4
+    Non-local pseudopotential parameters
+    Maximum angular momentum = 2
+    Number of non-local channels = 3
+       l(0)=0
+       l(1)=1
+       l(2)=2
+    Cutoff radius = 3.085
+    Number of spherical integration grid points = 12
+    Spherical grid and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 3.085
+
+  Creating CoulombHandler with the Esler Optimized Breakup. 
+  KContainer initialised with cutoff 17.64883115
+   # of K-shell  = 15328
+   # of K points = 113088
+
+  NUMBER OF OPT_BREAK KVECS = 94506472937
+ finding kc:  4.155841951 , 4.155841951
+  LRBreakp parameter Kc =4.155841951
+    Continuum approximation in k = [17.64883115,1662.33678)
+
+   LR Breakup chi^2 = 2.32162e-16
+   Constant of PBCAB 7.0533
+    CoulombPBCAB::initBreakup
+  Setting a linear grid=[0,3.6094) number of grid points =1001
+  Rcut                3.6094
+  Maximum K shell     253
+  Number of k vectors 1464
+    CoulombPBCAB::add 
+ Setting a linear grid=[0,3.6094) number of grid =3610
+    Creating the short-range pseudopotential for species 0
+    CoulombPBCAB::add 
+ Setting a linear grid=[0,3.6094) number of grid =3610
+    Creating the short-range pseudopotential for species 1
+  QMCHamiltonian::addOperator LocalECP to H, physical Hamiltonian 
+
+  Using NonLocalECP potential 
+    Maximum grid on a sphere for NonLocalECPotential: 12
+    Using batched ratio computing in NonLocalECP
+  QMCHamiltonian::addOperator NonLocalECP to H, physical Hamiltonian 
+
+   Coulomb Potential
+   -----------------
+    Name: ElecElec   Type: AA   PBC: yes
+
+  Clone CoulombHandler. 
+   PBCAA self-interaction term -16.822
+   PBCAA total constant -20.349
+    CoulombPBCAA::initBreakup
+  Setting a linear grid=[0,3.6094) number of grid points =1001
+  Maximum K shell 253
+  Number of k vectors 1464
+  Fixed Coulomb potential for e
+    e-e Madelung Const. =-0.072834012
+    Vtot     =0
+  QMCHamiltonian::addOperator ElecElec to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named ElecElec
+
+   Coulomb Potential
+   -----------------
+    Name: IonIon   Type: AA   PBC: yes
+
+  Clone CoulombHandler. 
+   PBCAA self-interaction term -87.474138
+   PBCAA total constant -91.000786
+    CoulombPBCAA::initBreakup
+  Setting a linear grid=[0,3.6093769) number of grid points =1001
+Checking ion-ion Ewald energy against reference...
+  Check passed.
+  Maximum K shell 253
+  Number of k vectors 1464
+  Fixed Coulomb potential for ion0
+    e-e Madelung Const. =-0.072834012
+    Vtot     =-53.673864
+  QMCHamiltonian::addOperator IonIon to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named IonIon
+
+  QMCHamiltonian::add2WalkerProperty added
+    5 to P::PropertyList 
+    0 to P::Collectables 
+    starting Index of the observables in P::PropertyList = 9
+ParticleSetPool::randomize 1 ParticleSet.
+<init source="ion0" target="e">
+</init>
+  Initialization Execution time = 3.71 secs
+=========================================================
+ Summary of QMC systems 
+=========================================================
+ParticleSetPool has: 
+
+  ParticleSet 'e' contains 40 particles :  u(20) d(20)
+
+    u  1.6001448926e+00  4.0583712426e-01  1.7638684193e+01
+    u  7.8174830405e+00  1.6176735638e+00  1.7063996971e+01
+    u  2.1423623705e+00  1.6463031849e+00  8.8606733054e+00
+    u  4.0992329216e+00  7.1455447528e-01  6.9098153697e+00
+    u  7.0190557185e-01  5.3838438975e+00  2.7221593809e+00
+    u  5.4289617627e-01  5.7447165972e+00  1.8087727774e+00
+    u  5.4881437662e+00  5.5319326188e+00  1.1138122063e+01
+    u  4.0054691327e+00  6.5542366228e+00  1.2173285958e+01
+    u  4.3037253033e+00  2.3692885507e+00  1.5272662868e+00
+    u  3.1406814272e+00  1.9896173711e+00  4.2342893130e+00
+    (... and 30 more particle positions ...)
+
+  Distance table for dissimilar particles (A-B):
+    source: ion0  target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use orthorhombic periodic cell in 3D.
+
+  Distance table for similar particles (A-A):
+    source/target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use orthorhombic periodic cell in 3D.
+
+
+  ParticleSet 'ion0' contains 8 particles :  Ge(4) Se(4)
+
+    Ge  8.7736205000e-01  1.8046884600e+00  1.7922937430e+01
+    Ge  3.2611381800e+00  1.8046884600e+00  7.7278649400e+00
+    Ge  7.3996384100e+00  5.4140653700e+00  2.4672075400e+00
+    Ge  5.0158622800e+00  5.4140653700e+00  1.2662280030e+01
+    Se  4.1633312300e+00  1.8046884600e+00  3.0177414600e+00
+    Se  8.2521694600e+00  1.8046884600e+00  1.3212813940e+01
+    Se  4.1136692300e+00  5.4140653700e+00  1.7372403510e+01
+    Se  2.4831000000e-02  5.4140653700e+00  7.1773310300e+00
+
+  Distance table for similar particles (A-A):
+    source/target: ion0
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use orthorhombic periodic cell in 3D.
+
+
+  Hamiltonian h0
+  Kinetic         Kinetic energy
+  LocalECP        CoulombPBCAB potential source: ion0
+  NonLocalECP     NonLocalECPotential: ion0
+  ElecElec        CoulombPBCAA potential: e_e
+  IonIon          CoulombPBCAA potential: ion0_ion0
+
+Loop execution max-interations = 5
+
+========================================
+  Reading WFOpt driver XML input section
+========================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s000
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s000
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074635 MiB
+Memory footprint by rank 0 on node 0       :     921 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074567 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074564 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+=====================================================
+VMC Warmup completed in 1.6872e-01 secs
+Completed block    1 of 10 average 0.13 secs/block after 7.345 secs
+Completed block    2 of 10 average 0.1274 secs/block after 7.471 secs
+Completed block    5 of 10 average 0.1261 secs/block after 7.849 secs
+Completed block    7 of 10 average 0.1257 secs/block after 8.1 secs
+Completed block   10 of 10 average 0.1252 secs/block after 8.483 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 0
+    time step          = 0.3
+    reference energy   = -51.619
+    reference variance = 4.63918
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074689 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.5322e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.1619e+01
+  VMC Evar = 4.6391e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.5934e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 3.6062e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 3.9201e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 4.3840e-01 at parameter 24
+Effective weight of all the samples measured by correlated sampling is 6.4487e-01
+
+******************************************************************************
+Init Cost =  -4.5993e+01    New Cost =  -4.7091e+01  Delta Cost =  -1.0980e+00
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   2.5000e-01
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -1.740702e-02    1  ON     0
+    eGe_1                -7.592634e-02    1  ON     1
+    eGe_2                -6.205046e-02    1  ON     2
+    eGe_3                -3.651410e-02    1  ON     3
+    eGe_4                -3.173596e-02    1  ON     4
+    eGe_5                -2.397117e-02    1  ON     5
+    eGe_6                -1.643212e-02    1  ON     6
+    eGe_7                -1.477756e-02    1  ON     7
+    eSe_0                -7.363103e-02    1  ON     8
+    eSe_1                -2.682873e-01    1  ON     9
+    eSe_2                -2.167110e-01    1  ON    10
+    eSe_3                -1.764945e-01    1  ON    11
+    eSe_4                -1.377739e-01    1  ON    12
+    eSe_5                -9.937454e-02    1  ON    13
+    eSe_6                -6.226548e-02    1  ON    14
+    eSe_7                -3.833845e-02    1  ON    15
+     uu_0                 1.699618e-01    1  ON    16
+     uu_1                 2.044609e-01    1  ON    17
+     uu_2                 1.449633e-01    1  ON    18
+     uu_3                 1.057191e-01    1  ON    19
+     uu_4                 7.229822e-02    1  ON    20
+     uu_5                 4.832775e-02    1  ON    21
+     uu_6                 2.816314e-02    1  ON    22
+     uu_7                 1.638438e-02    1  ON    23
+     ud_0                 4.383979e-01    1  ON    24
+     ud_1                 3.173034e-01    1  ON    25
+     ud_2                 2.180153e-01    1  ON    26
+     ud_3                 1.449372e-01    1  ON    27
+     ud_4                 9.170934e-02    1  ON    28
+     ud_5                 5.650628e-02    1  ON    29
+     ud_6                 3.090953e-02    1  ON    30
+     ud_7                 1.676560e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s000.vp.h5
+  Updated wavefunction xml file optJ12.s000.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.278 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s001
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s001
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074639 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074639 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074639 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+=====================================================
+VMC Warmup completed in 1.5948e-01 secs
+Completed block    1 of 10 average 0.1388 secs/block after 9.304 secs
+Completed block    2 of 10 average 0.1543 secs/block after 9.475 secs
+Completed block    5 of 10 average 0.1517 secs/block after 9.928 secs
+Completed block    7 of 10 average 0.1546 secs/block after 10.26 secs
+Completed block   10 of 10 average 0.1543 secs/block after 10.72 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 1
+    time step          = 0.3
+    reference energy   = -52.4719
+    reference variance = 1.304
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074637 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7450e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2472e+01
+  VMC Evar = 1.3043e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.4983e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 4.7505e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 3.1382e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 2.1009e-01 at parameter 24
+Effective weight of all the samples measured by correlated sampling is 8.5422e-01
+
+******************************************************************************
+Init Cost =  -4.7094e+01    New Cost =  -4.7225e+01  Delta Cost =  -1.3026e-01
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   6.2500e-02
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -3.700977e-02    1  ON     0
+    eGe_1                -1.136061e-01    1  ON     1
+    eGe_2                -8.817054e-02    1  ON     2
+    eGe_3                -5.730355e-02    1  ON     3
+    eGe_4                -4.661157e-02    1  ON     4
+    eGe_5                -3.420137e-02    1  ON     5
+    eGe_6                -2.291371e-02    1  ON     6
+    eGe_7                -1.861209e-02    1  ON     7
+    eSe_0                -1.650103e-01    1  ON     8
+    eSe_1                -4.199877e-01    1  ON     9
+    eSe_2                -3.421701e-01    1  ON    10
+    eSe_3                -2.784939e-01    1  ON    11
+    eSe_4                -2.136824e-01    1  ON    12
+    eSe_5                -1.504842e-01    1  ON    13
+    eSe_6                -9.207063e-02    1  ON    14
+    eSe_7                -5.142380e-02    1  ON    15
+     uu_0                 2.902270e-01    1  ON    16
+     uu_1                 3.128814e-01    1  ON    17
+     uu_2                 2.313992e-01    1  ON    18
+     uu_3                 1.724462e-01    1  ON    19
+     uu_4                 1.203648e-01    1  ON    20
+     uu_5                 8.126821e-02    1  ON    21
+     uu_6                 4.715326e-02    1  ON    22
+     uu_7                 2.596818e-02    1  ON    23
+     ud_0                 6.484899e-01    1  ON    24
+     ud_1                 4.847067e-01    1  ON    25
+     ud_2                 3.488884e-01    1  ON    26
+     ud_3                 2.437583e-01    1  ON    27
+     ud_4                 1.616277e-01    1  ON    28
+     ud_5                 1.024488e-01    1  ON    29
+     ud_6                 5.678810e-02    1  ON    30
+     ud_7                 2.954764e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s001.vp.h5
+  Updated wavefunction xml file optJ12.s001.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.268 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s002
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s002
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074634 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074634 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074636 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+=====================================================
+VMC Warmup completed in 1.5901e-01 secs
+Completed block    1 of 10 average 0.1591 secs/block after 11.6 secs
+Completed block    2 of 10 average 0.1572 secs/block after 11.76 secs
+Completed block    5 of 10 average 0.1534 secs/block after 12.21 secs
+Completed block    7 of 10 average 0.1518 secs/block after 12.51 secs
+Completed block   10 of 10 average 0.151 secs/block after 13.03 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 2
+    time step          = 0.3
+    reference energy   = -52.623
+    reference variance = 1.32277
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074637 MiB
+Memory footprint by rank 0 on node 0       :     969 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7877e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2623e+01
+  VMC Evar = 1.3226e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.5806e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 4.9277e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 3.1179e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 6.8246e-02 at parameter 8
+Effective weight of all the samples measured by correlated sampling is 9.9328e-01
+
+******************************************************************************
+Init Cost =  -4.7228e+01    New Cost =  -4.7226e+01  Delta Cost =   2.1162e-03
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   1.5625e-02
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -5.652749e-02    1  ON     0
+    eGe_1                -1.228339e-01    1  ON     1
+    eGe_2                -9.418402e-02    1  ON     2
+    eGe_3                -6.172549e-02    1  ON     3
+    eGe_4                -4.987805e-02    1  ON     4
+    eGe_5                -3.659791e-02    1  ON     5
+    eGe_6                -2.459509e-02    1  ON     6
+    eGe_7                -1.949234e-02    1  ON     7
+    eSe_0                -2.332559e-01    1  ON     8
+    eSe_1                -4.404443e-01    1  ON     9
+    eSe_2                -3.582965e-01    1  ON    10
+    eSe_3                -2.912268e-01    1  ON    11
+    eSe_4                -2.218529e-01    1  ON    12
+    eSe_5                -1.547251e-01    1  ON    13
+    eSe_6                -9.348167e-02    1  ON    14
+    eSe_7                -5.175112e-02    1  ON    15
+     uu_0                 3.547452e-01    1  ON    16
+     uu_1                 3.320947e-01    1  ON    17
+     uu_2                 2.474158e-01    1  ON    18
+     uu_3                 1.835118e-01    1  ON    19
+     uu_4                 1.284904e-01    1  ON    20
+     uu_5                 8.637500e-02    1  ON    21
+     uu_6                 4.979693e-02    1  ON    22
+     uu_7                 2.722175e-02    1  ON    23
+     ud_0                 6.908996e-01    1  ON    24
+     ud_1                 5.164692e-01    1  ON    25
+     ud_2                 3.747828e-01    1  ON    26
+     ud_3                 2.631233e-01    1  ON    27
+     ud_4                 1.756041e-01    1  ON    28
+     ud_5                 1.114102e-01    1  ON    29
+     ud_6                 6.171566e-02    1  ON    30
+     ud_7                 3.179870e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s002.vp.h5
+  Updated wavefunction xml file optJ12.s002.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.316 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s003
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s003
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074632 MiB
+Memory footprint by rank 0 on node 0       :     973 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074633 MiB
+Memory footprint by rank 0 on node 0       :     975 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074633 MiB
+Memory footprint by rank 0 on node 0       :     975 MiB
+=====================================================
+VMC Warmup completed in 1.6102e-01 secs
+Completed block    1 of 10 average 0.1404 secs/block after 13.9 secs
+Completed block    2 of 10 average 0.1473 secs/block after 14.06 secs
+Completed block    5 of 10 average 0.1517 secs/block after 14.52 secs
+Completed block    7 of 10 average 0.1523 secs/block after 14.83 secs
+Completed block   10 of 10 average 0.1537 secs/block after 15.31 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 3
+    time step          = 0.3
+    reference energy   = -52.6205
+    reference variance = 1.37645
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074634 MiB
+Memory footprint by rank 0 on node 0       :     975 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7466e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2620e+01
+  VMC Evar = 1.3770e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.5528e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 4.1428e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 3.0960e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 3.4914e-02 at parameter 8
+Effective weight of all the samples measured by correlated sampling is 9.9984e-01
+
+******************************************************************************
+Init Cost =  -4.7221e+01    New Cost =  -4.7221e+01  Delta Cost =  -6.1138e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -6.759251e-02    1  ON     0
+    eGe_1                -1.236142e-01    1  ON     1
+    eGe_2                -9.201403e-02    1  ON     2
+    eGe_3                -5.990474e-02    1  ON     3
+    eGe_4                -4.792982e-02    1  ON     4
+    eGe_5                -3.528342e-02    1  ON     5
+    eGe_6                -2.418759e-02    1  ON     6
+    eGe_7                -1.914010e-02    1  ON     7
+    eSe_0                -2.681701e-01    1  ON     8
+    eSe_1                -4.414982e-01    1  ON     9
+    eSe_2                -3.605098e-01    1  ON    10
+    eSe_3                -2.925081e-01    1  ON    11
+    eSe_4                -2.236960e-01    1  ON    12
+    eSe_5                -1.559997e-01    1  ON    13
+    eSe_6                -9.412451e-02    1  ON    14
+    eSe_7                -5.214456e-02    1  ON    15
+     uu_0                 3.847778e-01    1  ON    16
+     uu_1                 3.316857e-01    1  ON    17
+     uu_2                 2.481741e-01    1  ON    18
+     uu_3                 1.832543e-01    1  ON    19
+     uu_4                 1.278685e-01    1  ON    20
+     uu_5                 8.607480e-02    1  ON    21
+     uu_6                 4.936020e-02    1  ON    22
+     uu_7                 2.682550e-02    1  ON    23
+     ud_0                 6.955496e-01    1  ON    24
+     ud_1                 5.195875e-01    1  ON    25
+     ud_2                 3.777878e-01    1  ON    26
+     ud_3                 2.656875e-01    1  ON    27
+     ud_4                 1.775335e-01    1  ON    28
+     ud_5                 1.129493e-01    1  ON    29
+     ud_6                 6.268208e-02    1  ON    30
+     ud_7                 3.208505e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s003.vp.h5
+  Updated wavefunction xml file optJ12.s003.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.258 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s004
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s004
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074629 MiB
+Memory footprint by rank 0 on node 0       :     980 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074629 MiB
+Memory footprint by rank 0 on node 0       :     980 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074629 MiB
+Memory footprint by rank 0 on node 0       :     980 MiB
+=====================================================
+VMC Warmup completed in 1.5974e-01 secs
+Completed block    1 of 10 average 0.1542 secs/block after 16.17 secs
+Completed block    2 of 10 average 0.1524 secs/block after 16.32 secs
+Completed block    5 of 10 average 0.1516 secs/block after 16.78 secs
+Completed block    7 of 10 average 0.1516 secs/block after 17.08 secs
+Completed block   10 of 10 average 0.1507 secs/block after 17.53 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 4
+    time step          = 0.3
+    reference energy   = -52.621
+    reference variance = 1.38252
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074627 MiB
+Memory footprint by rank 0 on node 0       :     980 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7088e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2621e+01
+  VMC Evar = 1.3833e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.7005e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 6.2138e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 3.1553e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 3.4814e-02 at parameter 8
+Effective weight of all the samples measured by correlated sampling is 9.9989e-01
+
+******************************************************************************
+Init Cost =  -4.7221e+01    New Cost =  -4.7221e+01  Delta Cost =  -5.5746e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -7.460538e-02    1  ON     0
+    eGe_1                -1.205340e-01    1  ON     1
+    eGe_2                -9.479667e-02    1  ON     2
+    eGe_3                -6.136544e-02    1  ON     3
+    eGe_4                -4.956129e-02    1  ON     4
+    eGe_5                -3.663185e-02    1  ON     5
+    eGe_6                -2.520343e-02    1  ON     6
+    eGe_7                -1.897798e-02    1  ON     7
+    eSe_0                -3.029844e-01    1  ON     8
+    eSe_1                -4.391894e-01    1  ON     9
+    eSe_2                -3.589798e-01    1  ON    10
+    eSe_3                -2.911655e-01    1  ON    11
+    eSe_4                -2.229231e-01    1  ON    12
+    eSe_5                -1.558274e-01    1  ON    13
+    eSe_6                -9.371350e-02    1  ON    14
+    eSe_7                -5.149412e-02    1  ON    15
+     uu_0                 3.993777e-01    1  ON    16
+     uu_1                 3.286063e-01    1  ON    17
+     uu_2                 2.476219e-01    1  ON    18
+     uu_3                 1.836877e-01    1  ON    19
+     uu_4                 1.287178e-01    1  ON    20
+     uu_5                 8.668795e-02    1  ON    21
+     uu_6                 4.994076e-02    1  ON    22
+     uu_7                 2.725802e-02    1  ON    23
+     ud_0                 6.931276e-01    1  ON    24
+     ud_1                 5.173175e-01    1  ON    25
+     ud_2                 3.754860e-01    1  ON    26
+     ud_3                 2.639085e-01    1  ON    27
+     ud_4                 1.761552e-01    1  ON    28
+     ud_5                 1.119072e-01    1  ON    29
+     ud_6                 6.192124e-02    1  ON    30
+     ud_7                 3.184385e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s004.vp.h5
+  Updated wavefunction xml file optJ12.s004.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.286 secs
+Loop execution max-interations = 5
+
+========================================
+  Reading WFOpt driver XML input section
+========================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s005
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s005
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074624 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074624 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074623 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=====================================================
+VMC Warmup completed in 1.5897e-01 secs
+Completed block    1 of 10 average 0.1319 secs/block after 18.43 secs
+Completed block    2 of 10 average 0.1461 secs/block after 18.59 secs
+Completed block    5 of 10 average 0.1487 secs/block after 19.04 secs
+Completed block    7 of 10 average 0.15 secs/block after 19.35 secs
+Completed block   10 of 10 average 0.1511 secs/block after 19.82 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 5
+    time step          = 0.3
+    reference energy   = -52.6253
+    reference variance = 1.37023
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074728 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7085e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2625e+01
+  VMC Evar = 1.3705e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.5843e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 6.2405e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 3.1674e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 2.0625e-02 at parameter 8
+Effective weight of all the samples measured by correlated sampling is 9.9997e-01
+
+******************************************************************************
+Init Cost =  -4.7226e+01    New Cost =  -4.7225e+01  Delta Cost =   2.9988e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   2.5000e-01
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -8.400086e-02    1  ON     0
+    eGe_1                -1.205032e-01    1  ON     1
+    eGe_2                -9.282032e-02    1  ON     2
+    eGe_3                -6.074766e-02    1  ON     3
+    eGe_4                -4.921662e-02    1  ON     4
+    eGe_5                -3.627972e-02    1  ON     5
+    eGe_6                -2.424641e-02    1  ON     6
+    eGe_7                -1.900183e-02    1  ON     7
+    eSe_0                -3.236098e-01    1  ON     8
+    eSe_1                -4.375949e-01    1  ON     9
+    eSe_2                -3.605867e-01    1  ON    10
+    eSe_3                -2.922053e-01    1  ON    11
+    eSe_4                -2.237269e-01    1  ON    12
+    eSe_5                -1.561412e-01    1  ON    13
+    eSe_6                -9.453091e-02    1  ON    14
+    eSe_7                -5.213246e-02    1  ON    15
+     uu_0                 4.108949e-01    1  ON    16
+     uu_1                 3.287895e-01    1  ON    17
+     uu_2                 2.482201e-01    1  ON    18
+     uu_3                 1.837221e-01    1  ON    19
+     uu_4                 1.283747e-01    1  ON    20
+     uu_5                 8.643053e-02    1  ON    21
+     uu_6                 4.968944e-02    1  ON    22
+     uu_7                 2.708724e-02    1  ON    23
+     ud_0                 6.943958e-01    1  ON    24
+     ud_1                 5.181785e-01    1  ON    25
+     ud_2                 3.765694e-01    1  ON    26
+     ud_3                 2.648666e-01    1  ON    27
+     ud_4                 1.770599e-01    1  ON    28
+     ud_5                 1.124478e-01    1  ON    29
+     ud_6                 6.233167e-02    1  ON    30
+     ud_7                 3.219601e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s005.vp.h5
+  Updated wavefunction xml file optJ12.s005.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.263 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s006
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s006
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074723 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074723 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074721 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=====================================================
+VMC Warmup completed in 1.5956e-01 secs
+Completed block    1 of 10 average 0.1381 secs/block after 20.71 secs
+Completed block    2 of 10 average 0.1453 secs/block after 20.86 secs
+Completed block    5 of 10 average 0.1513 secs/block after 21.33 secs
+Completed block    7 of 10 average 0.1505 secs/block after 21.63 secs
+Completed block   10 of 10 average 0.1499 secs/block after 22.08 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 6
+    time step          = 0.3
+    reference energy   = -52.6245
+    reference variance = 1.38181
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074728 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7036e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2625e+01
+  VMC Evar = 1.3821e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.6849e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.2266e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 3.1273e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 1.5744e-02 at parameter 8
+Effective weight of all the samples measured by correlated sampling is 9.9992e-01
+
+******************************************************************************
+Init Cost =  -4.7224e+01    New Cost =  -4.7224e+01  Delta Cost =  -2.7310e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   6.2500e-02
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -8.952971e-02    1  ON     0
+    eGe_1                -1.199561e-01    1  ON     1
+    eGe_2                -9.012332e-02    1  ON     2
+    eGe_3                -5.810231e-02    1  ON     3
+    eGe_4                -4.665963e-02    1  ON     4
+    eGe_5                -3.487989e-02    1  ON     5
+    eGe_6                -2.355412e-02    1  ON     6
+    eGe_7                -1.874927e-02    1  ON     7
+    eSe_0                -3.393537e-01    1  ON     8
+    eSe_1                -4.366301e-01    1  ON     9
+    eSe_2                -3.590554e-01    1  ON    10
+    eSe_3                -2.903547e-01    1  ON    11
+    eSe_4                -2.219757e-01    1  ON    12
+    eSe_5                -1.550967e-01    1  ON    13
+    eSe_6                -9.344856e-02    1  ON    14
+    eSe_7                -5.175270e-02    1  ON    15
+     uu_0                 4.158212e-01    1  ON    16
+     uu_1                 3.288768e-01    1  ON    17
+     uu_2                 2.496603e-01    1  ON    18
+     uu_3                 1.845467e-01    1  ON    19
+     uu_4                 1.290996e-01    1  ON    20
+     uu_5                 8.694773e-02    1  ON    21
+     uu_6                 5.009775e-02    1  ON    22
+     uu_7                 2.726692e-02    1  ON    23
+     ud_0                 6.929526e-01    1  ON    24
+     ud_1                 5.172101e-01    1  ON    25
+     ud_2                 3.763471e-01    1  ON    26
+     ud_3                 2.645111e-01    1  ON    27
+     ud_4                 1.767770e-01    1  ON    28
+     ud_5                 1.123940e-01    1  ON    29
+     ud_6                 6.227251e-02    1  ON    30
+     ud_7                 3.207308e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s006.vp.h5
+  Updated wavefunction xml file optJ12.s006.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.268 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s007
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s007
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074723 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074723 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074723 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=====================================================
+VMC Warmup completed in 1.5932e-01 secs
+Completed block    1 of 10 average 0.1372 secs/block after 22.97 secs
+Completed block    2 of 10 average 0.1427 secs/block after 23.12 secs
+Completed block    5 of 10 average 0.1587 secs/block after 23.63 secs
+Completed block    7 of 10 average 0.1596 secs/block after 23.96 secs
+Completed block   10 of 10 average 0.1542 secs/block after 24.43 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 7
+    time step          = 0.3
+    reference energy   = -52.6189
+    reference variance = 1.39098
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074722 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7793e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2619e+01
+  VMC Evar = 1.3906e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.7901e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.6383e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 3.2355e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 1.1337e-02 at parameter 8
+Effective weight of all the samples measured by correlated sampling is 9.9993e-01
+
+******************************************************************************
+Init Cost =  -4.7218e+01    New Cost =  -4.7218e+01  Delta Cost =  -2.6046e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   1.5625e-02
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -9.490092e-02    1  ON     0
+    eGe_1                -1.160014e-01    1  ON     1
+    eGe_2                -9.037901e-02    1  ON     2
+    eGe_3                -5.682863e-02    1  ON     3
+    eGe_4                -4.503736e-02    1  ON     4
+    eGe_5                -3.227231e-02    1  ON     5
+    eGe_6                -2.189111e-02    1  ON     6
+    eGe_7                -1.755427e-02    1  ON     7
+    eSe_0                -3.506904e-01    1  ON     8
+    eSe_1                -4.365369e-01    1  ON     9
+    eSe_2                -3.598612e-01    1  ON    10
+    eSe_3                -2.908412e-01    1  ON    11
+    eSe_4                -2.224338e-01    1  ON    12
+    eSe_5                -1.549526e-01    1  ON    13
+    eSe_6                -9.383111e-02    1  ON    14
+    eSe_7                -5.216352e-02    1  ON    15
+     uu_0                 4.185505e-01    1  ON    16
+     uu_1                 3.293749e-01    1  ON    17
+     uu_2                 2.511833e-01    1  ON    18
+     uu_3                 1.850256e-01    1  ON    19
+     uu_4                 1.296067e-01    1  ON    20
+     uu_5                 8.710686e-02    1  ON    21
+     uu_6                 5.008259e-02    1  ON    22
+     uu_7                 2.722099e-02    1  ON    23
+     ud_0                 6.932983e-01    1  ON    24
+     ud_1                 5.174094e-01    1  ON    25
+     ud_2                 3.762203e-01    1  ON    26
+     ud_3                 2.647557e-01    1  ON    27
+     ud_4                 1.772014e-01    1  ON    28
+     ud_5                 1.127861e-01    1  ON    29
+     ud_6                 6.262944e-02    1  ON    30
+     ud_7                 3.213546e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s007.vp.h5
+  Updated wavefunction xml file optJ12.s007.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.359 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s008
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s008
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074718 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074718 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074718 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=====================================================
+VMC Warmup completed in 1.6015e-01 secs
+Completed block    1 of 10 average 0.1298 secs/block after 25.32 secs
+Completed block    2 of 10 average 0.1422 secs/block after 25.48 secs
+Completed block    5 of 10 average 0.1466 secs/block after 25.93 secs
+Completed block    7 of 10 average 0.148 secs/block after 26.24 secs
+Completed block   10 of 10 average 0.1484 secs/block after 26.69 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 8
+    time step          = 0.3
+    reference energy   = -52.6226
+    reference variance = 1.38483
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074716 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.6855e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2622e+01
+  VMC Evar = 1.3847e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.6039e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.5274e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 3.1487e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 1.0576e-02 at parameter 8
+Effective weight of all the samples measured by correlated sampling is 9.9975e-01
+
+******************************************************************************
+Init Cost =  -4.7222e+01    New Cost =  -4.7222e+01  Delta Cost =  -1.8432e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -1.008647e-01    1  ON     0
+    eGe_1                -1.192098e-01    1  ON     1
+    eGe_2                -9.348540e-02    1  ON     2
+    eGe_3                -6.024968e-02    1  ON     3
+    eGe_4                -4.945737e-02    1  ON     4
+    eGe_5                -3.727665e-02    1  ON     5
+    eGe_6                -2.510059e-02    1  ON     6
+    eGe_7                -1.923017e-02    1  ON     7
+    eSe_0                -3.612664e-01    1  ON     8
+    eSe_1                -4.357024e-01    1  ON     9
+    eSe_2                -3.593359e-01    1  ON    10
+    eSe_3                -2.908704e-01    1  ON    11
+    eSe_4                -2.225237e-01    1  ON    12
+    eSe_5                -1.550185e-01    1  ON    13
+    eSe_6                -9.376319e-02    1  ON    14
+    eSe_7                -5.190355e-02    1  ON    15
+     uu_0                 4.196273e-01    1  ON    16
+     uu_1                 3.302018e-01    1  ON    17
+     uu_2                 2.499899e-01    1  ON    18
+     uu_3                 1.839641e-01    1  ON    19
+     uu_4                 1.292076e-01    1  ON    20
+     uu_5                 8.682251e-02    1  ON    21
+     uu_6                 4.995386e-02    1  ON    22
+     uu_7                 2.721621e-02    1  ON    23
+     ud_0                 6.954560e-01    1  ON    24
+     ud_1                 5.175481e-01    1  ON    25
+     ud_2                 3.762895e-01    1  ON    26
+     ud_3                 2.643657e-01    1  ON    27
+     ud_4                 1.770278e-01    1  ON    28
+     ud_5                 1.126474e-01    1  ON    29
+     ud_6                 6.252795e-02    1  ON    30
+     ud_7                 3.203446e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s008.vp.h5
+  Updated wavefunction xml file optJ12.s008.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.223 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ12.s009
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ12.s009
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074712 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 4 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 32 parameters.
+ In total 32 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074712 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074711 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=====================================================
+VMC Warmup completed in 1.5992e-01 secs
+Completed block    1 of 10 average 0.1565 secs/block after 27.59 secs
+Completed block    2 of 10 average 0.1496 secs/block after 27.73 secs
+Completed block    5 of 10 average 0.1515 secs/block after 28.2 secs
+Completed block    7 of 10 average 0.1515 secs/block after 28.51 secs
+Completed block   10 of 10 average 0.1529 secs/block after 28.98 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 9
+    time step          = 0.3
+    reference energy   = -52.6225
+    reference variance = 1.37004
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074721 MiB
+Memory footprint by rank 0 on node 0       :     982 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7524e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2622e+01
+  VMC Evar = 1.3700e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 2.5722e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 6.9166e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+No eigenvalues passed initial filter. Trying broader 100 a.u. filter
+  Execution time (eigenvalue) = 3.1494e-04
+
+Among totally 32 optimized parameters, largest LM parameter change : 7.2543e-03 at parameter 8
+Effective weight of all the samples measured by correlated sampling is 9.9997e-01
+
+******************************************************************************
+Init Cost =  -4.7223e+01    New Cost =  -4.7223e+01  Delta Cost =   5.4422e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+     Name                        Value Type Use Index
+    ----- ---------------------------- ---- --- -----
+    eGe_0                -1.057006e-01    1  ON     0
+    eGe_1                -1.226763e-01    1  ON     1
+    eGe_2                -9.543549e-02    1  ON     2
+    eGe_3                -6.190982e-02    1  ON     3
+    eGe_4                -5.019066e-02    1  ON     4
+    eGe_5                -3.668761e-02    1  ON     5
+    eGe_6                -2.544948e-02    1  ON     6
+    eGe_7                -1.995656e-02    1  ON     7
+    eSe_0                -3.685207e-01    1  ON     8
+    eSe_1                -4.356687e-01    1  ON     9
+    eSe_2                -3.602302e-01    1  ON    10
+    eSe_3                -2.913577e-01    1  ON    11
+    eSe_4                -2.231006e-01    1  ON    12
+    eSe_5                -1.559588e-01    1  ON    13
+    eSe_6                -9.438734e-02    1  ON    14
+    eSe_7                -5.203063e-02    1  ON    15
+     uu_0                 4.187231e-01    1  ON    16
+     uu_1                 3.282924e-01    1  ON    17
+     uu_2                 2.485186e-01    1  ON    18
+     uu_3                 1.837751e-01    1  ON    19
+     uu_4                 1.289254e-01    1  ON    20
+     uu_5                 8.699028e-02    1  ON    21
+     uu_6                 5.020176e-02    1  ON    22
+     uu_7                 2.748617e-02    1  ON    23
+     ud_0                 6.932852e-01    1  ON    24
+     ud_1                 5.172748e-01    1  ON    25
+     ud_2                 3.762906e-01    1  ON    26
+     ud_3                 2.645687e-01    1  ON    27
+     ud_4                 1.770418e-01    1  ON    28
+     ud_5                 1.124759e-01    1  ON    29
+     ud_6                 6.235815e-02    1  ON    30
+     ud_7                 3.205115e-02    1  ON    31
+
+  Updated wavefunction vp file optJ12.s009.vp.h5
+  Updated wavefunction xml file optJ12.s009.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.306 secs
+  Total Execution time = 22.85 secs
+
+=========================================================
+  A new xml input file : optJ12.s009.cont.xml
+
+Use --enable-timers=<value> command line option to increase or decrease level of timing information
+Stack timer profile
+Timer                       Inclusive_time  Exclusive_time  Calls       Time_per_call
+Total                         28.5234     0.0232              1      28.523366638
+  QMCLinearOptimizeBatched    22.8263    22.8263             10       2.282625001
+  Startup                      5.6740     5.6740              1       5.673961966
+
+QMCPACK execution completed successfully

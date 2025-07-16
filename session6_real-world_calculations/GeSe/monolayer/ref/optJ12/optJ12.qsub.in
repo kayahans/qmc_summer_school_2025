@@ -1,0 +1,38 @@
+#!/bin/sh
+#PBS -l select=32
+#PBS -l place=scatter
+#PBS -l filesystems=flare
+#PBS -l walltime=06:00:00
+#PBS -A PSFMat_2
+#PBS -q prod
+#PBS -N optJ12
+#PBS -k doe
+#PBS -o optJ12.out
+#PBS -e optJ12.err
+
+cd ${PBS_O_WORKDIR}
+
+
+for module_name in oneapi/release oneapi/eng-compiler
+do
+  if module is-loaded $module_name ; then module unload $module_name; fi
+done
+
+module load oneapi/release/2025.0.5
+
+export MPIR_CVAR_ENABLE_GPU=0
+unset MPIR_CVAR_CH4_COLL_SELECTION_TUNING_JSON_FILE
+unset MPIR_CVAR_COLL_SELECTION_TUNING_JSON_FILE
+unset MPIR_CVAR_CH4_POSIX_COLL_SELECTION_TUNING_JSON_FILE
+export FI_CXI_DEFAULT_CQ_SIZE=131072
+export FI_CXI_CQ_FILL_PERCENT=20
+
+export LIBOMP_USE_HIDDEN_HELPER_TASK=0
+export ZES_ENABLE_SYSMAN=1
+
+export ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE
+export NEOReadDebugKeys=1
+export SplitBcsCopy=0
+
+export OMP_NUM_THREADS=51
+mpiexec --cpu-bind depth -d 51 -n 64 -ppn 2 /soft/applications/qmcpack/release-v4.1.0/build_aurora_oneapi2025.0.5_cpu_real/bin/qmcpack optJ12.in.xml

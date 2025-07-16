@@ -1,0 +1,3415 @@
+  Input file(s): optJ123.in.xml 
+================================================================
+                        QMCPACK 4.1.0
+
+          (c) Copyright 2003-2025 QMCPACK developers
+
+                         Please cite:
+      J. Kim et al. J. Phys. Cond. Mat. 30 195901 (2018)
+           https://doi.org/10.1088/1361-648X/aab9c3
+                             and
+       P. Kent et al. J. Chem. Phys. 152 174105 (2020)
+              https://doi.org/10.1063/5.0004860
+
+  Git branch: HEAD
+  Last git commit: c32123a5233186b177d75b800b86f1ad3b1a1413
+  Last git commit date: Wed Apr 30 13:56:36 2025 -0400
+  Last git commit subject: Merge pull request #5482 from QMCPACK/rc_410
+================================================================
+  Global options 
+
+  Total number of MPI ranks = 64
+  Number of MPI groups      = 1
+  MPI group ID              = 0
+  Number of ranks in group  = 64
+  MPI ranks per node        = 2
+  OMP 1st level threads     = 51
+  OMP nested threading disabled or only 1 thread on the 2nd level
+
+  Precision used in this calculation, see definitions in the manual:
+  Base precision      = double
+  Full precision      = double
+
+  CPU only build
+  Real build. QMC_COMPLEX=OFF
+  Timer build option is enabled. Current timer level is coarse
+
+=================================================
+--- Memory usage report : when QMCPACK starts ---
+=================================================
+Available memory on node 0, free + buffers : 1076458 MiB
+Memory footprint by rank 0 on node 0       :     177 MiB
+=================================================
+
+  Input XML = optJ123.in.xml
+
+  Project = optJ123
+  date    = 2025-07-15 18:31:21 UTC
+  host    = x4118c7s0b0n0
+
+
+ Random Number
+ -------------
+  Offset for the random number seeds based on time: 633
+
+  Range of prime numbers to use as seeds over processors and threads = 4703-36779
+
+
+ Lattice
+ -------
+  Simulation cell radius   = 3.609377 bohr
+  Wigner-Seitz cell radius = 3.609377 bohr
+
+  Overwriting global supercell 
+  Long-range breakup parameters:
+    rc*kc = 15.000000; rc = 3.609377; kc = 4.155842; tol = 0.000300
+  Long-range breakup parameters:
+    rc*kc = 15.000000; rc = 3.609377; kc = 4.155842; tol = 0.000300
+  KContainer initialised with cutoff 4.155842
+   # of K-shell  = 254
+   # of K points = 1464
+
+  Lattice (bohr):      8.2770004600                 0                 0
+                                  0      7.2187538300                 0
+                                  0                 0     20.3901449700
+
+  Boundary Conditions:  p  p  p 
+
+  Volume (bohr^3) = 1218.3035925553
+
+  Reciprocal vectors without 2*pi.
+    g_1 =       0.1208167143                 0                 0
+    g_2 =                  0      0.1385280650                 0
+    g_3 =                  0                 0      0.0490433002
+
+  Metric tensor in real-space.
+    h_1 = 68.5087366148 0.0000000000 0.0000000000 
+    h_2 = 0.0000000000 52.1104068581 0.0000000000 
+    h_3 = 0.0000000000 0.0000000000 415.7580118976 
+
+  Metric tensor in g-space.
+    h_1 = 0.5762537678 0.0000000000 0.0000000000 
+    h_2 = 0.0000000000 0.7575918129 0.0000000000 
+    h_3 = 0.0000000000 0.0000000000 0.0949552780 
+
+ Particle Set
+ ------------
+  Name: e   Offload : no
+
+  All the species have the same mass 1.0000000000
+
+  Creating Structure Factor for periodic systems 4.1558419509
+  Particle set size: 40   Groups : 2
+
+
+ Particle Set
+ ------------
+  Name: ion0   Offload : no
+
+  Distinctive masses for each species 
+
+  Creating Structure Factor for periodic systems 4.1558419509
+  Particle set size: 8   Groups : 2
+
+
+ Many-body wavefunction
+ -------------------
+  Name: psi0   Tasking: no
+
+
+   Single particle orbitals (SPO) collection
+   -----------------------------------------
+    Name: bspline   Type input: bspline
+
+  Created SPOSet builder named 'bspline' of type bspline
+
+     Single particle orbitals (SPO)
+     ------------------------------
+      Name: spo_u   Type: spline   Builder class name: EinsplineSetBuilder
+
+  TileMatrix = 
+ [  1  0  0
+    0  1  0
+    0  0  1 ]
+  Reading 20 orbitals from HDF5 file.
+  HDF5 orbital file version 2.1.0
+  Reading orbital file in ESHDF format.
+  ESHDF orbital file version 2.1.0
+  Lattice = 
+    [  8.277000  0.000000  0.000000
+       0.000000  7.218754  0.000000
+       0.000000  0.000000 20.390145 ]
+  SuperLattice = 
+    [  8.277000  0.000000  0.000000
+       0.000000  7.218754  0.000000
+       0.000000  0.000000 20.390145 ]
+
+bands=24, elecs=40, spins=2, twists=1
+Atom type(0) = 32
+Atom type(1) = 32
+Atom type(2) = 32
+Atom type(3) = 32
+Atom type(4) = 34
+Atom type(5) = 34
+Atom type(6) = 34
+Atom type(7) = 34
+   Skip initialization of the density
+TIMER  EinsplineSetBuilder::ReadOrbitalInfo 0.1004975010
+TIMER  EinsplineSetBuilder::BroadcastOrbitalInfo 0.0002869540
+Found 1 distinct supercell twist based on 1 primitive cell k-point
+Super twist #0:  [   0.00000   0.00000   0.00000 ]
+QMCPACK WARNING twist attribute does't exist but twistnum attribute was found. This is potentially ambiguous. Specifying twist attribute is preferred.
+  Using supercell twist 0:  [   0.00000   0.00000   0.00000]
+Using 1 copies of twist angle [ 0.000,  0.000,  0.000]
+Using real splines.
+24 complex-valued orbitals supplied by h5 can be expanded up to 24 SPOs.
+Sorting the bands now:
+We will read 20 distinct complex-valued orbitals from h5.
+    Using real valued spline SPOs with real single precision storage (R2R).
+    Running on CPU.
+BandInfoGroup::selectBands bigspace has 24 distinct orbitals 
+BandInfoGroup::selectBands using distinct orbitals [0,20)
+  Number of distinct bands 20
+  First Band index 0
+  First SPO index 0
+  Size of SPOs 20
+  ClassName = SplineR2R
+  Using real einspline table
+NumDistinctOrbitals 20 numOrbs = 20
+  TwistIndex = 0 TwistAngle                  0                 0                 0
+   HalfG = 000
+B-spline mesh factor is 1.0000000000
+B-spline mesh size is (96, 84, 240)
+Maxmimum number of Gvecs 134739
+MEMORY 255 MB allocated for the coefficients in 3D spline orbital representation
+Start transforming plane waves to 3D B-Splines.
+  Time to gather the table = 0.6469232560
+  SplineSetReader initialize_spline_pio 0.9531764480 sec
+  Time to bcast the table = 0.0939359700
+Time spent in creating B-spline SPOs 1.1597854620 sec
+
+     Single particle orbitals (SPO)
+     ------------------------------
+      Name: spo_d   Type: spline   Builder class name: EinsplineSetBuilder
+
+24 complex-valued orbitals supplied by h5 can be expanded up to 24 SPOs.
+Sorting the bands now:
+We will read 20 distinct complex-valued orbitals from h5.
+    Running on CPU.
+BandInfoGroup::selectBands bigspace has 24 distinct orbitals 
+BandInfoGroup::selectBands using distinct orbitals [0,20)
+  Number of distinct bands 20
+  First Band index 0
+  First SPO index 0
+  Size of SPOs 20
+  ClassName = SplineR2R
+  Using real einspline table
+NumDistinctOrbitals 20 numOrbs = 20
+  TwistIndex = 0 TwistAngle                  0                 0                 0
+   HalfG = 000
+B-spline mesh factor is 1.0000000000
+B-spline mesh size is (96, 84, 240)
+Maxmimum number of Gvecs 134739
+MEMORY 255 MB allocated for the coefficients in 3D spline orbital representation
+Start transforming plane waves to 3D B-Splines.
+  Time to gather the table = 0.4557684570
+  SplineSetReader initialize_spline_pio 0.7218299690 sec
+  Time to bcast the table = 0.0902135270
+Time spent in creating B-spline SPOs 0.8849941590 sec
+
+   Single Slater determinant
+   -------------------------
+
+     Determinant
+     -----------
+      Name: updet   Spin group: 0   SPO name: spo_u
+
+      Setting delay_rank to default value 1
+      Using rank-1 Sherman-Morrison Fahy update (SM1)
+      Running on CPU.
+
+
+     Determinant
+     -----------
+      Name: downdet   Spin group: 1   SPO name: spo_d
+
+      Setting delay_rank to default value 1
+      Using rank-1 Sherman-Morrison Fahy update (SM1)
+      Running on CPU.
+
+  Added a fermionic WaveFunctionComponent SlaterDet
+
+   Jastrow
+   -------
+    Name: J1   Type: One-Body   Function: bspline
+
+    Radial function for element: Ge - e
+  The Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.6093769150.
+     Number of parameters: 8
+     Cusp: 0.0000000000
+     Cutoff radius: 3.6093769150
+
+      Name                        Value Type Use Index
+     ----- ---------------------------- ---- --- -----
+     eGe_0                -7.460538e-02    1  ON     0
+     eGe_1                -1.205340e-01    1  ON     1
+     eGe_2                -9.479667e-02    1  ON     2
+     eGe_3                -6.136544e-02    1  ON     3
+     eGe_4                -4.956129e-02    1  ON     4
+     eGe_5                -3.663185e-02    1  ON     5
+     eGe_6                -2.520343e-02    1  ON     6
+     eGe_7                -1.897798e-02    1  ON     7
+
+    Radial function for element: Se - e
+  The Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+     Number of parameters: 8
+     Cusp: 0
+     Cutoff radius: 3.60938
+
+      Name                        Value Type Use Index
+     ----- ---------------------------- ---- --- -----
+     eSe_0                -3.029844e-01    1  ON     0
+     eSe_1                -4.391894e-01    1  ON     1
+     eSe_2                -3.589798e-01    1  ON     2
+     eSe_3                -2.911655e-01    1  ON     3
+     eSe_4                -2.229231e-01    1  ON     4
+     eSe_5                -1.558274e-01    1  ON     5
+     eSe_6                -9.371350e-02    1  ON     6
+     eSe_7                -5.149412e-02    1  ON     7
+
+
+   Jastrow
+   -------
+    Name: J2   Type: Two-Body   Function: bspline
+
+    Radial function for species: u - u
+  The Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+     Number of parameters: 8
+     Cusp: -0.25
+     Cutoff radius: 3.60938
+
+     Name                        Value Type Use Index
+     ---- ---------------------------- ---- --- -----
+     uu_0                 3.993777e-01    1  ON     0
+     uu_1                 3.286063e-01    1  ON     1
+     uu_2                 2.476219e-01    1  ON     2
+     uu_3                 1.836877e-01    1  ON     3
+     uu_4                 1.287178e-01    1  ON     4
+     uu_5                 8.668795e-02    1  ON     5
+     uu_6                 4.994076e-02    1  ON     6
+     uu_7                 2.725802e-02    1  ON     7
+
+    Radial function for species: u - d
+  The Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+     Number of parameters: 8
+     Cusp: -0.5
+     Cutoff radius: 3.60938
+
+     Name                        Value Type Use Index
+     ---- ---------------------------- ---- --- -----
+     ud_0                 6.931276e-01    1  ON     0
+     ud_1                 5.173175e-01    1  ON     1
+     ud_2                 3.754860e-01    1  ON     2
+     ud_3                 2.639085e-01    1  ON     3
+     ud_4                 1.761552e-01    1  ON     4
+     ud_5                 1.119072e-01    1  ON     5
+     ud_6                 6.192124e-02    1  ON     6
+     ud_7                 3.184385e-02    1  ON     7
+
+
+   Jastrow
+   -------
+    Name: J3   Type: eeI   Function: polynomial
+
+     Ion: Ge   electron-electron: u - u
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 3.60938
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+         Name                        Value Type Use Index
+      ------- ---------------------------- ---- --- -----
+       uuGe_0                 0.000000e+00    1  ON     0
+       uuGe_1                 0.000000e+00    1  ON     1
+       uuGe_2                 0.000000e+00    1  ON     2
+       uuGe_3                 0.000000e+00    1  ON     3
+       uuGe_4                 0.000000e+00    1  ON     4
+       uuGe_5                 0.000000e+00    1  ON     5
+       uuGe_6                 0.000000e+00    1  ON     6
+       uuGe_7                 0.000000e+00    1  ON     7
+       uuGe_8                 0.000000e+00    1  ON     8
+       uuGe_9                 0.000000e+00    1  ON     9
+      uuGe_10                 0.000000e+00    1  ON    10
+      uuGe_11                 0.000000e+00    1  ON    11
+      uuGe_12                 0.000000e+00    1  ON    12
+      uuGe_13                 0.000000e+00    1  ON    13
+      uuGe_14                 0.000000e+00    1  ON    14
+      uuGe_15                 0.000000e+00    1  ON    15
+      uuGe_16                 0.000000e+00    1  ON    16
+      uuGe_17                 0.000000e+00    1  ON    17
+      uuGe_18                 0.000000e+00    1  ON    18
+      uuGe_19                 0.000000e+00    1  ON    19
+      uuGe_20                 0.000000e+00    1  ON    20
+      uuGe_21                 0.000000e+00    1  ON    21
+      uuGe_22                 0.000000e+00    1  ON    22
+      uuGe_23                 0.000000e+00    1  ON    23
+      uuGe_24                 0.000000e+00    1  ON    24
+      uuGe_25                 0.000000e+00    1  ON    25
+
+  The eeI Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+     Ion: Ge   electron-electron: u - d
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 3.60938
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+         Name                        Value Type Use Index
+      ------- ---------------------------- ---- --- -----
+       udGe_0                 0.000000e+00    1  ON     0
+       udGe_1                 0.000000e+00    1  ON     1
+       udGe_2                 0.000000e+00    1  ON     2
+       udGe_3                 0.000000e+00    1  ON     3
+       udGe_4                 0.000000e+00    1  ON     4
+       udGe_5                 0.000000e+00    1  ON     5
+       udGe_6                 0.000000e+00    1  ON     6
+       udGe_7                 0.000000e+00    1  ON     7
+       udGe_8                 0.000000e+00    1  ON     8
+       udGe_9                 0.000000e+00    1  ON     9
+      udGe_10                 0.000000e+00    1  ON    10
+      udGe_11                 0.000000e+00    1  ON    11
+      udGe_12                 0.000000e+00    1  ON    12
+      udGe_13                 0.000000e+00    1  ON    13
+      udGe_14                 0.000000e+00    1  ON    14
+      udGe_15                 0.000000e+00    1  ON    15
+      udGe_16                 0.000000e+00    1  ON    16
+      udGe_17                 0.000000e+00    1  ON    17
+      udGe_18                 0.000000e+00    1  ON    18
+      udGe_19                 0.000000e+00    1  ON    19
+      udGe_20                 0.000000e+00    1  ON    20
+      udGe_21                 0.000000e+00    1  ON    21
+      udGe_22                 0.000000e+00    1  ON    22
+      udGe_23                 0.000000e+00    1  ON    23
+      udGe_24                 0.000000e+00    1  ON    24
+      udGe_25                 0.000000e+00    1  ON    25
+
+  The eeI Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+     Ion: Se   electron-electron: u - u
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 3.60938
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+         Name                        Value Type Use Index
+      ------- ---------------------------- ---- --- -----
+       uuSe_0                 0.000000e+00    1  ON     0
+       uuSe_1                 0.000000e+00    1  ON     1
+       uuSe_2                 0.000000e+00    1  ON     2
+       uuSe_3                 0.000000e+00    1  ON     3
+       uuSe_4                 0.000000e+00    1  ON     4
+       uuSe_5                 0.000000e+00    1  ON     5
+       uuSe_6                 0.000000e+00    1  ON     6
+       uuSe_7                 0.000000e+00    1  ON     7
+       uuSe_8                 0.000000e+00    1  ON     8
+       uuSe_9                 0.000000e+00    1  ON     9
+      uuSe_10                 0.000000e+00    1  ON    10
+      uuSe_11                 0.000000e+00    1  ON    11
+      uuSe_12                 0.000000e+00    1  ON    12
+      uuSe_13                 0.000000e+00    1  ON    13
+      uuSe_14                 0.000000e+00    1  ON    14
+      uuSe_15                 0.000000e+00    1  ON    15
+      uuSe_16                 0.000000e+00    1  ON    16
+      uuSe_17                 0.000000e+00    1  ON    17
+      uuSe_18                 0.000000e+00    1  ON    18
+      uuSe_19                 0.000000e+00    1  ON    19
+      uuSe_20                 0.000000e+00    1  ON    20
+      uuSe_21                 0.000000e+00    1  ON    21
+      uuSe_22                 0.000000e+00    1  ON    22
+      uuSe_23                 0.000000e+00    1  ON    23
+      uuSe_24                 0.000000e+00    1  ON    24
+      uuSe_25                 0.000000e+00    1  ON    25
+
+  The eeI Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+     Ion: Se   electron-electron: u - d
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 3.60938
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+         Name                        Value Type Use Index
+      ------- ---------------------------- ---- --- -----
+       udSe_0                 0.000000e+00    1  ON     0
+       udSe_1                 0.000000e+00    1  ON     1
+       udSe_2                 0.000000e+00    1  ON     2
+       udSe_3                 0.000000e+00    1  ON     3
+       udSe_4                 0.000000e+00    1  ON     4
+       udSe_5                 0.000000e+00    1  ON     5
+       udSe_6                 0.000000e+00    1  ON     6
+       udSe_7                 0.000000e+00    1  ON     7
+       udSe_8                 0.000000e+00    1  ON     8
+       udSe_9                 0.000000e+00    1  ON     9
+      udSe_10                 0.000000e+00    1  ON    10
+      udSe_11                 0.000000e+00    1  ON    11
+      udSe_12                 0.000000e+00    1  ON    12
+      udSe_13                 0.000000e+00    1  ON    13
+      udSe_14                 0.000000e+00    1  ON    14
+      udSe_15                 0.000000e+00    1  ON    15
+      udSe_16                 0.000000e+00    1  ON    16
+      udSe_17                 0.000000e+00    1  ON    17
+      udSe_18                 0.000000e+00    1  ON    18
+      udSe_19                 0.000000e+00    1  ON    19
+      udSe_20                 0.000000e+00    1  ON    20
+      udSe_21                 0.000000e+00    1  ON    21
+      udSe_22                 0.000000e+00    1  ON    22
+      udSe_23                 0.000000e+00    1  ON    23
+      udSe_24                 0.000000e+00    1  ON    24
+      udSe_25                 0.000000e+00    1  ON    25
+
+  The eeI Jastrow cutoff specified is slightly larger than the Wigner-Seitz radius.  Setting to Wigner-Seitz radius = 3.60938.
+  Wave function psi0 parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -7.460538e-02    1  ON     0
+      eGe_1                -1.205340e-01    1  ON     1
+      eGe_2                -9.479667e-02    1  ON     2
+      eGe_3                -6.136544e-02    1  ON     3
+      eGe_4                -4.956129e-02    1  ON     4
+      eGe_5                -3.663185e-02    1  ON     5
+      eGe_6                -2.520343e-02    1  ON     6
+      eGe_7                -1.897798e-02    1  ON     7
+      eSe_0                -3.029844e-01    1  ON     8
+      eSe_1                -4.391894e-01    1  ON     9
+      eSe_2                -3.589798e-01    1  ON    10
+      eSe_3                -2.911655e-01    1  ON    11
+      eSe_4                -2.229231e-01    1  ON    12
+      eSe_5                -1.558274e-01    1  ON    13
+      eSe_6                -9.371350e-02    1  ON    14
+      eSe_7                -5.149412e-02    1  ON    15
+       uu_0                 3.993777e-01    1  ON    16
+       uu_1                 3.286063e-01    1  ON    17
+       uu_2                 2.476219e-01    1  ON    18
+       uu_3                 1.836877e-01    1  ON    19
+       uu_4                 1.287178e-01    1  ON    20
+       uu_5                 8.668795e-02    1  ON    21
+       uu_6                 4.994076e-02    1  ON    22
+       uu_7                 2.725802e-02    1  ON    23
+       ud_0                 6.931276e-01    1  ON    24
+       ud_1                 5.173175e-01    1  ON    25
+       ud_2                 3.754860e-01    1  ON    26
+       ud_3                 2.639085e-01    1  ON    27
+       ud_4                 1.761552e-01    1  ON    28
+       ud_5                 1.119072e-01    1  ON    29
+       ud_6                 6.192124e-02    1  ON    30
+       ud_7                 3.184385e-02    1  ON    31
+     uuGe_0                 0.000000e+00    1  ON    32
+     uuGe_1                 0.000000e+00    1  ON    33
+     uuGe_2                 0.000000e+00    1  ON    34
+     uuGe_3                 0.000000e+00    1  ON    35
+     uuGe_4                 0.000000e+00    1  ON    36
+     uuGe_5                 0.000000e+00    1  ON    37
+     uuGe_6                 0.000000e+00    1  ON    38
+     uuGe_7                 0.000000e+00    1  ON    39
+     uuGe_8                 0.000000e+00    1  ON    40
+     uuGe_9                 0.000000e+00    1  ON    41
+    uuGe_10                 0.000000e+00    1  ON    42
+    uuGe_11                 0.000000e+00    1  ON    43
+    uuGe_12                 0.000000e+00    1  ON    44
+    uuGe_13                 0.000000e+00    1  ON    45
+    uuGe_14                 0.000000e+00    1  ON    46
+    uuGe_15                 0.000000e+00    1  ON    47
+    uuGe_16                 0.000000e+00    1  ON    48
+    uuGe_17                 0.000000e+00    1  ON    49
+    uuGe_18                 0.000000e+00    1  ON    50
+    uuGe_19                 0.000000e+00    1  ON    51
+    uuGe_20                 0.000000e+00    1  ON    52
+    uuGe_21                 0.000000e+00    1  ON    53
+    uuGe_22                 0.000000e+00    1  ON    54
+    uuGe_23                 0.000000e+00    1  ON    55
+    uuGe_24                 0.000000e+00    1  ON    56
+    uuGe_25                 0.000000e+00    1  ON    57
+     udGe_0                 0.000000e+00    1  ON    58
+     udGe_1                 0.000000e+00    1  ON    59
+     udGe_2                 0.000000e+00    1  ON    60
+     udGe_3                 0.000000e+00    1  ON    61
+     udGe_4                 0.000000e+00    1  ON    62
+     udGe_5                 0.000000e+00    1  ON    63
+     udGe_6                 0.000000e+00    1  ON    64
+     udGe_7                 0.000000e+00    1  ON    65
+     udGe_8                 0.000000e+00    1  ON    66
+     udGe_9                 0.000000e+00    1  ON    67
+    udGe_10                 0.000000e+00    1  ON    68
+    udGe_11                 0.000000e+00    1  ON    69
+    udGe_12                 0.000000e+00    1  ON    70
+    udGe_13                 0.000000e+00    1  ON    71
+    udGe_14                 0.000000e+00    1  ON    72
+    udGe_15                 0.000000e+00    1  ON    73
+    udGe_16                 0.000000e+00    1  ON    74
+    udGe_17                 0.000000e+00    1  ON    75
+    udGe_18                 0.000000e+00    1  ON    76
+    udGe_19                 0.000000e+00    1  ON    77
+    udGe_20                 0.000000e+00    1  ON    78
+    udGe_21                 0.000000e+00    1  ON    79
+    udGe_22                 0.000000e+00    1  ON    80
+    udGe_23                 0.000000e+00    1  ON    81
+    udGe_24                 0.000000e+00    1  ON    82
+    udGe_25                 0.000000e+00    1  ON    83
+     uuSe_0                 0.000000e+00    1  ON    84
+     uuSe_1                 0.000000e+00    1  ON    85
+     uuSe_2                 0.000000e+00    1  ON    86
+     uuSe_3                 0.000000e+00    1  ON    87
+     uuSe_4                 0.000000e+00    1  ON    88
+     uuSe_5                 0.000000e+00    1  ON    89
+     uuSe_6                 0.000000e+00    1  ON    90
+     uuSe_7                 0.000000e+00    1  ON    91
+     uuSe_8                 0.000000e+00    1  ON    92
+     uuSe_9                 0.000000e+00    1  ON    93
+    uuSe_10                 0.000000e+00    1  ON    94
+    uuSe_11                 0.000000e+00    1  ON    95
+    uuSe_12                 0.000000e+00    1  ON    96
+    uuSe_13                 0.000000e+00    1  ON    97
+    uuSe_14                 0.000000e+00    1  ON    98
+    uuSe_15                 0.000000e+00    1  ON    99
+    uuSe_16                 0.000000e+00    1  ON   100
+    uuSe_17                 0.000000e+00    1  ON   101
+    uuSe_18                 0.000000e+00    1  ON   102
+    uuSe_19                 0.000000e+00    1  ON   103
+    uuSe_20                 0.000000e+00    1  ON   104
+    uuSe_21                 0.000000e+00    1  ON   105
+    uuSe_22                 0.000000e+00    1  ON   106
+    uuSe_23                 0.000000e+00    1  ON   107
+    uuSe_24                 0.000000e+00    1  ON   108
+    uuSe_25                 0.000000e+00    1  ON   109
+     udSe_0                 0.000000e+00    1  ON   110
+     udSe_1                 0.000000e+00    1  ON   111
+     udSe_2                 0.000000e+00    1  ON   112
+     udSe_3                 0.000000e+00    1  ON   113
+     udSe_4                 0.000000e+00    1  ON   114
+     udSe_5                 0.000000e+00    1  ON   115
+     udSe_6                 0.000000e+00    1  ON   116
+     udSe_7                 0.000000e+00    1  ON   117
+     udSe_8                 0.000000e+00    1  ON   118
+     udSe_9                 0.000000e+00    1  ON   119
+    udSe_10                 0.000000e+00    1  ON   120
+    udSe_11                 0.000000e+00    1  ON   121
+    udSe_12                 0.000000e+00    1  ON   122
+    udSe_13                 0.000000e+00    1  ON   123
+    udSe_14                 0.000000e+00    1  ON   124
+    udSe_15                 0.000000e+00    1  ON   125
+    udSe_16                 0.000000e+00    1  ON   126
+    udSe_17                 0.000000e+00    1  ON   127
+    udSe_18                 0.000000e+00    1  ON   128
+    udSe_19                 0.000000e+00    1  ON   129
+    udSe_20                 0.000000e+00    1  ON   130
+    udSe_21                 0.000000e+00    1  ON   131
+    udSe_22                 0.000000e+00    1  ON   132
+    udSe_23                 0.000000e+00    1  ON   133
+    udSe_24                 0.000000e+00    1  ON   134
+    udSe_25                 0.000000e+00    1  ON   135
+
+  Adding psi0 TrialWaveFunction to the pool
+
+ Hamiltonian and observables
+ ---------------------------
+  Name: h0
+
+  QMCHamiltonian::addOperator Kinetic to H, physical Hamiltonian 
+
+   Pseudo Potential
+   ----------------
+    Name: PseudoPot   Wavefunction : psi0
+
+
+  Adding pseudopotential for Ge
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+QMCPACK WARNING Nrule was not determined from qmcpack input or pseudopotential file. Setting sensible default.
+    Assuming Hartree unit
+ l-local setting found in pseudopotential file and used.
+   Number of angular momentum channels 4
+   Maximum angular momentum channel (Lmax) 3
+   Creating a Linear Grid Rmax=4.425
+  Using global grid with delta = 0.001
+   Making L=3 a local potential with a radial cutoff of 9.999
+  Quadrature Nrule: 4
+    Non-local pseudopotential parameters
+    Maximum angular momentum = 2
+    Number of non-local channels = 3
+       l(0)=0
+       l(1)=1
+       l(2)=2
+    Cutoff radius = 4.425
+    Number of spherical integration grid points = 12
+    Spherical grid and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 4.425
+
+  Adding pseudopotential for Se
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+QMCPACK WARNING Nrule was not determined from qmcpack input or pseudopotential file. Setting sensible default.
+    Assuming Hartree unit
+ l-local setting found in pseudopotential file and used.
+   Number of angular momentum channels 4
+   Maximum angular momentum channel (Lmax) 3
+   Creating a Linear Grid Rmax=3.085
+  Using global grid with delta = 0.001
+   Making L=3 a local potential with a radial cutoff of 9.999
+  Quadrature Nrule: 4
+    Non-local pseudopotential parameters
+    Maximum angular momentum = 2
+    Number of non-local channels = 3
+       l(0)=0
+       l(1)=1
+       l(2)=2
+    Cutoff radius = 3.085
+    Number of spherical integration grid points = 12
+    Spherical grid and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 3.085
+
+  Creating CoulombHandler with the Esler Optimized Breakup. 
+  KContainer initialised with cutoff 17.64883115
+   # of K-shell  = 15328
+   # of K points = 113088
+
+  NUMBER OF OPT_BREAK KVECS = 94506472937
+ finding kc:  4.155841951 , 4.155841951
+  LRBreakp parameter Kc =4.155841951
+    Continuum approximation in k = [17.64883115,1662.33678)
+
+   LR Breakup chi^2 = 2.32162e-16
+   Constant of PBCAB 7.0533
+    CoulombPBCAB::initBreakup
+  Setting a linear grid=[0,3.6094) number of grid points =1001
+  Rcut                3.6094
+  Maximum K shell     253
+  Number of k vectors 1464
+    CoulombPBCAB::add 
+ Setting a linear grid=[0,3.6094) number of grid =3610
+    Creating the short-range pseudopotential for species 0
+    CoulombPBCAB::add 
+ Setting a linear grid=[0,3.6094) number of grid =3610
+    Creating the short-range pseudopotential for species 1
+  QMCHamiltonian::addOperator LocalECP to H, physical Hamiltonian 
+
+  Using NonLocalECP potential 
+    Maximum grid on a sphere for NonLocalECPotential: 12
+    Using batched ratio computing in NonLocalECP
+  QMCHamiltonian::addOperator NonLocalECP to H, physical Hamiltonian 
+
+   Coulomb Potential
+   -----------------
+    Name: ElecElec   Type: AA   PBC: yes
+
+  Clone CoulombHandler. 
+   PBCAA self-interaction term -16.822
+   PBCAA total constant -20.349
+    CoulombPBCAA::initBreakup
+  Setting a linear grid=[0,3.6094) number of grid points =1001
+  Maximum K shell 253
+  Number of k vectors 1464
+  Fixed Coulomb potential for e
+    e-e Madelung Const. =-0.072834012
+    Vtot     =0
+  QMCHamiltonian::addOperator ElecElec to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named ElecElec
+
+   Coulomb Potential
+   -----------------
+    Name: IonIon   Type: AA   PBC: yes
+
+  Clone CoulombHandler. 
+   PBCAA self-interaction term -87.474138
+   PBCAA total constant -91.000786
+    CoulombPBCAA::initBreakup
+  Setting a linear grid=[0,3.6093769) number of grid points =1001
+Checking ion-ion Ewald energy against reference...
+  Check passed.
+  Maximum K shell 253
+  Number of k vectors 1464
+  Fixed Coulomb potential for ion0
+    e-e Madelung Const. =-0.072834012
+    Vtot     =-53.673864
+  QMCHamiltonian::addOperator IonIon to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named IonIon
+
+  QMCHamiltonian::add2WalkerProperty added
+    5 to P::PropertyList 
+    0 to P::Collectables 
+    starting Index of the observables in P::PropertyList = 9
+ParticleSetPool::randomize 1 ParticleSet.
+<init source="ion0" target="e">
+</init>
+  Initialization Execution time = 2.903 secs
+=========================================================
+ Summary of QMC systems 
+=========================================================
+ParticleSetPool has: 
+
+  ParticleSet 'e' contains 40 particles :  u(20) d(20)
+
+    u  8.2362840803e+00  3.1150531681e+00  1.7914200802e+01
+    u  5.6827267334e-01  4.6168291866e-01  1.8735833409e+01
+    u  3.6141659902e+00  3.1956432310e-01  7.2485136458e+00
+    u  2.2948024562e+00  5.3643964390e-01  7.8610573175e+00
+    u  6.6124089778e+00  6.8027528331e+00  2.5759133394e+00
+    u  7.4825442591e+00  4.4420288486e+00  1.1990310455e+00
+    u  4.3963329415e+00  5.9741884502e+00  1.1297565579e+01
+    u  3.9292262065e+00  5.9681945870e+00  1.3697733001e+01
+    u  2.8174397266e+00  1.1659259821e+00  2.4341675075e+00
+    u  4.0493395785e+00  6.1565751818e-01  4.0822654488e+00
+    (... and 30 more particle positions ...)
+
+  Distance table for dissimilar particles (A-B):
+    source: ion0  target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use orthorhombic periodic cell in 3D.
+
+  Distance table for similar particles (A-A):
+    source/target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use orthorhombic periodic cell in 3D.
+
+
+  ParticleSet 'ion0' contains 8 particles :  Ge(4) Se(4)
+
+    Ge  8.7736205000e-01  1.8046884600e+00  1.7922937430e+01
+    Ge  3.2611381800e+00  1.8046884600e+00  7.7278649400e+00
+    Ge  7.3996384100e+00  5.4140653700e+00  2.4672075400e+00
+    Ge  5.0158622800e+00  5.4140653700e+00  1.2662280030e+01
+    Se  4.1633312300e+00  1.8046884600e+00  3.0177414600e+00
+    Se  8.2521694600e+00  1.8046884600e+00  1.3212813940e+01
+    Se  4.1136692300e+00  5.4140653700e+00  1.7372403510e+01
+    Se  2.4831000000e-02  5.4140653700e+00  7.1773310300e+00
+
+  Distance table for similar particles (A-A):
+    source/target: ion0
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use orthorhombic periodic cell in 3D.
+
+
+  Hamiltonian h0
+  Kinetic         Kinetic energy
+  LocalECP        CoulombPBCAB potential source: ion0
+  NonLocalECP     NonLocalECPotential: ion0
+  ElecElec        CoulombPBCAA potential: e_e
+  IonIon          CoulombPBCAA potential: ion0_ion0
+
+Loop execution max-interations = 10
+
+========================================
+  Reading WFOpt driver XML input section
+========================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s000
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s000
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074944 MiB
+Memory footprint by rank 0 on node 0       :     918 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074886 MiB
+Memory footprint by rank 0 on node 0       :     967 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074885 MiB
+Memory footprint by rank 0 on node 0       :     967 MiB
+=====================================================
+VMC Warmup completed in 1.7443e-01 secs
+Completed block    1 of 10 average 0.1298 secs/block after 6.299 secs
+Completed block    2 of 10 average 0.1287 secs/block after 6.428 secs
+Completed block    5 of 10 average 0.129 secs/block after 6.818 secs
+Completed block    7 of 10 average 0.1286 secs/block after 7.076 secs
+Completed block   10 of 10 average 0.1291 secs/block after 7.47 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 0
+    time step          = 0.3
+    reference energy   = -52.622
+    reference variance = 1.37806
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074883 MiB
+Memory footprint by rank 0 on node 0       :     967 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.5118e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2622e+01
+  VMC Evar = 1.3783e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 3.6079e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 4.1754e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 2.3457e-02
+
+Among totally 136 optimized parameters, largest LM parameter change : 5.1195e-02 at parameter 9
+Effective weight of all the samples measured by correlated sampling is 9.9770e-01
+
+******************************************************************************
+Init Cost =  -4.7222e+01    New Cost =  -4.7231e+01  Delta Cost =  -8.6516e-03
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   2.5000e-01
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -7.873694e-02    1  ON     0
+      eGe_1                -1.020455e-01    1  ON     1
+      eGe_2                -8.443432e-02    1  ON     2
+      eGe_3                -5.667471e-02    1  ON     3
+      eGe_4                -4.989235e-02    1  ON     4
+      eGe_5                -3.657861e-02    1  ON     5
+      eGe_6                -2.479629e-02    1  ON     6
+      eGe_7                -1.921568e-02    1  ON     7
+      eSe_0                -3.135772e-01    1  ON     8
+      eSe_1                -3.879940e-01    1  ON     9
+      eSe_2                -3.341178e-01    1  ON    10
+      eSe_3                -2.791052e-01    1  ON    11
+      eSe_4                -2.249836e-01    1  ON    12
+      eSe_5                -1.555942e-01    1  ON    13
+      eSe_6                -9.382992e-02    1  ON    14
+      eSe_7                -5.130035e-02    1  ON    15
+       uu_0                 4.100343e-01    1  ON    16
+       uu_1                 3.293578e-01    1  ON    17
+       uu_2                 2.495603e-01    1  ON    18
+       uu_3                 1.850178e-01    1  ON    19
+       uu_4                 1.297380e-01    1  ON    20
+       uu_5                 8.664140e-02    1  ON    21
+       uu_6                 4.966922e-02    1  ON    22
+       uu_7                 2.704179e-02    1  ON    23
+       ud_0                 6.989038e-01    1  ON    24
+       ud_1                 5.225653e-01    1  ON    25
+       ud_2                 3.807391e-01    1  ON    26
+       ud_3                 2.682611e-01    1  ON    27
+       ud_4                 1.792691e-01    1  ON    28
+       ud_5                 1.131794e-01    1  ON    29
+       ud_6                 6.216543e-02    1  ON    30
+       ud_7                 3.189129e-02    1  ON    31
+     uuGe_0                -5.773410e-03    1  ON    32
+     uuGe_1                 8.462557e-03    1  ON    33
+     uuGe_2                -1.945027e-03    1  ON    34
+     uuGe_3                 8.198500e-03    1  ON    35
+     uuGe_4                -2.773147e-03    1  ON    36
+     uuGe_5                -1.578342e-03    1  ON    37
+     uuGe_6                -4.707360e-03    1  ON    38
+     uuGe_7                -1.659861e-03    1  ON    39
+     uuGe_8                 2.567027e-03    1  ON    40
+     uuGe_9                -2.988906e-05    1  ON    41
+    uuGe_10                -2.366331e-03    1  ON    42
+    uuGe_11                 2.221169e-04    1  ON    43
+    uuGe_12                 4.141272e-03    1  ON    44
+    uuGe_13                 3.825277e-03    1  ON    45
+    uuGe_14                -7.037460e-04    1  ON    46
+    uuGe_15                -7.819089e-03    1  ON    47
+    uuGe_16                 1.635550e-03    1  ON    48
+    uuGe_17                -4.967290e-04    1  ON    49
+    uuGe_18                 3.690203e-04    1  ON    50
+    uuGe_19                 2.530775e-03    1  ON    51
+    uuGe_20                 3.888918e-03    1  ON    52
+    uuGe_21                 6.311905e-04    1  ON    53
+    uuGe_22                 1.947933e-03    1  ON    54
+    uuGe_23                 2.036632e-03    1  ON    55
+    uuGe_24                 1.041248e-03    1  ON    56
+    uuGe_25                 1.334748e-03    1  ON    57
+     udGe_0                -2.685340e-02    1  ON    58
+     udGe_1                 2.013893e-02    1  ON    59
+     udGe_2                -1.970598e-02    1  ON    60
+     udGe_3                 1.816857e-02    1  ON    61
+     udGe_4                -2.613325e-02    1  ON    62
+     udGe_5                -2.323198e-03    1  ON    63
+     udGe_6                -1.158307e-02    1  ON    64
+     udGe_7                -7.977433e-03    1  ON    65
+     udGe_8                 1.089851e-02    1  ON    66
+     udGe_9                -1.117224e-02    1  ON    67
+    udGe_10                -2.450821e-03    1  ON    68
+    udGe_11                -6.434040e-03    1  ON    69
+    udGe_12                 2.246138e-02    1  ON    70
+    udGe_13                -6.118405e-04    1  ON    71
+    udGe_14                -1.532382e-02    1  ON    72
+    udGe_15                -2.625481e-02    1  ON    73
+    udGe_16                -2.635212e-03    1  ON    74
+    udGe_17                 5.537716e-04    1  ON    75
+    udGe_18                 4.481447e-05    1  ON    76
+    udGe_19                 1.673741e-02    1  ON    77
+    udGe_20                -5.802294e-03    1  ON    78
+    udGe_21                -5.445912e-03    1  ON    79
+    udGe_22                 1.092451e-02    1  ON    80
+    udGe_23                -5.496603e-03    1  ON    81
+    udGe_24                -5.863766e-03    1  ON    82
+    udGe_25                -6.567089e-03    1  ON    83
+     uuSe_0                -9.853659e-03    1  ON    84
+     uuSe_1                 1.280523e-02    1  ON    85
+     uuSe_2                -6.777735e-03    1  ON    86
+     uuSe_3                 1.568871e-02    1  ON    87
+     uuSe_4                -6.459091e-03    1  ON    88
+     uuSe_5                 1.130005e-03    1  ON    89
+     uuSe_6                -5.250778e-03    1  ON    90
+     uuSe_7                -5.496401e-04    1  ON    91
+     uuSe_8                 7.542610e-03    1  ON    92
+     uuSe_9                -5.194421e-03    1  ON    93
+    uuSe_10                -4.725004e-03    1  ON    94
+    uuSe_11                 2.377586e-03    1  ON    95
+    uuSe_12                 1.292437e-02    1  ON    96
+    uuSe_13                -1.577849e-04    1  ON    97
+    uuSe_14                -5.233544e-03    1  ON    98
+    uuSe_15                -1.796591e-02    1  ON    99
+    uuSe_16                -3.991071e-03    1  ON   100
+    uuSe_17                -2.206177e-03    1  ON   101
+    uuSe_18                 1.290659e-03    1  ON   102
+    uuSe_19                 1.145196e-02    1  ON   103
+    uuSe_20                -1.288216e-02    1  ON   104
+    uuSe_21                -2.929415e-03    1  ON   105
+    uuSe_22                 1.063858e-02    1  ON   106
+    uuSe_23                -1.242216e-02    1  ON   107
+    uuSe_24                -6.658922e-03    1  ON   108
+    uuSe_25                -4.379927e-03    1  ON   109
+     udSe_0                -2.759370e-02    1  ON   110
+     udSe_1                 2.554581e-02    1  ON   111
+     udSe_2                -1.712514e-02    1  ON   112
+     udSe_3                 4.840855e-02    1  ON   113
+     udSe_4                -1.579133e-02    1  ON   114
+     udSe_5                -1.910266e-02    1  ON   115
+     udSe_6                -3.817847e-03    1  ON   116
+     udSe_7                 4.662396e-03    1  ON   117
+     udSe_8                 8.890365e-03    1  ON   118
+     udSe_9                -1.280676e-02    1  ON   119
+    udSe_10                 5.961735e-04    1  ON   120
+    udSe_11                 1.125004e-02    1  ON   121
+    udSe_12                 1.398345e-02    1  ON   122
+    udSe_13                 6.235518e-03    1  ON   123
+    udSe_14                -1.059660e-02    1  ON   124
+    udSe_15                -3.430915e-02    1  ON   125
+    udSe_16                -1.214837e-02    1  ON   126
+    udSe_17                -1.298868e-03    1  ON   127
+    udSe_18                 9.100661e-03    1  ON   128
+    udSe_19                 1.974504e-02    1  ON   129
+    udSe_20                -4.225989e-02    1  ON   130
+    udSe_21                 2.393861e-03    1  ON   131
+    udSe_22                 2.035237e-02    1  ON   132
+    udSe_23                -4.531283e-02    1  ON   133
+    udSe_24                -1.236413e-02    1  ON   134
+    udSe_25                -4.680900e-03    1  ON   135
+
+  Updated wavefunction vp file optJ123.s000.vp.h5
+  Updated wavefunction xml file optJ123.s000.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.172 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s001
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s001
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074805 MiB
+Memory footprint by rank 0 on node 0       :     998 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074806 MiB
+Memory footprint by rank 0 on node 0       :     998 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074805 MiB
+Memory footprint by rank 0 on node 0       :     998 MiB
+=====================================================
+VMC Warmup completed in 1.6882e-01 secs
+Completed block    1 of 10 average 0.1803 secs/block after 8.475 secs
+Completed block    2 of 10 average 0.1695 secs/block after 8.635 secs
+Completed block    5 of 10 average 0.1628 secs/block after 9.113 secs
+Completed block    7 of 10 average 0.1612 secs/block after 9.429 secs
+Completed block   10 of 10 average 0.1592 secs/block after 9.896 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 1
+    time step          = 0.3
+    reference energy   = -52.6263
+    reference variance = 1.34901
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074806 MiB
+Memory footprint by rank 0 on node 0       :     998 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7915e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2626e+01
+  VMC Evar = 1.3493e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 3.7324e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.5733e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 8.5973e-03
+
+Among totally 136 optimized parameters, largest LM parameter change : 2.6776e-02 at parameter 113
+Effective weight of all the samples measured by correlated sampling is 9.9984e-01
+
+******************************************************************************
+Init Cost =  -4.7229e+01    New Cost =  -4.7227e+01  Delta Cost =   1.3429e-03
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   6.2500e-02
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -8.535177e-02    1  ON     0
+      eGe_1                -1.016165e-01    1  ON     1
+      eGe_2                -8.626532e-02    1  ON     2
+      eGe_3                -5.835263e-02    1  ON     3
+      eGe_4                -5.254822e-02    1  ON     4
+      eGe_5                -3.830657e-02    1  ON     5
+      eGe_6                -2.622113e-02    1  ON     6
+      eGe_7                -1.948731e-02    1  ON     7
+      eSe_0                -3.239084e-01    1  ON     8
+      eSe_1                -3.860276e-01    1  ON     9
+      eSe_2                -3.354484e-01    1  ON    10
+      eSe_3                -2.810730e-01    1  ON    11
+      eSe_4                -2.292080e-01    1  ON    12
+      eSe_5                -1.587555e-01    1  ON    13
+      eSe_6                -9.629638e-02    1  ON    14
+      eSe_7                -5.289190e-02    1  ON    15
+       uu_0                 4.118551e-01    1  ON    16
+       uu_1                 3.308393e-01    1  ON    17
+       uu_2                 2.517612e-01    1  ON    18
+       uu_3                 1.864883e-01    1  ON    19
+       uu_4                 1.305543e-01    1  ON    20
+       uu_5                 8.716457e-02    1  ON    21
+       uu_6                 4.986448e-02    1  ON    22
+       uu_7                 2.716279e-02    1  ON    23
+       ud_0                 6.986588e-01    1  ON    24
+       ud_1                 5.240162e-01    1  ON    25
+       ud_2                 3.822853e-01    1  ON    26
+       ud_3                 2.696028e-01    1  ON    27
+       ud_4                 1.800021e-01    1  ON    28
+       ud_5                 1.133192e-01    1  ON    29
+       ud_6                 6.221680e-02    1  ON    30
+       ud_7                 3.209880e-02    1  ON    31
+     uuGe_0                -9.119229e-03    1  ON    32
+     uuGe_1                 1.256327e-02    1  ON    33
+     uuGe_2                -5.148006e-03    1  ON    34
+     uuGe_3                 1.312567e-02    1  ON    35
+     uuGe_4                -4.365382e-03    1  ON    36
+     uuGe_5                -2.376154e-03    1  ON    37
+     uuGe_6                -6.706668e-03    1  ON    38
+     uuGe_7                -2.157846e-03    1  ON    39
+     uuGe_8                 5.860910e-03    1  ON    40
+     uuGe_9                -1.082901e-03    1  ON    41
+    uuGe_10                -3.484954e-03    1  ON    42
+    uuGe_11                 7.924970e-04    1  ON    43
+    uuGe_12                 7.701434e-03    1  ON    44
+    uuGe_13                 5.639730e-03    1  ON    45
+    uuGe_14                -1.879075e-03    1  ON    46
+    uuGe_15                -1.476574e-02    1  ON    47
+    uuGe_16                 1.469576e-03    1  ON    48
+    uuGe_17                -1.656238e-03    1  ON    49
+    uuGe_18                 4.920763e-04    1  ON    50
+    uuGe_19                 5.142297e-03    1  ON    51
+    uuGe_20                 4.395031e-03    1  ON    52
+    uuGe_21                 1.009618e-03    1  ON    53
+    uuGe_22                 3.524006e-03    1  ON    54
+    uuGe_23                 2.427980e-03    1  ON    55
+    uuGe_24                 1.455930e-03    1  ON    56
+    uuGe_25                 7.187077e-04    1  ON    57
+     udGe_0                -3.829121e-02    1  ON    58
+     udGe_1                 2.990770e-02    1  ON    59
+     udGe_2                -3.067391e-02    1  ON    60
+     udGe_3                 3.589702e-02    1  ON    61
+     udGe_4                -2.803314e-02    1  ON    62
+     udGe_5                -5.762711e-03    1  ON    63
+     udGe_6                -1.392883e-02    1  ON    64
+     udGe_7                -8.055678e-03    1  ON    65
+     udGe_8                 1.786642e-02    1  ON    66
+     udGe_9                -1.367631e-02    1  ON    67
+    udGe_10                -6.486902e-03    1  ON    68
+    udGe_11                -6.194404e-03    1  ON    69
+    udGe_12                 2.774987e-02    1  ON    70
+    udGe_13                 9.657478e-03    1  ON    71
+    udGe_14                -1.690358e-02    1  ON    72
+    udGe_15                -3.724809e-02    1  ON    73
+    udGe_16                -5.476235e-03    1  ON    74
+    udGe_17                -5.967281e-03    1  ON    75
+    udGe_18                -1.733764e-03    1  ON    76
+    udGe_19                 2.107903e-02    1  ON    77
+    udGe_20                -9.127924e-03    1  ON    78
+    udGe_21                -6.734666e-03    1  ON    79
+    udGe_22                 1.502761e-02    1  ON    80
+    udGe_23                -8.698924e-03    1  ON    81
+    udGe_24                -5.630633e-03    1  ON    82
+    udGe_25                -6.510216e-03    1  ON    83
+     uuSe_0                -1.533571e-02    1  ON    84
+     uuSe_1                 1.669204e-02    1  ON    85
+     uuSe_2                -1.049515e-02    1  ON    86
+     uuSe_3                 2.479567e-02    1  ON    87
+     uuSe_4                -3.900433e-03    1  ON    88
+     uuSe_5                -7.642435e-04    1  ON    89
+     uuSe_6                -3.961987e-03    1  ON    90
+     uuSe_7                 1.680578e-03    1  ON    91
+     uuSe_8                 9.014573e-03    1  ON    92
+     uuSe_9                -6.279106e-03    1  ON    93
+    uuSe_10                -7.286010e-03    1  ON    94
+    uuSe_11                 4.404748e-03    1  ON    95
+    uuSe_12                 1.472160e-02    1  ON    96
+    uuSe_13                 5.313688e-03    1  ON    97
+    uuSe_14                -4.638710e-03    1  ON    98
+    uuSe_15                -2.473636e-02    1  ON    99
+    uuSe_16                -7.432303e-03    1  ON   100
+    uuSe_17                -6.209783e-03    1  ON   101
+    uuSe_18                 1.940708e-03    1  ON   102
+    uuSe_19                 1.647241e-02    1  ON   103
+    uuSe_20                -2.132197e-02    1  ON   104
+    uuSe_21                -1.085951e-03    1  ON   105
+    uuSe_22                 1.642901e-02    1  ON   106
+    uuSe_23                -2.020154e-02    1  ON   107
+    uuSe_24                -7.962354e-03    1  ON   108
+    uuSe_25                -1.004678e-02    1  ON   109
+     udSe_0                -4.128278e-02    1  ON   110
+     udSe_1                 2.693218e-02    1  ON   111
+     udSe_2                -2.369890e-02    1  ON   112
+     udSe_3                 7.518446e-02    1  ON   113
+     udSe_4                -2.174499e-02    1  ON   114
+     udSe_5                -2.677632e-02    1  ON   115
+     udSe_6                 5.808157e-03    1  ON   116
+     udSe_7                 1.053369e-02    1  ON   117
+     udSe_8                 6.395600e-04    1  ON   118
+     udSe_9                -1.323332e-02    1  ON   119
+    udSe_10                 4.859295e-03    1  ON   120
+    udSe_11                 1.567237e-02    1  ON   121
+    udSe_12                 8.372357e-03    1  ON   122
+    udSe_13                 2.094725e-02    1  ON   123
+    udSe_14                -1.378282e-02    1  ON   124
+    udSe_15                -3.774737e-02    1  ON   125
+    udSe_16                -1.666034e-02    1  ON   126
+    udSe_17                 7.325952e-04    1  ON   127
+    udSe_18                 1.674181e-02    1  ON   128
+    udSe_19                 2.666464e-02    1  ON   129
+    udSe_20                -5.927316e-02    1  ON   130
+    udSe_21                 8.288800e-03    1  ON   131
+    udSe_22                 3.055007e-02    1  ON   132
+    udSe_23                -7.062722e-02    1  ON   133
+    udSe_24                -2.153368e-02    1  ON   134
+    udSe_25                -1.200318e-02    1  ON   135
+
+  Updated wavefunction vp file optJ123.s001.vp.h5
+  Updated wavefunction xml file optJ123.s001.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.475 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s002
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s002
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074802 MiB
+Memory footprint by rank 0 on node 0       :    1002 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074802 MiB
+Memory footprint by rank 0 on node 0       :    1002 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074802 MiB
+Memory footprint by rank 0 on node 0       :    1002 MiB
+=====================================================
+VMC Warmup completed in 1.6950e-01 secs
+Completed block    1 of 10 average 0.1663 secs/block after 10.95 secs
+Completed block    2 of 10 average 0.1609 secs/block after 11.11 secs
+Completed block    5 of 10 average 0.1581 secs/block after 11.58 secs
+Completed block    7 of 10 average 0.1594 secs/block after 11.91 secs
+Completed block   10 of 10 average 0.1569 secs/block after 12.36 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 2
+    time step          = 0.3
+    reference energy   = -52.6262
+    reference variance = 1.35639
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074804 MiB
+Memory footprint by rank 0 on node 0       :    1002 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7810e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2626e+01
+  VMC Evar = 1.3562e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 4.2420e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.3210e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 9.2913e-03
+
+Among totally 136 optimized parameters, largest LM parameter change : 1.7500e-02 at parameter 113
+Effective weight of all the samples measured by correlated sampling is 9.9980e-01
+
+******************************************************************************
+Init Cost =  -4.7228e+01    New Cost =  -4.7229e+01  Delta Cost =  -5.8778e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   1.5625e-02
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -8.603045e-02    1  ON     0
+      eGe_1                -9.708191e-02    1  ON     1
+      eGe_2                -8.264504e-02    1  ON     2
+      eGe_3                -5.431197e-02    1  ON     3
+      eGe_4                -4.912928e-02    1  ON     4
+      eGe_5                -3.628477e-02    1  ON     5
+      eGe_6                -2.461496e-02    1  ON     6
+      eGe_7                -1.935857e-02    1  ON     7
+      eSe_0                -3.309903e-01    1  ON     8
+      eSe_1                -3.852887e-01    1  ON     9
+      eSe_2                -3.361509e-01    1  ON    10
+      eSe_3                -2.824188e-01    1  ON    11
+      eSe_4                -2.300071e-01    1  ON    12
+      eSe_5                -1.599296e-01    1  ON    13
+      eSe_6                -9.739951e-02    1  ON    14
+      eSe_7                -5.350074e-02    1  ON    15
+       uu_0                 4.153011e-01    1  ON    16
+       uu_1                 3.303055e-01    1  ON    17
+       uu_2                 2.513915e-01    1  ON    18
+       uu_3                 1.865421e-01    1  ON    19
+       uu_4                 1.303222e-01    1  ON    20
+       uu_5                 8.651946e-02    1  ON    21
+       uu_6                 4.943767e-02    1  ON    22
+       uu_7                 2.695161e-02    1  ON    23
+       ud_0                 7.005697e-01    1  ON    24
+       ud_1                 5.244570e-01    1  ON    25
+       ud_2                 3.828326e-01    1  ON    26
+       ud_3                 2.698400e-01    1  ON    27
+       ud_4                 1.802737e-01    1  ON    28
+       ud_5                 1.136556e-01    1  ON    29
+       ud_6                 6.253068e-02    1  ON    30
+       ud_7                 3.215178e-02    1  ON    31
+     uuGe_0                -1.068959e-02    1  ON    32
+     uuGe_1                 1.478147e-02    1  ON    33
+     uuGe_2                -7.911335e-03    1  ON    34
+     uuGe_3                 1.480119e-02    1  ON    35
+     uuGe_4                -4.281932e-03    1  ON    36
+     uuGe_5                 5.108357e-04    1  ON    37
+     uuGe_6                -6.790628e-03    1  ON    38
+     uuGe_7                -2.028410e-03    1  ON    39
+     uuGe_8                 7.597294e-03    1  ON    40
+     uuGe_9                -2.365532e-03    1  ON    41
+    uuGe_10                -3.898604e-03    1  ON    42
+    uuGe_11                 4.512963e-04    1  ON    43
+    uuGe_12                 7.614523e-03    1  ON    44
+    uuGe_13                 5.167238e-03    1  ON    45
+    uuGe_14                -2.631766e-03    1  ON    46
+    uuGe_15                -1.696608e-02    1  ON    47
+    uuGe_16                -4.760397e-04    1  ON    48
+    uuGe_17                -3.547005e-03    1  ON    49
+    uuGe_18                -6.401671e-04    1  ON    50
+    uuGe_19                 5.336918e-03    1  ON    51
+    uuGe_20                -7.931231e-05    1  ON    52
+    uuGe_21                 3.844577e-04    1  ON    53
+    uuGe_22                 5.711765e-03    1  ON    54
+    uuGe_23                -2.664942e-04    1  ON    55
+    uuGe_24                 2.488968e-03    1  ON    56
+    uuGe_25                 3.959770e-03    1  ON    57
+     udGe_0                -4.021057e-02    1  ON    58
+     udGe_1                 3.200840e-02    1  ON    59
+     udGe_2                -3.544618e-02    1  ON    60
+     udGe_3                 4.728168e-02    1  ON    61
+     udGe_4                -2.703881e-02    1  ON    62
+     udGe_5                -7.898145e-03    1  ON    63
+     udGe_6                -1.306476e-02    1  ON    64
+     udGe_7                -6.771808e-03    1  ON    65
+     udGe_8                 2.159100e-02    1  ON    66
+     udGe_9                -1.604170e-02    1  ON    67
+    udGe_10                -1.073415e-02    1  ON    68
+    udGe_11                -5.287584e-03    1  ON    69
+    udGe_12                 3.065299e-02    1  ON    70
+    udGe_13                 1.419593e-02    1  ON    71
+    udGe_14                -1.700280e-02    1  ON    72
+    udGe_15                -4.242741e-02    1  ON    73
+    udGe_16                -9.583475e-03    1  ON    74
+    udGe_17                -1.069127e-02    1  ON    75
+    udGe_18                -2.684459e-03    1  ON    76
+    udGe_19                 2.400597e-02    1  ON    77
+    udGe_20                -1.578809e-02    1  ON    78
+    udGe_21                -7.000843e-03    1  ON    79
+    udGe_22                 1.789586e-02    1  ON    80
+    udGe_23                -1.321051e-02    1  ON    81
+    udGe_24                -5.364892e-03    1  ON    82
+    udGe_25                -7.853255e-03    1  ON    83
+     uuSe_0                -2.064094e-02    1  ON    84
+     uuSe_1                 1.295185e-02    1  ON    85
+     uuSe_2                -1.675474e-02    1  ON    86
+     uuSe_3                 3.055448e-02    1  ON    87
+     uuSe_4                 1.210053e-03    1  ON    88
+     uuSe_5                -3.225603e-03    1  ON    89
+     uuSe_6                 1.959132e-03    1  ON    90
+     uuSe_7                 3.625138e-03    1  ON    91
+     uuSe_8                 8.133853e-03    1  ON    92
+     uuSe_9                -5.063205e-03    1  ON    93
+    uuSe_10                -1.097690e-02    1  ON    94
+    uuSe_11                 2.163637e-03    1  ON    95
+    uuSe_12                 1.295364e-02    1  ON    96
+    uuSe_13                 1.501700e-02    1  ON    97
+    uuSe_14                -4.557714e-03    1  ON    98
+    uuSe_15                -2.579475e-02    1  ON    99
+    uuSe_16                -1.085600e-02    1  ON   100
+    uuSe_17                -1.181088e-02    1  ON   101
+    uuSe_18                 7.455736e-04    1  ON   102
+    uuSe_19                 2.058786e-02    1  ON   103
+    uuSe_20                -2.613757e-02    1  ON   104
+    uuSe_21                 8.915749e-04    1  ON   105
+    uuSe_22                 2.291139e-02    1  ON   106
+    uuSe_23                -2.436021e-02    1  ON   107
+    uuSe_24                -8.242481e-03    1  ON   108
+    uuSe_25                -1.665062e-02    1  ON   109
+     udSe_0                -5.235647e-02    1  ON   110
+     udSe_1                 1.882844e-02    1  ON   111
+     udSe_2                -2.834287e-02    1  ON   112
+     udSe_3                 9.268469e-02    1  ON   113
+     udSe_4                -2.618916e-02    1  ON   114
+     udSe_5                -2.962842e-02    1  ON   115
+     udSe_6                 1.805218e-02    1  ON   116
+     udSe_7                 1.472271e-02    1  ON   117
+     udSe_8                -1.101755e-02    1  ON   118
+     udSe_9                -1.477897e-02    1  ON   119
+    udSe_10                 7.072296e-03    1  ON   120
+    udSe_11                 1.778513e-02    1  ON   121
+    udSe_12                 1.422992e-03    1  ON   122
+    udSe_13                 3.350587e-02    1  ON   123
+    udSe_14                -1.097933e-02    1  ON   124
+    udSe_15                -3.816997e-02    1  ON   125
+    udSe_16                -2.168172e-02    1  ON   126
+    udSe_17                 2.792621e-03    1  ON   127
+    udSe_18                 2.517376e-02    1  ON   128
+    udSe_19                 3.113101e-02    1  ON   129
+    udSe_20                -7.129423e-02    1  ON   130
+    udSe_21                 2.240583e-02    1  ON   131
+    udSe_22                 3.521223e-02    1  ON   132
+    udSe_23                -8.796357e-02    1  ON   133
+    udSe_24                -2.188442e-02    1  ON   134
+    udSe_25                -2.256050e-02    1  ON   135
+
+  Updated wavefunction vp file optJ123.s002.vp.h5
+  Updated wavefunction xml file optJ123.s002.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.483 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s003
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s003
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074798 MiB
+Memory footprint by rank 0 on node 0       :    1005 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074798 MiB
+Memory footprint by rank 0 on node 0       :    1006 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074798 MiB
+Memory footprint by rank 0 on node 0       :    1006 MiB
+=====================================================
+VMC Warmup completed in 1.6904e-01 secs
+Completed block    1 of 10 average 0.1382 secs/block after 13.4 secs
+Completed block    2 of 10 average 0.1646 secs/block after 13.59 secs
+Completed block    5 of 10 average 0.1562 secs/block after 14.05 secs
+Completed block    7 of 10 average 0.1573 secs/block after 14.37 secs
+Completed block   10 of 10 average 0.1583 secs/block after 14.86 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 3
+    time step          = 0.3
+    reference energy   = -52.6299
+    reference variance = 1.34966
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074799 MiB
+Memory footprint by rank 0 on node 0       :    1006 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7914e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2630e+01
+  VMC Evar = 1.3495e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 4.0367e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.7434e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 8.5911e-03
+
+Among totally 136 optimized parameters, largest LM parameter change : 1.7147e-02 at parameter 113
+Effective weight of all the samples measured by correlated sampling is 9.9985e-01
+
+******************************************************************************
+Init Cost =  -4.7232e+01    New Cost =  -4.7231e+01  Delta Cost =   6.6845e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -9.149909e-02    1  ON     0
+      eGe_1                -9.928222e-02    1  ON     1
+      eGe_2                -8.564207e-02    1  ON     2
+      eGe_3                -5.725018e-02    1  ON     3
+      eGe_4                -5.087633e-02    1  ON     4
+      eGe_5                -3.727125e-02    1  ON     5
+      eGe_6                -2.470976e-02    1  ON     6
+      eGe_7                -1.946383e-02    1  ON     7
+      eSe_0                -3.320098e-01    1  ON     8
+      eSe_1                -3.908992e-01    1  ON     9
+      eSe_2                -3.389162e-01    1  ON    10
+      eSe_3                -2.842234e-01    1  ON    11
+      eSe_4                -2.316044e-01    1  ON    12
+      eSe_5                -1.603249e-01    1  ON    13
+      eSe_6                -9.773280e-02    1  ON    14
+      eSe_7                -5.386341e-02    1  ON    15
+       uu_0                 4.183767e-01    1  ON    16
+       uu_1                 3.343526e-01    1  ON    17
+       uu_2                 2.557148e-01    1  ON    18
+       uu_3                 1.891088e-01    1  ON    19
+       uu_4                 1.322300e-01    1  ON    20
+       uu_5                 8.808528e-02    1  ON    21
+       uu_6                 5.043457e-02    1  ON    22
+       uu_7                 2.759136e-02    1  ON    23
+       ud_0                 7.013901e-01    1  ON    24
+       ud_1                 5.246013e-01    1  ON    25
+       ud_2                 3.825615e-01    1  ON    26
+       ud_3                 2.694209e-01    1  ON    27
+       ud_4                 1.796436e-01    1  ON    28
+       ud_5                 1.131481e-01    1  ON    29
+       ud_6                 6.222727e-02    1  ON    30
+       ud_7                 3.199686e-02    1  ON    31
+     uuGe_0                -1.096994e-02    1  ON    32
+     uuGe_1                 1.793010e-02    1  ON    33
+     uuGe_2                -8.407893e-03    1  ON    34
+     uuGe_3                 1.954534e-02    1  ON    35
+     uuGe_4                -2.561272e-03    1  ON    36
+     uuGe_5                 2.616410e-03    1  ON    37
+     uuGe_6                -7.523440e-03    1  ON    38
+     uuGe_7                -1.827205e-03    1  ON    39
+     uuGe_8                 9.082456e-03    1  ON    40
+     uuGe_9                -1.691162e-03    1  ON    41
+    uuGe_10                -6.070952e-03    1  ON    42
+    uuGe_11                 1.190737e-03    1  ON    43
+    uuGe_12                 8.589124e-03    1  ON    44
+    uuGe_13                 7.249628e-03    1  ON    45
+    uuGe_14                -1.471615e-03    1  ON    46
+    uuGe_15                -1.807822e-02    1  ON    47
+    uuGe_16                -6.830237e-04    1  ON    48
+    uuGe_17                -5.072342e-03    1  ON    49
+    uuGe_18                -1.039985e-03    1  ON    50
+    uuGe_19                 5.379990e-03    1  ON    51
+    uuGe_20                -3.421783e-04    1  ON    52
+    uuGe_21                 2.266455e-04    1  ON    53
+    uuGe_22                 5.362901e-03    1  ON    54
+    uuGe_23                -6.325365e-04    1  ON    55
+    uuGe_24                 2.804301e-03    1  ON    56
+    uuGe_25                 4.002314e-03    1  ON    57
+     udGe_0                -4.295505e-02    1  ON    58
+     udGe_1                 2.607017e-02    1  ON    59
+     udGe_2                -4.156844e-02    1  ON    60
+     udGe_3                 5.095169e-02    1  ON    61
+     udGe_4                -2.553432e-02    1  ON    62
+     udGe_5                -1.383390e-02    1  ON    63
+     udGe_6                -8.254380e-03    1  ON    64
+     udGe_7                -5.371488e-03    1  ON    65
+     udGe_8                 2.201411e-02    1  ON    66
+     udGe_9                -1.690656e-02    1  ON    67
+    udGe_10                -1.215438e-02    1  ON    68
+    udGe_11                -7.447452e-03    1  ON    69
+    udGe_12                 2.912531e-02    1  ON    70
+    udGe_13                 2.053336e-02    1  ON    71
+    udGe_14                -1.895113e-02    1  ON    72
+    udGe_15                -4.302422e-02    1  ON    73
+    udGe_16                -1.273438e-02    1  ON    74
+    udGe_17                -1.483667e-02    1  ON    75
+    udGe_18                -4.507894e-03    1  ON    76
+    udGe_19                 2.602801e-02    1  ON    77
+    udGe_20                -1.930922e-02    1  ON    78
+    udGe_21                -7.990706e-03    1  ON    79
+    udGe_22                 2.205587e-02    1  ON    80
+    udGe_23                -1.567672e-02    1  ON    81
+    udGe_24                -5.987481e-03    1  ON    82
+    udGe_25                -9.267169e-03    1  ON    83
+     uuSe_0                -2.344702e-02    1  ON    84
+     uuSe_1                 1.162690e-02    1  ON    85
+     uuSe_2                -1.953824e-02    1  ON    86
+     uuSe_3                 3.617761e-02    1  ON    87
+     uuSe_4                 1.779110e-03    1  ON    88
+     uuSe_5                -4.966708e-03    1  ON    89
+     uuSe_6                 5.034081e-03    1  ON    90
+     uuSe_7                 5.318250e-03    1  ON    91
+     uuSe_8                 7.594478e-03    1  ON    92
+     uuSe_9                -5.790167e-03    1  ON    93
+    uuSe_10                -1.278986e-02    1  ON    94
+    uuSe_11                 2.676254e-03    1  ON    95
+    uuSe_12                 1.330559e-02    1  ON    96
+    uuSe_13                 1.925689e-02    1  ON    97
+    uuSe_14                -4.205850e-03    1  ON    98
+    uuSe_15                -2.858569e-02    1  ON    99
+    uuSe_16                -1.374491e-02    1  ON   100
+    uuSe_17                -1.442840e-02    1  ON   101
+    uuSe_18                 1.146899e-03    1  ON   102
+    uuSe_19                 2.362369e-02    1  ON   103
+    uuSe_20                -3.178443e-02    1  ON   104
+    uuSe_21                 2.047653e-03    1  ON   105
+    uuSe_22                 2.680699e-02    1  ON   106
+    uuSe_23                -2.917419e-02    1  ON   107
+    uuSe_24                -9.208265e-03    1  ON   108
+    uuSe_25                -2.014663e-02    1  ON   109
+     udSe_0                -6.205499e-02    1  ON   110
+     udSe_1                 1.335248e-02    1  ON   111
+     udSe_2                -3.178975e-02    1  ON   112
+     udSe_3                 1.098321e-01    1  ON   113
+     udSe_4                -3.506058e-02    1  ON   114
+     udSe_5                -3.146443e-02    1  ON   115
+     udSe_6                 2.751596e-02    1  ON   116
+     udSe_7                 1.790415e-02    1  ON   117
+     udSe_8                -2.147272e-02    1  ON   118
+     udSe_9                -1.618028e-02    1  ON   119
+    udSe_10                 1.076034e-02    1  ON   120
+    udSe_11                 1.867643e-02    1  ON   121
+    udSe_12                -4.239788e-03    1  ON   122
+    udSe_13                 4.668308e-02    1  ON   123
+    udSe_14                -9.728051e-03    1  ON   124
+    udSe_15                -3.625740e-02    1  ON   125
+    udSe_16                -2.512241e-02    1  ON   126
+    udSe_17                 4.082023e-03    1  ON   127
+    udSe_18                 2.967012e-02    1  ON   128
+    udSe_19                 3.218864e-02    1  ON   129
+    udSe_20                -7.886695e-02    1  ON   130
+    udSe_21                 2.622523e-02    1  ON   131
+    udSe_22                 3.746013e-02    1  ON   132
+    udSe_23                -1.010494e-01    1  ON   133
+    udSe_24                -2.560171e-02    1  ON   134
+    udSe_25                -2.489714e-02    1  ON   135
+
+  Updated wavefunction vp file optJ123.s003.vp.h5
+  Updated wavefunction xml file optJ123.s003.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.49 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s004
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s004
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074795 MiB
+Memory footprint by rank 0 on node 0       :    1009 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074795 MiB
+Memory footprint by rank 0 on node 0       :    1009 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074796 MiB
+Memory footprint by rank 0 on node 0       :    1009 MiB
+=====================================================
+VMC Warmup completed in 1.6985e-01 secs
+Completed block    1 of 10 average 0.1347 secs/block after 15.88 secs
+Completed block    2 of 10 average 0.1462 secs/block after 16.04 secs
+Completed block    5 of 10 average 0.1538 secs/block after 16.52 secs
+Completed block    7 of 10 average 0.1535 secs/block after 16.83 secs
+Completed block   10 of 10 average 0.1579 secs/block after 17.34 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 4
+    time step          = 0.3
+    reference energy   = -52.625
+    reference variance = 1.37563
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074796 MiB
+Memory footprint by rank 0 on node 0       :    1009 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7842e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2625e+01
+  VMC Evar = 1.3756e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 4.0394e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.2292e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 8.8702e-03
+
+Among totally 136 optimized parameters, largest LM parameter change : 1.6849e-02 at parameter 113
+Effective weight of all the samples measured by correlated sampling is 9.9982e-01
+
+******************************************************************************
+Init Cost =  -4.7225e+01    New Cost =  -4.7226e+01  Delta Cost =  -1.0278e-03
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -9.688511e-02    1  ON     0
+      eGe_1                -9.790470e-02    1  ON     1
+      eGe_2                -8.457755e-02    1  ON     2
+      eGe_3                -5.550991e-02    1  ON     3
+      eGe_4                -5.021120e-02    1  ON     4
+      eGe_5                -3.683332e-02    1  ON     5
+      eGe_6                -2.504956e-02    1  ON     6
+      eGe_7                -1.945396e-02    1  ON     7
+      eSe_0                -3.343073e-01    1  ON     8
+      eSe_1                -3.835029e-01    1  ON     9
+      eSe_2                -3.354165e-01    1  ON    10
+      eSe_3                -2.811218e-01    1  ON    11
+      eSe_4                -2.286217e-01    1  ON    12
+      eSe_5                -1.577857e-01    1  ON    13
+      eSe_6                -9.574937e-02    1  ON    14
+      eSe_7                -5.280384e-02    1  ON    15
+       uu_0                 4.198597e-01    1  ON    16
+       uu_1                 3.325221e-01    1  ON    17
+       uu_2                 2.525813e-01    1  ON    18
+       uu_3                 1.877378e-01    1  ON    19
+       uu_4                 1.312653e-01    1  ON    20
+       uu_5                 8.749162e-02    1  ON    21
+       uu_6                 4.984236e-02    1  ON    22
+       uu_7                 2.705749e-02    1  ON    23
+       ud_0                 7.021273e-01    1  ON    24
+       ud_1                 5.251595e-01    1  ON    25
+       ud_2                 3.835476e-01    1  ON    26
+       ud_3                 2.701121e-01    1  ON    27
+       ud_4                 1.805234e-01    1  ON    28
+       ud_5                 1.137282e-01    1  ON    29
+       ud_6                 6.254087e-02    1  ON    30
+       ud_7                 3.210760e-02    1  ON    31
+     uuGe_0                -1.587068e-02    1  ON    32
+     uuGe_1                 1.685280e-02    1  ON    33
+     uuGe_2                -1.363176e-02    1  ON    34
+     uuGe_3                 1.733907e-02    1  ON    35
+     uuGe_4                -7.351527e-03    1  ON    36
+     uuGe_5                -9.271318e-05    1  ON    37
+     uuGe_6                -8.359848e-03    1  ON    38
+     uuGe_7                -3.224475e-03    1  ON    39
+     uuGe_8                 1.136972e-02    1  ON    40
+     uuGe_9                -6.178180e-03    1  ON    41
+    uuGe_10                -5.306022e-03    1  ON    42
+    uuGe_11                -8.653791e-04    1  ON    43
+    uuGe_12                 1.179820e-02    1  ON    44
+    uuGe_13                 4.931856e-03    1  ON    45
+    uuGe_14                -4.032763e-03    1  ON    46
+    uuGe_15                -2.152597e-02    1  ON    47
+    uuGe_16                -2.800817e-03    1  ON    48
+    uuGe_17                -6.085400e-03    1  ON    49
+    uuGe_18                -2.211596e-03    1  ON    50
+    uuGe_19                 7.266616e-03    1  ON    51
+    uuGe_20                -3.618985e-03    1  ON    52
+    uuGe_21                -1.536496e-03    1  ON    53
+    uuGe_22                 6.032158e-03    1  ON    54
+    uuGe_23                -1.726316e-03    1  ON    55
+    uuGe_24                 2.342224e-03    1  ON    56
+    uuGe_25                 2.477214e-03    1  ON    57
+     udGe_0                -4.635627e-02    1  ON    58
+     udGe_1                 2.499272e-02    1  ON    59
+     udGe_2                -4.565903e-02    1  ON    60
+     udGe_3                 5.650691e-02    1  ON    61
+     udGe_4                -2.694027e-02    1  ON    62
+     udGe_5                -1.529926e-02    1  ON    63
+     udGe_6                -6.482964e-03    1  ON    64
+     udGe_7                -4.723471e-03    1  ON    65
+     udGe_8                 2.293808e-02    1  ON    66
+     udGe_9                -2.012595e-02    1  ON    67
+    udGe_10                -1.380204e-02    1  ON    68
+    udGe_11                -6.855829e-03    1  ON    69
+    udGe_12                 3.177202e-02    1  ON    70
+    udGe_13                 2.269862e-02    1  ON    71
+    udGe_14                -1.937345e-02    1  ON    72
+    udGe_15                -4.943892e-02    1  ON    73
+    udGe_16                -1.578427e-02    1  ON    74
+    udGe_17                -1.609366e-02    1  ON    75
+    udGe_18                -2.336098e-03    1  ON    76
+    udGe_19                 3.101296e-02    1  ON    77
+    udGe_20                -2.312176e-02    1  ON    78
+    udGe_21                -2.299187e-03    1  ON    79
+    udGe_22                 2.544452e-02    1  ON    80
+    udGe_23                -1.817100e-02    1  ON    81
+    udGe_24                -4.046245e-03    1  ON    82
+    udGe_25                -1.582838e-02    1  ON    83
+     uuSe_0                -3.014967e-02    1  ON    84
+     uuSe_1                 1.321386e-02    1  ON    85
+     uuSe_2                -2.202281e-02    1  ON    86
+     uuSe_3                 3.931442e-02    1  ON    87
+     uuSe_4                 2.324191e-04    1  ON    88
+     uuSe_5                -2.028098e-03    1  ON    89
+     uuSe_6                 5.725752e-03    1  ON    90
+     uuSe_7                 5.272950e-03    1  ON    91
+     uuSe_8                 5.496804e-03    1  ON    92
+     uuSe_9                -7.466004e-03    1  ON    93
+    uuSe_10                -1.318419e-02    1  ON    94
+    uuSe_11                 2.564401e-03    1  ON    95
+    uuSe_12                 1.245195e-02    1  ON    96
+    uuSe_13                 2.288438e-02    1  ON    97
+    uuSe_14                -1.523197e-03    1  ON    98
+    uuSe_15                -3.031302e-02    1  ON    99
+    uuSe_16                -1.474127e-02    1  ON   100
+    uuSe_17                -1.559539e-02    1  ON   101
+    uuSe_18                 2.075370e-03    1  ON   102
+    uuSe_19                 2.414863e-02    1  ON   103
+    uuSe_20                -3.235032e-02    1  ON   104
+    uuSe_21                 5.692632e-03    1  ON   105
+    uuSe_22                 2.750731e-02    1  ON   106
+    uuSe_23                -2.994755e-02    1  ON   107
+    uuSe_24                -7.482557e-03    1  ON   108
+    uuSe_25                -2.300851e-02    1  ON   109
+     udSe_0                -6.770642e-02    1  ON   110
+     udSe_1                 3.745439e-03    1  ON   111
+     udSe_2                -3.387568e-02    1  ON   112
+     udSe_3                 1.266811e-01    1  ON   113
+     udSe_4                -4.261698e-02    1  ON   114
+     udSe_5                -3.011109e-02    1  ON   115
+     udSe_6                 3.601827e-02    1  ON   116
+     udSe_7                 2.118483e-02    1  ON   117
+     udSe_8                -2.982866e-02    1  ON   118
+     udSe_9                -2.310063e-02    1  ON   119
+    udSe_10                 1.091602e-02    1  ON   120
+    udSe_11                 2.192911e-02    1  ON   121
+    udSe_12                -7.601221e-03    1  ON   122
+    udSe_13                 5.540758e-02    1  ON   123
+    udSe_14                -6.510818e-03    1  ON   124
+    udSe_15                -3.743959e-02    1  ON   125
+    udSe_16                -3.018288e-02    1  ON   126
+    udSe_17                 5.555199e-03    1  ON   127
+    udSe_18                 3.571541e-02    1  ON   128
+    udSe_19                 3.367939e-02    1  ON   129
+    udSe_20                -8.491470e-02    1  ON   130
+    udSe_21                 3.356652e-02    1  ON   131
+    udSe_22                 3.829800e-02    1  ON   132
+    udSe_23                -1.102447e-01    1  ON   133
+    udSe_24                -2.682544e-02    1  ON   134
+    udSe_25                -2.821196e-02    1  ON   135
+
+  Updated wavefunction vp file optJ123.s004.vp.h5
+  Updated wavefunction xml file optJ123.s004.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.469 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s005
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s005
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074791 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074792 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074792 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+=====================================================
+VMC Warmup completed in 1.6711e-01 secs
+Completed block    1 of 10 average 0.1644 secs/block after 18.38 secs
+Completed block    2 of 10 average 0.1687 secs/block after 18.56 secs
+Completed block    5 of 10 average 0.1625 secs/block after 19.04 secs
+Completed block    7 of 10 average 0.1581 secs/block after 19.33 secs
+Completed block   10 of 10 average 0.1613 secs/block after 19.84 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 5
+    time step          = 0.3
+    reference energy   = -52.6299
+    reference variance = 1.36651
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074794 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.8175e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2630e+01
+  VMC Evar = 1.3672e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 4.1095e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 6.1707e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 8.7845e-03
+
+Among totally 136 optimized parameters, largest LM parameter change : 1.3581e-02 at parameter 113
+Effective weight of all the samples measured by correlated sampling is 9.9991e-01
+
+******************************************************************************
+Init Cost =  -4.7230e+01    New Cost =  -4.7231e+01  Delta Cost =  -4.8914e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -9.792784e-02    1  ON     0
+      eGe_1                -9.618735e-02    1  ON     1
+      eGe_2                -8.513052e-02    1  ON     2
+      eGe_3                -5.653226e-02    1  ON     3
+      eGe_4                -5.044800e-02    1  ON     4
+      eGe_5                -3.725973e-02    1  ON     5
+      eGe_6                -2.442604e-02    1  ON     6
+      eGe_7                -1.920365e-02    1  ON     7
+      eSe_0                -3.346684e-01    1  ON     8
+      eSe_1                -3.844878e-01    1  ON     9
+      eSe_2                -3.357397e-01    1  ON    10
+      eSe_3                -2.812022e-01    1  ON    11
+      eSe_4                -2.287639e-01    1  ON    12
+      eSe_5                -1.584708e-01    1  ON    13
+      eSe_6                -9.612393e-02    1  ON    14
+      eSe_7                -5.338837e-02    1  ON    15
+       uu_0                 4.194867e-01    1  ON    16
+       uu_1                 3.291068e-01    1  ON    17
+       uu_2                 2.512299e-01    1  ON    18
+       uu_3                 1.866098e-01    1  ON    19
+       uu_4                 1.310291e-01    1  ON    20
+       uu_5                 8.764387e-02    1  ON    21
+       uu_6                 5.007986e-02    1  ON    22
+       uu_7                 2.726639e-02    1  ON    23
+       ud_0                 7.002853e-01    1  ON    24
+       ud_1                 5.232370e-01    1  ON    25
+       ud_2                 3.816130e-01    1  ON    26
+       ud_3                 2.686452e-01    1  ON    27
+       ud_4                 1.790289e-01    1  ON    28
+       ud_5                 1.126444e-01    1  ON    29
+       ud_6                 6.184879e-02    1  ON    30
+       ud_7                 3.175598e-02    1  ON    31
+     uuGe_0                -1.710971e-02    1  ON    32
+     uuGe_1                 1.990062e-02    1  ON    33
+     uuGe_2                -1.421638e-02    1  ON    34
+     uuGe_3                 2.221887e-02    1  ON    35
+     uuGe_4                -5.384564e-03    1  ON    36
+     uuGe_5                 3.671346e-03    1  ON    37
+     uuGe_6                -8.803497e-03    1  ON    38
+     uuGe_7                -3.579968e-03    1  ON    39
+     uuGe_8                 1.185391e-02    1  ON    40
+     uuGe_9                -4.995425e-03    1  ON    41
+    uuGe_10                -8.471987e-03    1  ON    42
+    uuGe_11                -1.070214e-03    1  ON    43
+    uuGe_12                 1.290275e-02    1  ON    44
+    uuGe_13                 7.943667e-03    1  ON    45
+    uuGe_14                -2.133716e-03    1  ON    46
+    uuGe_15                -2.128586e-02    1  ON    47
+    uuGe_16                -2.636825e-03    1  ON    48
+    uuGe_17                -7.319861e-03    1  ON    49
+    uuGe_18                -2.095828e-03    1  ON    50
+    uuGe_19                 7.806665e-03    1  ON    51
+    uuGe_20                -2.100699e-03    1  ON    52
+    uuGe_21                 6.080907e-04    1  ON    53
+    uuGe_22                 5.389033e-03    1  ON    54
+    uuGe_23                -4.778963e-04    1  ON    55
+    uuGe_24                 4.256319e-03    1  ON    56
+    uuGe_25                 2.810905e-04    1  ON    57
+     udGe_0                -4.801743e-02    1  ON    58
+     udGe_1                 2.419516e-02    1  ON    59
+     udGe_2                -4.905881e-02    1  ON    60
+     udGe_3                 6.308719e-02    1  ON    61
+     udGe_4                -2.486188e-02    1  ON    62
+     udGe_5                -1.404836e-02    1  ON    63
+     udGe_6                -3.179159e-03    1  ON    64
+     udGe_7                -3.546796e-03    1  ON    65
+     udGe_8                 2.227180e-02    1  ON    66
+     udGe_9                -1.996367e-02    1  ON    67
+    udGe_10                -1.625927e-02    1  ON    68
+    udGe_11                -7.873770e-03    1  ON    69
+    udGe_12                 2.990104e-02    1  ON    70
+    udGe_13                 2.866358e-02    1  ON    71
+    udGe_14                -1.853570e-02    1  ON    72
+    udGe_15                -4.836972e-02    1  ON    73
+    udGe_16                -1.823475e-02    1  ON    74
+    udGe_17                -1.944090e-02    1  ON    75
+    udGe_18                -3.058073e-03    1  ON    76
+    udGe_19                 3.173269e-02    1  ON    77
+    udGe_20                -2.545055e-02    1  ON    78
+    udGe_21                -7.060489e-04    1  ON    79
+    udGe_22                 2.688495e-02    1  ON    80
+    udGe_23                -1.954798e-02    1  ON    81
+    udGe_24                -2.803253e-03    1  ON    82
+    udGe_25                -1.864171e-02    1  ON    83
+     uuSe_0                -3.147368e-02    1  ON    84
+     uuSe_1                 1.097638e-02    1  ON    85
+     uuSe_2                -2.119486e-02    1  ON    86
+     uuSe_3                 4.123216e-02    1  ON    87
+     uuSe_4                 8.485717e-04    1  ON    88
+     uuSe_5                -4.597946e-03    1  ON    89
+     uuSe_6                 8.346516e-03    1  ON    90
+     uuSe_7                 6.629757e-03    1  ON    91
+     uuSe_8                 2.430609e-03    1  ON    92
+     uuSe_9                -5.874762e-03    1  ON    93
+    uuSe_10                -1.320896e-02    1  ON    94
+    uuSe_11                 2.748655e-03    1  ON    95
+    uuSe_12                 1.031499e-02    1  ON    96
+    uuSe_13                 2.800032e-02    1  ON    97
+    uuSe_14                 7.382957e-04    1  ON    98
+    uuSe_15                -2.960222e-02    1  ON    99
+    uuSe_16                -1.510540e-02    1  ON   100
+    uuSe_17                -1.726511e-02    1  ON   101
+    uuSe_18                 1.670800e-03    1  ON   102
+    uuSe_19                 2.381918e-02    1  ON   103
+    uuSe_20                -3.308031e-02    1  ON   104
+    uuSe_21                 5.224833e-03    1  ON   105
+    uuSe_22                 2.894894e-02    1  ON   106
+    uuSe_23                -3.151150e-02    1  ON   107
+    uuSe_24                -8.241686e-03    1  ON   108
+    uuSe_25                -2.348200e-02    1  ON   109
+     udSe_0                -7.690090e-02    1  ON   110
+     udSe_1                -3.273458e-03    1  ON   111
+     udSe_2                -3.536191e-02    1  ON   112
+     udSe_3                 1.402623e-01    1  ON   113
+     udSe_4                -5.191730e-02    1  ON   114
+     udSe_5                -3.329593e-02    1  ON   115
+     udSe_6                 4.489276e-02    1  ON   116
+     udSe_7                 2.368282e-02    1  ON   117
+     udSe_8                -4.101514e-02    1  ON   118
+     udSe_9                -2.351399e-02    1  ON   119
+    udSe_10                 1.521890e-02    1  ON   120
+    udSe_11                 2.266150e-02    1  ON   121
+    udSe_12                -1.255211e-02    1  ON   122
+    udSe_13                 6.779089e-02    1  ON   123
+    udSe_14                -4.878407e-03    1  ON   124
+    udSe_15                -3.546458e-02    1  ON   125
+    udSe_16                -3.184021e-02    1  ON   126
+    udSe_17                 8.064243e-03    1  ON   127
+    udSe_18                 4.024174e-02    1  ON   128
+    udSe_19                 3.441184e-02    1  ON   129
+    udSe_20                -8.878723e-02    1  ON   130
+    udSe_21                 3.624043e-02    1  ON   131
+    udSe_22                 3.989870e-02    1  ON   132
+    udSe_23                -1.204713e-01    1  ON   133
+    udSe_24                -3.136419e-02    1  ON   134
+    udSe_25                -2.963502e-02    1  ON   135
+
+  Updated wavefunction vp file optJ123.s005.vp.h5
+  Updated wavefunction xml file optJ123.s005.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.528 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s006
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s006
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074788 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074788 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074788 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+=====================================================
+VMC Warmup completed in 1.6858e-01 secs
+Completed block    1 of 10 average 0.1402 secs/block after 20.88 secs
+Completed block    2 of 10 average 0.1588 secs/block after 21.06 secs
+Completed block    5 of 10 average 0.1558 secs/block after 21.53 secs
+Completed block    7 of 10 average 0.1569 secs/block after 21.85 secs
+Completed block   10 of 10 average 0.1577 secs/block after 22.33 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 6
+    time step          = 0.3
+    reference energy   = -52.6288
+    reference variance = 1.3607
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074789 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7790e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2629e+01
+  VMC Evar = 1.3609e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 4.0658e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.7273e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 8.5985e-03
+
+Among totally 136 optimized parameters, largest LM parameter change : 1.2653e-02 at parameter 114
+Effective weight of all the samples measured by correlated sampling is 9.9988e-01
+
+******************************************************************************
+Init Cost =  -4.7230e+01    New Cost =  -4.7230e+01  Delta Cost =  -6.5432e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -1.021736e-01    1  ON     0
+      eGe_1                -1.021759e-01    1  ON     1
+      eGe_2                -8.636916e-02    1  ON     2
+      eGe_3                -5.704471e-02    1  ON     3
+      eGe_4                -5.130801e-02    1  ON     4
+      eGe_5                -3.720283e-02    1  ON     5
+      eGe_6                -2.473748e-02    1  ON     6
+      eGe_7                -1.966199e-02    1  ON     7
+      eSe_0                -3.373521e-01    1  ON     8
+      eSe_1                -3.853559e-01    1  ON     9
+      eSe_2                -3.332360e-01    1  ON    10
+      eSe_3                -2.785837e-01    1  ON    11
+      eSe_4                -2.268810e-01    1  ON    12
+      eSe_5                -1.571078e-01    1  ON    13
+      eSe_6                -9.535993e-02    1  ON    14
+      eSe_7                -5.192301e-02    1  ON    15
+       uu_0                 4.220788e-01    1  ON    16
+       uu_1                 3.323419e-01    1  ON    17
+       uu_2                 2.522741e-01    1  ON    18
+       uu_3                 1.864442e-01    1  ON    19
+       uu_4                 1.303113e-01    1  ON    20
+       uu_5                 8.689425e-02    1  ON    21
+       uu_6                 4.954267e-02    1  ON    22
+       uu_7                 2.689474e-02    1  ON    23
+       ud_0                 7.004303e-01    1  ON    24
+       ud_1                 5.241592e-01    1  ON    25
+       ud_2                 3.816845e-01    1  ON    26
+       ud_3                 2.693496e-01    1  ON    27
+       ud_4                 1.798708e-01    1  ON    28
+       ud_5                 1.133220e-01    1  ON    29
+       ud_6                 6.223829e-02    1  ON    30
+       ud_7                 3.197220e-02    1  ON    31
+     uuGe_0                -1.689058e-02    1  ON    32
+     uuGe_1                 1.864714e-02    1  ON    33
+     uuGe_2                -1.577166e-02    1  ON    34
+     uuGe_3                 2.233793e-02    1  ON    35
+     uuGe_4                -2.566803e-03    1  ON    36
+     uuGe_5                 5.084856e-03    1  ON    37
+     uuGe_6                -7.133440e-03    1  ON    38
+     uuGe_7                -2.751065e-03    1  ON    39
+     uuGe_8                 1.229932e-02    1  ON    40
+     uuGe_9                -5.298498e-03    1  ON    41
+    uuGe_10                -9.252484e-03    1  ON    42
+    uuGe_11                -1.461522e-03    1  ON    43
+    uuGe_12                 1.110702e-02    1  ON    44
+    uuGe_13                 8.671794e-03    1  ON    45
+    uuGe_14                -1.843325e-03    1  ON    46
+    uuGe_15                -1.949658e-02    1  ON    47
+    uuGe_16                -4.209017e-03    1  ON    48
+    uuGe_17                -9.332097e-03    1  ON    49
+    uuGe_18                -3.390786e-03    1  ON    50
+    uuGe_19                 6.865459e-03    1  ON    51
+    uuGe_20                -4.942560e-03    1  ON    52
+    uuGe_21                -5.103417e-04    1  ON    53
+    uuGe_22                 5.648047e-03    1  ON    54
+    uuGe_23                -2.019443e-03    1  ON    55
+    uuGe_24                 4.187078e-03    1  ON    56
+    uuGe_25                 1.184900e-03    1  ON    57
+     udGe_0                -4.797141e-02    1  ON    58
+     udGe_1                 2.501515e-02    1  ON    59
+     udGe_2                -5.012853e-02    1  ON    60
+     udGe_3                 7.209266e-02    1  ON    61
+     udGe_4                -2.435413e-02    1  ON    62
+     udGe_5                -1.238790e-02    1  ON    63
+     udGe_6                -1.762208e-03    1  ON    64
+     udGe_7                -3.001587e-03    1  ON    65
+     udGe_8                 2.264220e-02    1  ON    66
+     udGe_9                -2.018106e-02    1  ON    67
+    udGe_10                -2.081786e-02    1  ON    68
+    udGe_11                -7.778098e-03    1  ON    69
+    udGe_12                 3.292174e-02    1  ON    70
+    udGe_13                 3.238481e-02    1  ON    71
+    udGe_14                -1.745519e-02    1  ON    72
+    udGe_15                -4.987864e-02    1  ON    73
+    udGe_16                -2.054657e-02    1  ON    74
+    udGe_17                -2.155584e-02    1  ON    75
+    udGe_18                -2.569684e-03    1  ON    76
+    udGe_19                 3.492512e-02    1  ON    77
+    udGe_20                -2.881588e-02    1  ON    78
+    udGe_21                 8.158342e-04    1  ON    79
+    udGe_22                 2.815540e-02    1  ON    80
+    udGe_23                -2.229877e-02    1  ON    81
+    udGe_24                -3.105731e-03    1  ON    82
+    udGe_25                -2.449998e-02    1  ON    83
+     uuSe_0                -3.367380e-02    1  ON    84
+     uuSe_1                 1.016241e-02    1  ON    85
+     uuSe_2                -2.039227e-02    1  ON    86
+     uuSe_3                 4.153886e-02    1  ON    87
+     uuSe_4                -7.317078e-05    1  ON    88
+     uuSe_5                -6.337311e-03    1  ON    89
+     uuSe_6                 9.792344e-03    1  ON    90
+     uuSe_7                 7.699752e-03    1  ON    91
+     uuSe_8                -3.223673e-04    1  ON    92
+     uuSe_9                -6.557088e-03    1  ON    93
+    uuSe_10                -1.203421e-02    1  ON    94
+    uuSe_11                 3.961289e-03    1  ON    95
+    uuSe_12                 8.716107e-03    1  ON    96
+    uuSe_13                 2.871613e-02    1  ON    97
+    uuSe_14                 3.221095e-03    1  ON    98
+    uuSe_15                -3.051022e-02    1  ON    99
+    uuSe_16                -1.655417e-02    1  ON   100
+    uuSe_17                -1.766146e-02    1  ON   101
+    uuSe_18                 2.652095e-03    1  ON   102
+    uuSe_19                 2.364736e-02    1  ON   103
+    uuSe_20                -3.807932e-02    1  ON   104
+    uuSe_21                 7.117539e-03    1  ON   105
+    uuSe_22                 2.945056e-02    1  ON   106
+    uuSe_23                -3.627332e-02    1  ON   107
+    uuSe_24                -7.599053e-03    1  ON   108
+    uuSe_25                -2.411097e-02    1  ON   109
+     udSe_0                -7.981766e-02    1  ON   110
+     udSe_1                -1.420275e-02    1  ON   111
+     udSe_2                -3.279399e-02    1  ON   112
+     udSe_3                 1.511566e-01    1  ON   113
+     udSe_4                -6.457050e-02    1  ON   114
+     udSe_5                -3.517014e-02    1  ON   115
+     udSe_6                 5.224472e-02    1  ON   116
+     udSe_7                 2.542314e-02    1  ON   117
+     udSe_8                -5.229134e-02    1  ON   118
+     udSe_9                -2.644555e-02    1  ON   119
+    udSe_10                 1.919761e-02    1  ON   120
+    udSe_11                 2.430502e-02    1  ON   121
+    udSe_12                -1.644430e-02    1  ON   122
+    udSe_13                 7.664893e-02    1  ON   123
+    udSe_14                -1.286966e-03    1  ON   124
+    udSe_15                -3.357370e-02    1  ON   125
+    udSe_16                -3.330134e-02    1  ON   126
+    udSe_17                 1.140254e-02    1  ON   127
+    udSe_18                 4.439761e-02    1  ON   128
+    udSe_19                 3.234040e-02    1  ON   129
+    udSe_20                -8.901318e-02    1  ON   130
+    udSe_21                 3.753034e-02    1  ON   131
+    udSe_22                 3.816050e-02    1  ON   132
+    udSe_23                -1.261405e-01    1  ON   133
+    udSe_24                -3.493015e-02    1  ON   134
+    udSe_25                -2.692700e-02    1  ON   135
+
+  Updated wavefunction vp file optJ123.s006.vp.h5
+  Updated wavefunction xml file optJ123.s006.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.474 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s007
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s007
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074779 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074779 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074779 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+=====================================================
+VMC Warmup completed in 1.6840e-01 secs
+Completed block    1 of 10 average 0.1443 secs/block after 23.36 secs
+Completed block    2 of 10 average 0.1576 secs/block after 23.53 secs
+Completed block    5 of 10 average 0.1554 secs/block after 24 secs
+Completed block    7 of 10 average 0.156 secs/block after 24.31 secs
+Completed block   10 of 10 average 0.1586 secs/block after 24.81 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 7
+    time step          = 0.3
+    reference energy   = -52.6251
+    reference variance = 1.35616
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074780 MiB
+Memory footprint by rank 0 on node 0       :    1010 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7823e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2625e+01
+  VMC Evar = 1.3561e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 4.0741e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 6.7207e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 9.1598e-03
+
+Among totally 136 optimized parameters, largest LM parameter change : 1.2194e-02 at parameter 114
+Effective weight of all the samples measured by correlated sampling is 9.9988e-01
+
+******************************************************************************
+Init Cost =  -4.7227e+01    New Cost =  -4.7227e+01  Delta Cost =   3.2007e-06
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -1.021679e-01    1  ON     0
+      eGe_1                -9.728758e-02    1  ON     1
+      eGe_2                -8.314912e-02    1  ON     2
+      eGe_3                -5.638956e-02    1  ON     3
+      eGe_4                -5.146338e-02    1  ON     4
+      eGe_5                -3.798690e-02    1  ON     5
+      eGe_6                -2.600454e-02    1  ON     6
+      eGe_7                -1.970642e-02    1  ON     7
+      eSe_0                -3.398577e-01    1  ON     8
+      eSe_1                -3.869031e-01    1  ON     9
+      eSe_2                -3.371464e-01    1  ON    10
+      eSe_3                -2.813047e-01    1  ON    11
+      eSe_4                -2.294262e-01    1  ON    12
+      eSe_5                -1.588834e-01    1  ON    13
+      eSe_6                -9.670459e-02    1  ON    14
+      eSe_7                -5.287158e-02    1  ON    15
+       uu_0                 4.251782e-01    1  ON    16
+       uu_1                 3.328502e-01    1  ON    17
+       uu_2                 2.534001e-01    1  ON    18
+       uu_3                 1.882335e-01    1  ON    19
+       uu_4                 1.317441e-01    1  ON    20
+       uu_5                 8.778765e-02    1  ON    21
+       uu_6                 5.007117e-02    1  ON    22
+       uu_7                 2.727583e-02    1  ON    23
+       ud_0                 7.000799e-01    1  ON    24
+       ud_1                 5.233839e-01    1  ON    25
+       ud_2                 3.816155e-01    1  ON    26
+       ud_3                 2.690816e-01    1  ON    27
+       ud_4                 1.797832e-01    1  ON    28
+       ud_5                 1.133057e-01    1  ON    29
+       ud_6                 6.196782e-02    1  ON    30
+       ud_7                 3.166500e-02    1  ON    31
+     uuGe_0                -1.844031e-02    1  ON    32
+     uuGe_1                 2.096931e-02    1  ON    33
+     uuGe_2                -1.855270e-02    1  ON    34
+     uuGe_3                 2.574527e-02    1  ON    35
+     uuGe_4                -3.611564e-03    1  ON    36
+     uuGe_5                 7.761128e-03    1  ON    37
+     uuGe_6                -7.443316e-03    1  ON    38
+     uuGe_7                -3.155140e-03    1  ON    39
+     uuGe_8                 1.417580e-02    1  ON    40
+     uuGe_9                -5.645659e-03    1  ON    41
+    uuGe_10                -1.075851e-02    1  ON    42
+    uuGe_11                -2.525866e-03    1  ON    43
+    uuGe_12                 1.282685e-02    1  ON    44
+    uuGe_13                 9.606495e-03    1  ON    45
+    uuGe_14                -3.538679e-03    1  ON    46
+    uuGe_15                -2.173882e-02    1  ON    47
+    uuGe_16                -5.315323e-03    1  ON    48
+    uuGe_17                -1.088991e-02    1  ON    49
+    uuGe_18                -4.588785e-03    1  ON    50
+    uuGe_19                 8.223144e-03    1  ON    51
+    uuGe_20                -7.062513e-03    1  ON    52
+    uuGe_21                -2.341050e-03    1  ON    53
+    uuGe_22                 8.035106e-03    1  ON    54
+    uuGe_23                -3.365134e-03    1  ON    55
+    uuGe_24                 3.693871e-03    1  ON    56
+    uuGe_25                 2.720004e-03    1  ON    57
+     udGe_0                -5.164025e-02    1  ON    58
+     udGe_1                 2.191923e-02    1  ON    59
+     udGe_2                -5.663453e-02    1  ON    60
+     udGe_3                 7.584090e-02    1  ON    61
+     udGe_4                -2.391341e-02    1  ON    62
+     udGe_5                -1.720075e-02    1  ON    63
+     udGe_6                 1.962964e-03    1  ON    64
+     udGe_7                -1.463482e-03    1  ON    65
+     udGe_8                 2.337893e-02    1  ON    66
+     udGe_9                -2.240637e-02    1  ON    67
+    udGe_10                -2.057030e-02    1  ON    68
+    udGe_11                -9.123560e-03    1  ON    69
+    udGe_12                 3.017997e-02    1  ON    70
+    udGe_13                 3.736650e-02    1  ON    71
+    udGe_14                -1.882926e-02    1  ON    72
+    udGe_15                -5.148800e-02    1  ON    73
+    udGe_16                -2.421998e-02    1  ON    74
+    udGe_17                -2.579435e-02    1  ON    75
+    udGe_18                -4.423698e-03    1  ON    76
+    udGe_19                 3.539924e-02    1  ON    77
+    udGe_20                -3.375431e-02    1  ON    78
+    udGe_21                 5.548331e-04    1  ON    79
+    udGe_22                 3.112623e-02    1  ON    80
+    udGe_23                -2.513526e-02    1  ON    81
+    udGe_24                -1.701004e-03    1  ON    82
+    udGe_25                -2.342430e-02    1  ON    83
+     uuSe_0                -3.317650e-02    1  ON    84
+     uuSe_1                 9.376485e-03    1  ON    85
+     uuSe_2                -1.844626e-02    1  ON    86
+     uuSe_3                 4.317218e-02    1  ON    87
+     uuSe_4                -1.522276e-03    1  ON    88
+     uuSe_5                -3.216897e-03    1  ON    89
+     uuSe_6                 1.148811e-02    1  ON    90
+     uuSe_7                 8.417444e-03    1  ON    91
+     uuSe_8                -2.671209e-03    1  ON    92
+     uuSe_9                -6.190540e-03    1  ON    93
+    uuSe_10                -1.285788e-02    1  ON    94
+    uuSe_11                 4.536398e-03    1  ON    95
+    uuSe_12                 1.037945e-02    1  ON    96
+    uuSe_13                 2.944185e-02    1  ON    97
+    uuSe_14                 4.575949e-03    1  ON    98
+    uuSe_15                -3.255116e-02    1  ON    99
+    uuSe_16                -1.779080e-02    1  ON   100
+    uuSe_17                -1.784142e-02    1  ON   101
+    uuSe_18                 3.613449e-03    1  ON   102
+    uuSe_19                 2.637721e-02    1  ON   103
+    uuSe_20                -4.181127e-02    1  ON   104
+    uuSe_21                 7.729777e-03    1  ON   105
+    uuSe_22                 3.246327e-02    1  ON   106
+    uuSe_23                -3.994787e-02    1  ON   107
+    uuSe_24                -9.418152e-03    1  ON   108
+    uuSe_25                -2.793559e-02    1  ON   109
+     udSe_0                -8.314852e-02    1  ON   110
+     udSe_1                -1.958940e-02    1  ON   111
+     udSe_2                -2.823302e-02    1  ON   112
+     udSe_3                 1.591516e-01    1  ON   113
+     udSe_4                -7.676428e-02    1  ON   114
+     udSe_5                -3.367896e-02    1  ON   115
+     udSe_6                 5.743553e-02    1  ON   116
+     udSe_7                 2.690660e-02    1  ON   117
+     udSe_8                -6.383029e-02    1  ON   118
+     udSe_9                -2.993100e-02    1  ON   119
+    udSe_10                 2.468091e-02    1  ON   120
+    udSe_11                 2.718495e-02    1  ON   121
+    udSe_12                -2.016017e-02    1  ON   122
+    udSe_13                 8.078560e-02    1  ON   123
+    udSe_14                 3.897458e-03    1  ON   124
+    udSe_15                -3.372213e-02    1  ON   125
+    udSe_16                -3.495615e-02    1  ON   126
+    udSe_17                 1.601432e-02    1  ON   127
+    udSe_18                 4.995484e-02    1  ON   128
+    udSe_19                 3.065756e-02    1  ON   129
+    udSe_20                -9.215897e-02    1  ON   130
+    udSe_21                 4.241838e-02    1  ON   131
+    udSe_22                 3.616848e-02    1  ON   132
+    udSe_23                -1.332911e-01    1  ON   133
+    udSe_24                -3.632141e-02    1  ON   134
+    udSe_25                -2.573350e-02    1  ON   135
+
+  Updated wavefunction vp file optJ123.s007.vp.h5
+  Updated wavefunction xml file optJ123.s007.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.512 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s008
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s008
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074775 MiB
+Memory footprint by rank 0 on node 0       :    1011 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074775 MiB
+Memory footprint by rank 0 on node 0       :    1011 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074774 MiB
+Memory footprint by rank 0 on node 0       :    1011 MiB
+=====================================================
+VMC Warmup completed in 1.6883e-01 secs
+Completed block    1 of 10 average 0.1375 secs/block after 25.87 secs
+Completed block    2 of 10 average 0.1428 secs/block after 26.02 secs
+Completed block    5 of 10 average 0.1541 secs/block after 26.5 secs
+Completed block    7 of 10 average 0.1563 secs/block after 26.83 secs
+Completed block   10 of 10 average 0.1591 secs/block after 27.33 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 8
+    time step          = 0.3
+    reference energy   = -52.6287
+    reference variance = 1.35216
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074775 MiB
+Memory footprint by rank 0 on node 0       :    1011 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.7879e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2629e+01
+  VMC Evar = 1.3520e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 3.9302e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.2442e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+No eigenvalues passed initial filter. Trying broader 100 a.u. filter
+  Execution time (eigenvalue) = 1.0231e-02
+
+Among totally 136 optimized parameters, largest LM parameter change : 1.1424e-02 at parameter 113
+Effective weight of all the samples measured by correlated sampling is 9.9994e-01
+
+******************************************************************************
+Init Cost =  -4.7231e+01    New Cost =  -4.7232e+01  Delta Cost =  -7.5989e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -1.034255e-01    1  ON     0
+      eGe_1                -9.821640e-02    1  ON     1
+      eGe_2                -8.578112e-02    1  ON     2
+      eGe_3                -5.719497e-02    1  ON     3
+      eGe_4                -5.199074e-02    1  ON     4
+      eGe_5                -3.756419e-02    1  ON     5
+      eGe_6                -2.459851e-02    1  ON     6
+      eGe_7                -1.935413e-02    1  ON     7
+      eSe_0                -3.381722e-01    1  ON     8
+      eSe_1                -3.871459e-01    1  ON     9
+      eSe_2                -3.364526e-01    1  ON    10
+      eSe_3                -2.822212e-01    1  ON    11
+      eSe_4                -2.294574e-01    1  ON    12
+      eSe_5                -1.592348e-01    1  ON    13
+      eSe_6                -9.707806e-02    1  ON    14
+      eSe_7                -5.332020e-02    1  ON    15
+       uu_0                 4.213574e-01    1  ON    16
+       uu_1                 3.304675e-01    1  ON    17
+       uu_2                 2.521985e-01    1  ON    18
+       uu_3                 1.872860e-01    1  ON    19
+       uu_4                 1.312575e-01    1  ON    20
+       uu_5                 8.732588e-02    1  ON    21
+       uu_6                 5.005700e-02    1  ON    22
+       uu_7                 2.707714e-02    1  ON    23
+       ud_0                 7.003538e-01    1  ON    24
+       ud_1                 5.233273e-01    1  ON    25
+       ud_2                 3.816190e-01    1  ON    26
+       ud_3                 2.687179e-01    1  ON    27
+       ud_4                 1.792840e-01    1  ON    28
+       ud_5                 1.126137e-01    1  ON    29
+       ud_6                 6.171059e-02    1  ON    30
+       ud_7                 3.157978e-02    1  ON    31
+     uuGe_0                -2.046887e-02    1  ON    32
+     uuGe_1                 2.061417e-02    1  ON    33
+     uuGe_2                -1.963752e-02    1  ON    34
+     uuGe_3                 2.685069e-02    1  ON    35
+     uuGe_4                -1.789019e-03    1  ON    36
+     uuGe_5                 4.236963e-03    1  ON    37
+     uuGe_6                -7.854856e-03    1  ON    38
+     uuGe_7                -2.730592e-03    1  ON    39
+     uuGe_8                 1.520479e-02    1  ON    40
+     uuGe_9                -6.685566e-03    1  ON    41
+    uuGe_10                -1.097020e-02    1  ON    42
+    uuGe_11                -1.027734e-03    1  ON    43
+    uuGe_12                 1.246153e-02    1  ON    44
+    uuGe_13                 1.201589e-02    1  ON    45
+    uuGe_14                -1.571411e-03    1  ON    46
+    uuGe_15                -2.478395e-02    1  ON    47
+    uuGe_16                -5.204314e-03    1  ON    48
+    uuGe_17                -1.207802e-02    1  ON    49
+    uuGe_18                -4.036724e-03    1  ON    50
+    uuGe_19                 7.941517e-03    1  ON    51
+    uuGe_20                -4.978510e-03    1  ON    52
+    uuGe_21                 7.247110e-05    1  ON    53
+    uuGe_22                 7.261991e-03    1  ON    54
+    uuGe_23                -1.669681e-03    1  ON    55
+    uuGe_24                 5.664112e-03    1  ON    56
+    uuGe_25                 2.995253e-03    1  ON    57
+     udGe_0                -5.537439e-02    1  ON    58
+     udGe_1                 2.140080e-02    1  ON    59
+     udGe_2                -5.981829e-02    1  ON    60
+     udGe_3                 8.066117e-02    1  ON    61
+     udGe_4                -2.504391e-02    1  ON    62
+     udGe_5                -1.525460e-02    1  ON    63
+     udGe_6                 4.435479e-03    1  ON    64
+     udGe_7                -1.517405e-03    1  ON    65
+     udGe_8                 2.184591e-02    1  ON    66
+     udGe_9                -2.185489e-02    1  ON    67
+    udGe_10                -2.199984e-02    1  ON    68
+    udGe_11                -1.102548e-02    1  ON    69
+    udGe_12                 3.008238e-02    1  ON    70
+    udGe_13                 4.195997e-02    1  ON    71
+    udGe_14                -1.893935e-02    1  ON    72
+    udGe_15                -5.032218e-02    1  ON    73
+    udGe_16                -2.533409e-02    1  ON    74
+    udGe_17                -2.702061e-02    1  ON    75
+    udGe_18                -4.482452e-03    1  ON    76
+    udGe_19                 3.688994e-02    1  ON    77
+    udGe_20                -3.505261e-02    1  ON    78
+    udGe_21                 1.545107e-03    1  ON    79
+    udGe_22                 3.245448e-02    1  ON    80
+    udGe_23                -2.700440e-02    1  ON    81
+    udGe_24                -1.743281e-03    1  ON    82
+    udGe_25                -2.633833e-02    1  ON    83
+     uuSe_0                -3.663139e-02    1  ON    84
+     uuSe_1                 6.652598e-03    1  ON    85
+     uuSe_2                -1.923727e-02    1  ON    86
+     uuSe_3                 4.371835e-02    1  ON    87
+     uuSe_4                -3.393461e-03    1  ON    88
+     uuSe_5                -7.199286e-03    1  ON    89
+     uuSe_6                 1.420767e-02    1  ON    90
+     uuSe_7                 8.907834e-03    1  ON    91
+     uuSe_8                -7.105304e-03    1  ON    92
+     uuSe_9                -4.485786e-03    1  ON    93
+    uuSe_10                -1.097981e-02    1  ON    94
+    uuSe_11                 3.125175e-03    1  ON    95
+    uuSe_12                 6.344905e-03    1  ON    96
+    uuSe_13                 3.513657e-02    1  ON    97
+    uuSe_14                 5.881370e-03    1  ON    98
+    uuSe_15                -2.968931e-02    1  ON    99
+    uuSe_16                -1.704418e-02    1  ON   100
+    uuSe_17                -1.821554e-02    1  ON   101
+    uuSe_18                 3.560782e-03    1  ON   102
+    uuSe_19                 2.507615e-02    1  ON   103
+    uuSe_20                -3.955892e-02    1  ON   104
+    uuSe_21                 9.240060e-03    1  ON   105
+    uuSe_22                 3.284695e-02    1  ON   106
+    uuSe_23                -3.953028e-02    1  ON   107
+    uuSe_24                -8.218891e-03    1  ON   108
+    uuSe_25                -2.924034e-02    1  ON   109
+     udSe_0                -9.129915e-02    1  ON   110
+     udSe_1                -2.515318e-02    1  ON   111
+     udSe_2                -2.872351e-02    1  ON   112
+     udSe_3                 1.705752e-01    1  ON   113
+     udSe_4                -8.713258e-02    1  ON   114
+     udSe_5                -3.152638e-02    1  ON   115
+     udSe_6                 6.405749e-02    1  ON   116
+     udSe_7                 2.809749e-02    1  ON   117
+     udSe_8                -7.360404e-02    1  ON   118
+     udSe_9                -3.272192e-02    1  ON   119
+    udSe_10                 2.729166e-02    1  ON   120
+    udSe_11                 2.811026e-02    1  ON   121
+    udSe_12                -2.210794e-02    1  ON   122
+    udSe_13                 8.846571e-02    1  ON   123
+    udSe_14                 7.908460e-03    1  ON   124
+    udSe_15                -3.355799e-02    1  ON   125
+    udSe_16                -3.728720e-02    1  ON   126
+    udSe_17                 1.854597e-02    1  ON   127
+    udSe_18                 5.438416e-02    1  ON   128
+    udSe_19                 3.072784e-02    1  ON   129
+    udSe_20                -9.645035e-02    1  ON   130
+    udSe_21                 4.634895e-02    1  ON   131
+    udSe_22                 3.506456e-02    1  ON   132
+    udSe_23                -1.415763e-01    1  ON   133
+    udSe_24                -3.778665e-02    1  ON   134
+    udSe_25                -2.580413e-02    1  ON   135
+
+  Updated wavefunction vp file optJ123.s008.vp.h5
+  Updated wavefunction xml file optJ123.s008.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.475 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root optJ123.s009
+=========================================================
+  Random walking without drift
+ Legacy constructor adding a default LocalEnergyEstimator for the MainEstimator 
+
+=========================================================
+  Start VMCBatched
+  File Root optJ123.s009
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers : 1074768 MiB
+Memory footprint by rank 0 on node 0       :    1011 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 3264
+             walkers_per_rank  = [51(x64)]
+             num_crowds        = 51
+  on rank 0, walkers_per_crowd = [1(x51)]
+
+                         steps = 7 (different from input value 0)
+                        blocks = 10
+
+VMCBatched Driver collecting samples, samples per rank = 3570
+                                      total samples    = 228480
+
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+ TrialWaveFunction "psi0" has 8 optimizable objects:
+   'eGe' optimized
+   'eSe' optimized
+   'uu' optimized
+   'ud' optimized
+   'uuGe' optimized
+   'udGe' optimized
+   'uuSe' optimized
+   'udSe' optimized
+ Variational subset selects 136 parameters.
+ In total 136 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+
+******************
+Generating samples
+******************
+
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers : 1074768 MiB
+Memory footprint by rank 0 on node 0       :    1011 MiB
+===================================================================
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers : 1074768 MiB
+Memory footprint by rank 0 on node 0       :    1011 MiB
+=====================================================
+VMC Warmup completed in 1.6905e-01 secs
+Completed block    1 of 10 average 0.1544 secs/block after 28.36 secs
+Completed block    2 of 10 average 0.1673 secs/block after 28.54 secs
+Completed block    5 of 10 average 0.1615 secs/block after 29.02 secs
+Completed block    7 of 10 average 0.1584 secs/block after 29.32 secs
+Completed block   10 of 10 average 0.1606 secs/block after 29.82 secs
+====================================================
+  End of a VMC section
+    QMC counter        = 9
+    time step          = 0.3
+    reference energy   = -52.6261
+    reference variance = 1.3454
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers : 1074771 MiB
+Memory footprint by rank 0 on node 0       :    1011 MiB
+=============================================
+  Carry over 3264 walker configurations to the next QMC driver.
+  Execution time (sampling) = 1.8031e+00
+
+*****************************
+Compute parameter derivatives
+*****************************
+
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -5.2626e+01
+  VMC Evar = 1.3459e+00
+  Total weights = 2.2848e+05
+  Execution time (derivatives) = 4.0412e-01
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+  Execution time (building matrices) = 5.2638e-02
+
+**************************
+Solving eigenvalue problem
+**************************
+  Using inverse + regular eigenvalue solver (geev)
+  Execution time (eigenvalue) = 9.0513e-03
+
+Among totally 136 optimized parameters, largest LM parameter change : 1.1740e-02 at parameter 113
+Effective weight of all the samples measured by correlated sampling is 9.9996e-01
+
+******************************************************************************
+Init Cost =  -4.7229e+01    New Cost =  -4.7228e+01  Delta Cost =   6.6884e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Updated wave function parameters:
+       Name                        Value Type Use Index
+    ------- ---------------------------- ---- --- -----
+      eGe_0                -1.038388e-01    1  ON     0
+      eGe_1                -9.741498e-02    1  ON     1
+      eGe_2                -8.463867e-02    1  ON     2
+      eGe_3                -5.584817e-02    1  ON     3
+      eGe_4                -5.023353e-02    1  ON     4
+      eGe_5                -3.623110e-02    1  ON     5
+      eGe_6                -2.444679e-02    1  ON     6
+      eGe_7                -1.885129e-02    1  ON     7
+      eSe_0                -3.356145e-01    1  ON     8
+      eSe_1                -3.829756e-01    1  ON     9
+      eSe_2                -3.360180e-01    1  ON    10
+      eSe_3                -2.811441e-01    1  ON    11
+      eSe_4                -2.291739e-01    1  ON    12
+      eSe_5                -1.586367e-01    1  ON    13
+      eSe_6                -9.603836e-02    1  ON    14
+      eSe_7                -5.242128e-02    1  ON    15
+       uu_0                 4.181258e-01    1  ON    16
+       uu_1                 3.285415e-01    1  ON    17
+       uu_2                 2.511628e-01    1  ON    18
+       uu_3                 1.867069e-01    1  ON    19
+       uu_4                 1.306078e-01    1  ON    20
+       uu_5                 8.708118e-02    1  ON    21
+       uu_6                 4.975972e-02    1  ON    22
+       uu_7                 2.717424e-02    1  ON    23
+       ud_0                 7.015244e-01    1  ON    24
+       ud_1                 5.243421e-01    1  ON    25
+       ud_2                 3.822677e-01    1  ON    26
+       ud_3                 2.690417e-01    1  ON    27
+       ud_4                 1.794686e-01    1  ON    28
+       ud_5                 1.129607e-01    1  ON    29
+       ud_6                 6.185850e-02    1  ON    30
+       ud_7                 3.183213e-02    1  ON    31
+     uuGe_0                -2.550528e-02    1  ON    32
+     uuGe_1                 2.387566e-02    1  ON    33
+     uuGe_2                -2.199137e-02    1  ON    34
+     uuGe_3                 2.975718e-02    1  ON    35
+     uuGe_4                -4.352184e-03    1  ON    36
+     uuGe_5                 2.727423e-03    1  ON    37
+     uuGe_6                -9.916407e-03    1  ON    38
+     uuGe_7                -4.129384e-03    1  ON    39
+     uuGe_8                 1.596615e-02    1  ON    40
+     uuGe_9                -7.041384e-03    1  ON    41
+    uuGe_10                -1.166796e-02    1  ON    42
+    uuGe_11                -2.052856e-03    1  ON    43
+    uuGe_12                 1.475811e-02    1  ON    44
+    uuGe_13                 1.447193e-02    1  ON    45
+    uuGe_14                -2.372909e-03    1  ON    46
+    uuGe_15                -2.741558e-02    1  ON    47
+    uuGe_16                -4.123784e-03    1  ON    48
+    uuGe_17                -1.205393e-02    1  ON    49
+    uuGe_18                -3.852548e-03    1  ON    50
+    uuGe_19                 9.721091e-03    1  ON    51
+    uuGe_20                -1.945459e-03    1  ON    52
+    uuGe_21                 6.531048e-04    1  ON    53
+    uuGe_22                 8.693707e-03    1  ON    54
+    uuGe_23                -4.426059e-06    1  ON    55
+    uuGe_24                 5.861596e-03    1  ON    56
+    uuGe_25                 2.158123e-03    1  ON    57
+     udGe_0                -5.340189e-02    1  ON    58
+     udGe_1                 1.533637e-02    1  ON    59
+     udGe_2                -6.092932e-02    1  ON    60
+     udGe_3                 8.316528e-02    1  ON    61
+     udGe_4                -2.199101e-02    1  ON    62
+     udGe_5                -1.754077e-02    1  ON    63
+     udGe_6                 9.610642e-03    1  ON    64
+     udGe_7                 4.800858e-04    1  ON    65
+     udGe_8                 2.013140e-02    1  ON    66
+     udGe_9                -2.030525e-02    1  ON    67
+    udGe_10                -2.331096e-02    1  ON    68
+    udGe_11                -1.179646e-02    1  ON    69
+    udGe_12                 2.739779e-02    1  ON    70
+    udGe_13                 4.717169e-02    1  ON    71
+    udGe_14                -1.895710e-02    1  ON    72
+    udGe_15                -4.891898e-02    1  ON    73
+    udGe_16                -2.723610e-02    1  ON    74
+    udGe_17                -2.951927e-02    1  ON    75
+    udGe_18                -5.182057e-03    1  ON    76
+    udGe_19                 3.770514e-02    1  ON    77
+    udGe_20                -3.712906e-02    1  ON    78
+    udGe_21                 1.730605e-03    1  ON    79
+    udGe_22                 3.477189e-02    1  ON    80
+    udGe_23                -2.870629e-02    1  ON    81
+    udGe_24                -2.137556e-03    1  ON    82
+    udGe_25                -2.846584e-02    1  ON    83
+     uuSe_0                -3.639783e-02    1  ON    84
+     uuSe_1                 8.766499e-03    1  ON    85
+     uuSe_2                -1.772062e-02    1  ON    86
+     uuSe_3                 4.676614e-02    1  ON    87
+     uuSe_4                -6.207469e-03    1  ON    88
+     uuSe_5                -7.616123e-03    1  ON    89
+     uuSe_6                 1.427317e-02    1  ON    90
+     uuSe_7                 9.927948e-03    1  ON    91
+     uuSe_8                -8.358029e-03    1  ON    92
+     uuSe_9                -4.685496e-03    1  ON    93
+    uuSe_10                -9.795990e-03    1  ON    94
+    uuSe_11                 4.730159e-03    1  ON    95
+    uuSe_12                 6.355711e-03    1  ON    96
+    uuSe_13                 3.524064e-02    1  ON    97
+    uuSe_14                 6.759663e-03    1  ON    98
+    uuSe_15                -3.203181e-02    1  ON    99
+    uuSe_16                -1.782034e-02    1  ON   100
+    uuSe_17                -1.822935e-02    1  ON   101
+    uuSe_18                 3.966200e-03    1  ON   102
+    uuSe_19                 2.509015e-02    1  ON   103
+    uuSe_20                -4.294873e-02    1  ON   104
+    uuSe_21                 9.058449e-03    1  ON   105
+    uuSe_22                 3.372159e-02    1  ON   106
+    uuSe_23                -4.232063e-02    1  ON   107
+    uuSe_24                -7.647916e-03    1  ON   108
+    uuSe_25                -2.821425e-02    1  ON   109
+     udSe_0                -9.759684e-02    1  ON   110
+     udSe_1                -3.241185e-02    1  ON   111
+     udSe_2                -2.785706e-02    1  ON   112
+     udSe_3                 1.823153e-01    1  ON   113
+     udSe_4                -9.600781e-02    1  ON   114
+     udSe_5                -3.139811e-02    1  ON   115
+     udSe_6                 6.962236e-02    1  ON   116
+     udSe_7                 2.990098e-02    1  ON   117
+     udSe_8                -8.204292e-02    1  ON   118
+     udSe_9                -3.780213e-02    1  ON   119
+    udSe_10                 2.898071e-02    1  ON   120
+    udSe_11                 3.090417e-02    1  ON   121
+    udSe_12                -2.405316e-02    1  ON   122
+    udSe_13                 9.709474e-02    1  ON   123
+    udSe_14                 1.337148e-02    1  ON   124
+    udSe_15                -3.593112e-02    1  ON   125
+    udSe_16                -4.041069e-02    1  ON   126
+    udSe_17                 1.935563e-02    1  ON   127
+    udSe_18                 5.835981e-02    1  ON   128
+    udSe_19                 3.017250e-02    1  ON   129
+    udSe_20                -9.958939e-02    1  ON   130
+    udSe_21                 4.934896e-02    1  ON   131
+    udSe_22                 3.427132e-02    1  ON   132
+    udSe_23                -1.482271e-01    1  ON   133
+    udSe_24                -4.000582e-02    1  ON   134
+    udSe_25                -2.469224e-02    1  ON   135
+
+  Updated wavefunction vp file optJ123.s009.vp.h5
+  Updated wavefunction xml file optJ123.s009.opt.xml
+  QMCLinearOptimizeBatched Execution time = 2.507 secs
+  Total Execution time = 24.6 secs
+
+=========================================================
+  A new xml input file : optJ123.s009.cont.xml
+
+Use --enable-timers=<value> command line option to increase or decrease level of timing information
+Stack timer profile
+Timer                       Inclusive_time  Exclusive_time  Calls       Time_per_call
+Total                         29.7520     0.0126              1      29.751977772
+  QMCLinearOptimizeBatched    24.5866    24.5866             10       2.458658226
+  Startup                      5.1528     5.1528              1       5.152844137
+
+QMCPACK execution completed successfully

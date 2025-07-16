@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<qmcsystem>
+  <wavefunction name="psi0" target="e">
+         <sposet_builder type="bspline" href="../nscf/pwscf_output/pwscf.pwscf.h5" tilematrix="1 0 0 0 1 0 0 0 1" twistnum="0" source="ion0" version="0.10" meshfactor="1.0" precision="float" truncate="no">
+            <sposet type="bspline" name="spo_u" size="20" spindataset="0"/>
+            <sposet type="bspline" name="spo_d" size="20" spindataset="1"/>
+         </sposet_builder>
+         <determinantset>
+            <slaterdeterminant>
+               <determinant id="updet" group="u" sposet="spo_u" size="20"/>
+               <determinant id="downdet" group="d" sposet="spo_d" size="20"/>
+            </slaterdeterminant>
+         </determinantset>
+         <jastrow type="One-Body" name="J1" function="bspline" source="ion0" print="yes">
+            <correlation elementType="Ge" size="8" rcut="3.609376915" cusp="0.0">
+               <coefficients id="eGe" type="Array"> -0.09149909368 -0.09928222231 -0.08564207229 -0.05725017795 -0.05087632564 -0.03727125036 -0.02470975774 -0.01946383329</coefficients>
+            </correlation>
+            <correlation elementType="Se" size="8" rcut="3.609376915" cusp="0.0">
+               <coefficients id="eSe" type="Array"> -0.3320097675 -0.3908991806 -0.3389161698 -0.2842234391 -0.2316044128 -0.1603249478 -0.09773279975 -0.05386341313</coefficients>
+            </correlation>
+         </jastrow>
+         <jastrow type="Two-Body" name="J2" function="bspline" print="yes">
+            <correlation speciesA="u" speciesB="u" size="8" rcut="3.609376915">
+               <coefficients id="uu" type="Array"> 0.4183767207 0.3343526169 0.2557147972 0.1891087841 0.1322299922 0.08808528319 0.05043456611 0.02759135977</coefficients>
+            </correlation>
+            <correlation speciesA="u" speciesB="d" size="8" rcut="3.609376915">
+               <coefficients id="ud" type="Array"> 0.7013900678 0.5246012829 0.3825614657 0.2694209396 0.1796435509 0.1131480893 0.06222727151 0.03199686429</coefficients>
+            </correlation>
+         </jastrow>
+         <jastrow type="eeI" name="J3" function="polynomial" print="yes" source="ion0">
+            <correlation ispecies="Ge" especies1="u" especies2="u" isize="3" esize="3" rcut="3.609376915">
+               <coefficients id="uuGe" type="Array" optimize="yes"> -0.01096993823 0.01793009717 -0.008407892928 0.01954533799 -0.002561271725 0.002616409669 -0.007523440014 -0.00182720456 0.009082455515 -0.001691162037 -0.006070952408 0.001190737023 0.008589123982 0.007249627523 -0.001471614671 -0.01807822336 -0.0006830236504 -0.005072342085 -0.00103998499 0.005379990273 -0.0003421782715 0.0002266454539 0.005362900526 -0.0006325365126 0.002804301475 0.004002314388</coefficients>
+            </correlation>
+            <correlation ispecies="Ge" especies1="u" especies2="d" isize="3" esize="3" rcut="3.609376915">
+               <coefficients id="udGe" type="Array" optimize="yes"> -0.04295505265 0.0260701749 -0.04156844037 0.05095169207 -0.0255343246 -0.01383389521 -0.008254379861 -0.00537148796 0.02201411068 -0.01690656028 -0.01215438242 -0.007447451592 0.02912531215 0.02053336349 -0.01895112931 -0.0430242209 -0.01273438341 -0.01483667286 -0.004507894304 0.0260280146 -0.01930921862 -0.007990705882 0.02205587183 -0.01567672083 -0.005987481096 -0.00926716886</coefficients>
+            </correlation>
+            <correlation ispecies="Se" especies1="u" especies2="u" isize="3" esize="3" rcut="3.609376915">
+               <coefficients id="uuSe" type="Array" optimize="yes"> -0.02344701935 0.01162690314 -0.01953823924 0.0361776056 0.001779109589 -0.004966707885 0.005034081024 0.005318249768 0.007594478142 -0.005790167361 -0.01278985773 0.002676253925 0.01330558607 0.0192568922 -0.004205849748 -0.02858569273 -0.01374491196 -0.0144284046 0.001146899445 0.02362368762 -0.03178443223 0.002047653484 0.02680699181 -0.02917418746 -0.009208264706 -0.02014662641</coefficients>
+            </correlation>
+            <correlation ispecies="Se" especies1="u" especies2="d" isize="3" esize="3" rcut="3.609376915">
+               <coefficients id="udSe" type="Array" optimize="yes"> -0.06205499017 0.0133524803 -0.03178975036 0.1098321081 -0.03506057858 -0.0314644251 0.02751595895 0.01790415002 -0.02147271751 -0.01618028312 0.01076033988 0.01867642624 -0.004239787501 0.04668308452 -0.009728050716 -0.03625740156 -0.02512241145 0.004082023351 0.02967012139 0.03218863656 -0.0788669504 0.02622523439 0.0374601313 -0.1010494269 -0.02560170891 -0.0248971382</coefficients>
+            </correlation>
+         </jastrow>
+      <override_variational_parameters href="optJ123.s003.vp.h5"/></wavefunction>
+</qmcsystem>

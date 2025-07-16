@@ -1,0 +1,43 @@
+#!/bin/sh
+#PBS -l select=32
+#PBS -l place=scatter
+#PBS -l filesystems=flare
+#PBS -l walltime=03:00:00
+#PBS -A PSFMat_2
+#PBS -q prod
+#PBS -N nscf
+#PBS -k doe
+#PBS -o nscf.out
+#PBS -e nscf.err
+
+cd ${PBS_O_WORKDIR}
+
+
+for module_name in oneapi/release oneapi/eng-compiler
+do
+  if module is-loaded $module_name ; then module unload $module_name; fi
+done
+
+module load oneapi/eng-compiler/2024.07.30.002 mpich/opt/4.3.0rc3
+module load hdf5/1.14.3
+module unload gcc gcc-runtime
+
+export MPIR_CVAR_ENABLE_GPU=0
+unset MPIR_CVAR_CH4_COLL_SELECTION_TUNING_JSON_FILE
+unset MPIR_CVAR_COLL_SELECTION_TUNING_JSON_FILE
+unset MPIR_CVAR_CH4_POSIX_COLL_SELECTION_TUNING_JSON_FILE
+export FI_CXI_DEFAULT_CQ_SIZE=131072
+export FI_CXI_CQ_FILL_PERCENT=20
+
+export LIBOMP_USE_HIDDEN_HELPER_TASK=0
+export ZES_ENABLE_SYSMAN=1
+
+export ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE
+export NEOReadDebugKeys=1
+export EnableRecoverablePageFaults=0
+export SplitBcsCopy=0
+
+export LD_PRELOAD=/usr/lib64/libstdc++.so.6
+
+export OMP_NUM_THREADS=4
+mpiexec --cpu-bind depth -d 4 -n 832 -ppn 26 /soft/applications/quantum_espresso/7.4.1-oneapi2024/cpu-openmp/bin/pw.x -input nscf.in

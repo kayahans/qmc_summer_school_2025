@@ -1,0 +1,3 @@
+/soft/tools/mpi_wrapper_utils/gpu_tile_compact.sh: line 47: 47075 Segmentation fault      "$@"
+x4416c2s0b0n0.hostmgmt2416.cm.aurora.alcf.anl.gov: rank 182 exited with code 139
+x4416c2s0b0n0.hostmgmt2416.cm.aurora.alcf.anl.gov: rank 180 died from signal 15
