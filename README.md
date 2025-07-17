@@ -30,7 +30,10 @@ Access to the live Zoom sessions requires registration.
  * Speaker: Raymond Clay
  * "QMC for solids", Raymond Clay. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session5_solids_workflow/session5_solids.pdf). [Recorded video presentation on YouTube](https://youtu.be/BmLPliXyi5E).
 ## Session 6 / Thursday July 17 / 11 am Eastern US time : Real-World Calculations
- * Speakers: Hyeondeok Shin, Kayahan Saritas, Paul Kent 
+ * Speakers: Hyeondeok Shin, Kayahan Saritas, Paul Kent
+ * "Molecular workflows: binding and formation energies", Paul Kent. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session6_molecules/session6_molecules_vfinal.pdf).
+ * "Structural and Optical Properties of GeSe Monochalcogenide from Quantum Monte Carlo Simulations", Hyeondeok Shin. [Presentation PDF](https://github.com/QMCPACK/qmc_summer_school_2025/blob/master/session6_real-world_calculations/GeSe/QMC_workshop_2025_GeSe.pdf).
+ * "2D Materials Calculations", Kayahan Saritas.
 ## Session 7 / Tuesday July 22 / 11 am Eastern US time : Running on GPUs, Surrogate Hessian Geometry Optimization with STALK, School Wrap-Up
  * Speakers: Juha Tiihonen, Ye Luo, Paul Kent
 ## Session 8 / Thursday July 24 / 11 am Eastern US time: Backup Session. Only if needed.
